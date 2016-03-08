@@ -6,5 +6,5 @@ Mapping Broad Research Activities in Complex Systems: Case of the Bio‐Based Ec
 
 This additional material includes:
 Detailed Co-occurence maps,
-Topic Modelling results,
+[Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
 ...
