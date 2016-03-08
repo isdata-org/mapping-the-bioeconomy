@@ -8,3 +8,5 @@ This additional material includes:
 Detailed Co-occurence maps,
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
 ...
+
+[![Topic Modelling](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png)](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html)
