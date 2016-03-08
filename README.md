@@ -5,6 +5,6 @@ This is additional online material relating to the research presented in the art
 Mapping Broad Research Activities in Complex Systems: Case of the Bio‐Based Economy and Secondary Resources (DOI)
 
 This additional material includes:
-Detailed Co-occurence maps
-Topic Modelling results
+Detailed Co-occurence maps,
+Topic Modelling results,
 ...
