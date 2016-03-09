@@ -10,3 +10,8 @@ Detailed Co-occurence maps,
 ...
 
 [![Topic Modelling](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png)](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html)
+
+[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceMatrices/README.md)
+
+
+
