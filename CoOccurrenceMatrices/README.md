@@ -1,5 +1,15 @@
 # Co-occurrence Matrices
 
+Table of Contents
+=================
+  * [Top 50 Organisms](#top-50-organisms)
+  * [Wastes](#wastes)
+    * [Top 20](#top-20)
+    * [Full Matrix](#full-matrix)
+  * [Taxonomical Phylums &amp; Energy](#taxonomical-phylums--energy)
+  * [Taxonomical Orders &amp; Energy](#taxonomical-orders--energy)
+  * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
+
 ## Top 50 Organisms
 [![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./CoOccurrenceMatrices/images/Top50Species.png)
 
