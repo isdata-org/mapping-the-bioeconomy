@@ -11,7 +11,7 @@ Table of Contents
   * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
 
 ## Top 50 Organisms
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./CoOccurrenceMatrices/images/Top50Species.png)
+[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./images/Top50Species.png)
 
 ## Wastes
 ### Top 20
