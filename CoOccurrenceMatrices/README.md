@@ -22,35 +22,35 @@ Table of Contents
 
 
 ## Top 50 Organisms and Technologies, Applications & Products
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./images/Top50Species.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Top50Species.png)](./images/Top50Species.png)
 
 ## Wastes
 ### Top 20
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top20Wastes.png)](./images/Top20Wastes.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Top20Wastes.png)](./images/Top20Wastes.png)
 ### Full Matrix
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/FullWasteMatrix.png)](./images/FullWasteMatrix.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/FullWasteMatrix.png)](./images/FullWasteMatrix.png)
 
 ## Taxonomical Phylums
 ### Chemicals
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50ChemicalsPhylum.png)](./images/Top50ChemicalsPhylum.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Top50ChemicalsPhylum.png)](./images/Top50ChemicalsPhylum.png)
  	
 ### Energy
 #### Full Matrix
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/EnergyPhylum.png)](./images/EnergyPhylum.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/EnergyPhylum.png)](./images/EnergyPhylum.png)
 #### Top 15
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top15EnergyPhylum.png)](./images/Top15EnergyPhylum.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Top15EnergyPhylum.png)](./images/Top15EnergyPhylum.png)
 
 ###  Fertilizers
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/FertilizersTopPhylum.png)](./images/FertilizersTopPhylum.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/FertilizersTopPhylum.png)](./images/FertilizersTopPhylum.png)
 
 ### Products
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/ProductsTopPhylum.png)](./images/ProductsTopPhylum.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/ProductsTopPhylum.png)](./images/ProductsTopPhylum.png)
 
 ## Taxonomical Orders & Energy
 ### Top 15
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top15EnergyOrder.png)](./images/Top15EnergyOrder.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Top15EnergyOrder.png)](./images/Top15EnergyOrder.png)
 ### Full Matrix
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/EnergyPerOrder.png)](./images/EnergyPerOrder.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/EnergyPerOrder.png)](./images/EnergyPerOrder.png)
 
 ## Taxonomical Classes & Energy
-[![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/EnergyPerClass.png)](./images/EnergyPerClass.png)
+[![Co-occurrence Matrices](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/EnergyPerClass.png)](./images/EnergyPerClass.png)
