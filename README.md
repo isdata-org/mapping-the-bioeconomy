@@ -11,8 +11,8 @@ Detailed Co-occurence maps,
 
 
 <table cellspacing="0" cellpadding="0"><tr>
-<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width=100%></a></td>
-<td><a href="./CoOccurrenceMatrices/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png" width=100%></a></td></tr></table><table cellspacing="0" cellpadding="0"><tr>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width="400"></a></td>
+<td><a href="./CoOccurrenceMatrices/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png" width="420"></a></td></tr></table><table cellspacing="0" cellpadding="0"><tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_31.png" width=100%></a></td>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_5.png" width=100%></a></td>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_10.png" width=100%></a></td>
