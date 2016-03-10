@@ -9,9 +9,16 @@ Detailed Co-occurence maps,
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
 ...
 
-<table><tr>
-<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width=400></a></td>
-<td><a href="./CoOccurrenceMatrices/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png" width=400></a></td></tr></table>
+
+<table cellspacing="0" cellpadding="0"><tr>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width=100%></a></td>
+<td><a href="./CoOccurrenceMatrices/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png" width=100%></a></td></tr></table><table cellspacing="0" cellpadding="0"><tr>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_31.png" width=100%></a></td>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_5.png" width=100%></a></td>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_10.png" width=100%></a></td>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_15.png" width=100%></a></td>
+<td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_17.png" width=100%></a></td>
+</tr></table>
 
 ## Abstract
 > Several fields of research looking at complex systems are becoming more information dense in terms of the amount of articles, journals, and methods connected to their area of focus. This density makes activities such as mapping an overview of the area, surveying the work done in respect to a group of things, or identifying where certain research subjects interact a difficult task. This article employs multiple methods (literature collection, Topic Analysis, and Co-occurrence Mapping) to demonstrate how automated analyses of large bodies of literature may assist with such tasks.
