@@ -2,16 +2,19 @@
 
 Table of Contents
 =================
-  * [Top 50 Organisms](#top-50-organisms)
-  * [Wastes](#wastes)
-    * [Top 20](#top-20)
-    * [Full Matrix](#full-matrix)
-  * [Taxonomical Phylums &amp; Chemicals](#taxonomical-phylums--chemicals)
-  * [Taxonomical Phylums &amp; Energy](#taxonomical-phylums--energy)
-  * [Taxonomical Phylums &amp; Fertilizers](#taxonomical-phylums--fertilizers)
-  * [Taxonomical Phylums &amp; Products](#taxonomical-phylums--products)
-  * [Taxonomical Orders &amp; Energy](#taxonomical-orders--energy)
-  * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
+  * [Co-occurrence Matrices](#co-occurrence-matrices)
+  * [Table of Contents](#table-of-contents)
+    * [Top 50 Organisms](#top-50-organisms)
+    * [Wastes](#wastes)
+      * [Top 20](#top-20)
+      * [Full Matrix](#full-matrix)
+    * [Taxonomical Phylums](#taxonomical-phylums)
+      * [Chemicals](#chemicals)
+      * [Energy](#energy)
+      * [Fertilizers](#fertilizers)
+      * [Products](#products)
+    * [Taxonomical Orders &amp; Energy](#taxonomical-orders--energy)
+    * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
 
 ## Top 50 Organisms
 [![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./images/Top50Species.png)
