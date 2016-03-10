@@ -4,17 +4,22 @@ Table of Contents
 =================
   * [Co-occurrence Matrices](#co-occurrence-matrices)
   * [Table of Contents](#table-of-contents)
-    * [Top 50 Organisms](#top-50-organisms)
+    * [Top 50 Organisms and Technologies, Applications &amp; Products](#top-50-organisms-and-technologies-applications--products)
     * [Wastes](#wastes)
       * [Top 20](#top-20)
       * [Full Matrix](#full-matrix)
     * [Taxonomical Phylums](#taxonomical-phylums)
       * [Chemicals](#chemicals)
       * [Energy](#energy)
+        * [Full Matrix](#full-matrix-1)
+        * [Top 15](#top-15)
       * [Fertilizers](#fertilizers)
       * [Products](#products)
     * [Taxonomical Orders &amp; Energy](#taxonomical-orders--energy)
+      * [Top 15](#top-15-1)
+      * [Full Matrix](#full-matrix-2)
     * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
+
 
 ## Top 50 Organisms and Technologies, Applications & Products
 [![Co-occurrence Matrices](https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png)](./images/Top50Species.png)
