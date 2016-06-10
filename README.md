@@ -9,6 +9,7 @@ Detailed Co-occurence maps,
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
 ...
 
+[Topic Modelling (version 2)](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling2/index.html)
 
 <table cellspacing="0" cellpadding="0"><tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width="400"></a></td>
