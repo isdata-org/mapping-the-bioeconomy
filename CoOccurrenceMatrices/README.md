@@ -56,5 +56,5 @@ Table of Contents
 ## Taxonomical Classes & Energy
 [![Co-occurrence Matrices](./images/EnergyPerClass.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/EnergyPerClass.png)
 
-## Taxonomical Classes & Energy
+## Insects
 [![Co-occurrence Matrices](./images/Insects.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Insects.png)
