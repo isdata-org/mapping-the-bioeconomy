@@ -19,6 +19,7 @@ Table of Contents
       * [Top 15](#top-15-1)
       * [Full Matrix](#full-matrix-2)
     * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
+    * [Insects](#insects)
 
 
 ## Top 50 Organisms and Technologies, Applications & Products
@@ -54,3 +55,6 @@ Table of Contents
 
 ## Taxonomical Classes & Energy
 [![Co-occurrence Matrices](./images/EnergyPerClass.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/EnergyPerClass.png)
+
+## Taxonomical Classes & Energy
+[![Co-occurrence Matrices](./images/Insects.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceMatrices/images/Insects.png)
