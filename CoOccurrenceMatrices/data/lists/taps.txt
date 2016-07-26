@@ -39,6 +39,7 @@ Cyclonic_separation
 Dark_fermentation
 Diesel_fuel
 Digestate
+Enzymatic_hydrolysis
 Essential_oil
 Ethanol_fuel
 Expanded_granular_sludge_bed_digestion
