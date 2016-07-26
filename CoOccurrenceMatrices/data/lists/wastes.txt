@@ -49,6 +49,7 @@ Silk_waste
 Slaughterhouse
 Sludge
 Soybean_meal
+Spent_mushroom_compost
 Suet
 Tailings
 Textile
