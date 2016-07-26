@@ -2,11 +2,13 @@ Acetogenesis
 Acidogenesis
 Activated_sludge
 Aerated_static_pile_composting
+Aerobic_granular_reactor
 Alcohol_fuel
 Algae_fuel
 Anaerobic_digestion
 Anaerobic_lagoon
 Aquaculture
+Bioconversion
 Biodegradable_plastic
 Biodiesel
 Biodiesel_production
@@ -102,9 +104,12 @@ Pyrolysis_oil
 Refuse-derived_fuel
 Resin
 Sequencing_batch_reactor
+Sewage waste energy
 Syngas
 Synthetic_fuel
+Thermal_depolymerization
 Thermal_hydrolysis
+Top-lit_updraft_gasifier
 Torrefaction
 Vegetable_oil
 Vegetable_oil_fuel
