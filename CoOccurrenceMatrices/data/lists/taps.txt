@@ -8,6 +8,7 @@ Algae_fuel
 Anaerobic_digestion
 Anaerobic_lagoon
 Aquaculture
+Bioadhesive
 Bioconversion
 Biodegradable_plastic
 Biodiesel
@@ -16,6 +17,7 @@ Biofertilizer
 Biofilter
 Biofuel
 Biogas
+Bioherbicide
 Biohydrogen
 Bioplastic
 Biopolymer
