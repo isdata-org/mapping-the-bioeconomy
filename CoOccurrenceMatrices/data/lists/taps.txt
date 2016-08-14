@@ -100,6 +100,7 @@ Polylactic_acid
 Pullulan
 Pulp_(paper)
 Pyrolysis
+Pyrolysis_gasoline
 Pyrolysis_oil
 Refuse-derived_fuel
 Resin
