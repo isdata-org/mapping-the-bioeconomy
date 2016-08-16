@@ -107,7 +107,7 @@ Pyrolysis_oil
 Refuse-derived_fuel
 Resin
 Sequencing_batch_reactor
-Sewage waste energy
+Sewage_waste_energy
 Syngas
 Synthetic_fuel
 Thermal_depolymerization
