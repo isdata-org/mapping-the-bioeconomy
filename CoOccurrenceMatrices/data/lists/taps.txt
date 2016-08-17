@@ -32,6 +32,7 @@ Butanol
 Butanol_fuel
 Camphor
 Cellulosic_ethanol
+Coco_peat
 Cofiring
 Cogeneration
 Commercial_fish_feed
@@ -74,6 +75,7 @@ Industrial_fermentation
 Integrated_multi-trophic_aquaculture
 In-vessel_composting
 Liquid_hydrogen
+Manure-derived_synthetic_crude_oil
 Manure_management
 Meat_and_bone_meal
 Membrane_bioreactor
@@ -120,3 +122,4 @@ Vermicompost
 Vinasse
 Windrow_composting
 Wood_fuel
+Wood_wool
