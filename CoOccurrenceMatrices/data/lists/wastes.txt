@@ -2,6 +2,7 @@ Activated_sludge
 Advanced_meat_recovery
 Backwashing_(water_treatment)
 Bagasse
+Barkdust
 Biodegradable_waste
 Blood
 Blood_meal
@@ -54,6 +55,7 @@ Pomace
 Post-consumer_waste
 Poultry_litter
 Pulp_(paper)
+Ramial_chipped_wood
 Red_mud
 Sawdust
 Sewage
@@ -67,6 +69,7 @@ Spent_mushroom_compost
 Straw
 Suet
 Tailings
+Tall_oil
 Textile
 Toxic_waste
 Tree_stump
@@ -75,6 +78,7 @@ Vinasse
 Waste_tires
 Wax_paper
 Wood
+Wood_fibre
 Wood_flour
 Wood_wool
 Woodchips
