@@ -24,6 +24,7 @@ Biopolymer
 Biorefinery
 Biorefining
 Bioremediation
+Biosorption
 Biotransformation
 Black_liquor
 Bone_meal
