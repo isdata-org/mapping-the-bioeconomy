@@ -75,6 +75,7 @@ Incineration
 Industrial_fermentation
 Integrated_multi-trophic_aquaculture
 In-vessel_composting
+Jet_fuel
 Liquid_hydrogen
 Manure-derived_synthetic_crude_oil
 Manure_management
