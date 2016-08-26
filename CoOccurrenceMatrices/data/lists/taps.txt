@@ -13,6 +13,8 @@ Anaerobic_digestion
 Anaerobic_lagoon
 Animal_feed
 Aquaculture
+Arabinose
+Arabitol
 Arabitol
 Aspartic_acid
 Bioadhesive
@@ -42,6 +44,7 @@ Butanol
 Butanol_fuel
 Camphor
 Catalysis
+Cellulose
 Cellulosic_ethanol
 Coco_peat
 Cofiring
@@ -87,6 +90,7 @@ Gasoline
 Glutamic_acid
 Glycerol
 Green_manure
+Hemicellulose
 Herbicide
 Humectant
 Humic_acid
@@ -105,6 +109,7 @@ Itaconic_acid
 Jet_fuel
 Lactic_acid
 Levulinic_acid
+Lignin
 Liquid_hydrogen
 Malic_acid
 Manure-derived_synthetic_crude_oil
@@ -149,6 +154,7 @@ Saccharic_acid
 Sequencing_batch_reactor
 Sewage_waste_energy
 Sorbitol
+Starch
 Succinic_acid
 Surfactant
 Syngas
