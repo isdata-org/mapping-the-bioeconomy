@@ -1,5 +1,6 @@
 Acetogenesis
 Acidogenesis
+Activated_carbon
 Activated_sludge
 Adsorption
 Aerated_static_pile_composting
@@ -10,6 +11,7 @@ Anaerobic_digestion
 Anaerobic_lagoon
 Aquaculture
 Bioadhesive
+Biochar
 Bioconversion
 Biodegradable_plastic
 Biodiesel
@@ -22,6 +24,7 @@ Bioherbicide
 Biohydrogen
 Bioplastic
 Biopolymer
+Bioreactor
 Biorefinery
 Biorefining
 Bioremediation
@@ -38,18 +41,22 @@ Cellulosic_ethanol
 Coco_peat
 Cofiring
 Cogeneration
+Combustion
 Commercial_fish_feed
 Compost
+Constructed_wetland
 Cooking_oil
 Corn_ethanol
 Cosmetics
 Cracking_(chemistry)
 Cyclonic_separation
 Dark_fermentation
+Denitrification
 Desiccant
 Diesel_fuel
 Digestate
 Enzymatic_hydrolysis
+Enzyme
 Essential_oil
 Ethanol_fuel
 Expanded_granular_sludge_bed_digestion
@@ -59,6 +66,7 @@ Fatty_acid_methyl_ester
 Fermentation
 Fermentation_in_food_processing
 Fermentative_hydrogen_production
+Fertilizer
 Fish_emulsion
 Fish_farming
 Fish_meal
@@ -69,6 +77,7 @@ Fuel_oil
 Gasification
 Gasoline
 Green_manure
+Herbicide
 Humectant
 Humic_acid
 Humus
@@ -102,13 +111,17 @@ Night_soil
 Organic_farming
 Organic_fertilizer
 Particle_board
+Pesticide
 Pharmaceutical_drug
+Photocatalysis
 Photofermentation
 Phytoremediation
 Polyethylene
 Polyhydroxyalkanoates
 Polyhydroxybutyrate
 Polylactic_acid
+Polymer
+Protein
 Pullulan
 Pulp_(paper)
 Pyrolysis
@@ -125,6 +138,7 @@ Thermal_depolymerization
 Thermal_hydrolysis
 Top-lit_updraft_gasifier
 Torrefaction
+Upflow_anaerobic_sludge_blanket_digestion
 Vegetable_oil
 Vegetable_oil_fuel
 Vermicompost
