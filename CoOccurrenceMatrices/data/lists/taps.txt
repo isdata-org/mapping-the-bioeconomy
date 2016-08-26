@@ -1,6 +1,7 @@
 Acetogenesis
 Acidogenesis
 Activated_sludge
+Adsorption
 Aerated_static_pile_composting
 Aerobic_granular_reactor
 Alcohol_fuel
@@ -32,6 +33,7 @@ Briquette
 Butanol
 Butanol_fuel
 Camphor
+Catalysis
 Cellulosic_ethanol
 Coco_peat
 Cofiring
@@ -65,6 +67,7 @@ Fuel_oil
 Gasification
 Gasoline
 Green_manure
+Humectant
 Humic_acid
 Humus
 Hydrogen
