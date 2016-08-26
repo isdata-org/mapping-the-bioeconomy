@@ -1,3 +1,5 @@
+2,5-Furandicarboxylic_acid
+3-Hydroxypropionic_acid
 Acetogenesis
 Acidogenesis
 Activated_carbon
@@ -10,6 +12,8 @@ Algae_fuel
 Anaerobic_digestion
 Anaerobic_lagoon
 Aquaculture
+Arabitol
+Aspartic_acid
 Bioadhesive
 Biochar
 Bioconversion
@@ -57,6 +61,7 @@ Diesel_fuel
 Digestate
 Enzymatic_hydrolysis
 Enzyme
+Epichlorohydrin
 Essential_oil
 Ethanol_fuel
 Expanded_granular_sludge_bed_digestion
@@ -74,8 +79,12 @@ Fish_oil
 Flue-gas_desulfurization
 Fuel_cell
 Fuel_oil
+Fumaric_acid
+Furfural
 Gasification
 Gasoline
+Glutamic_acid
+Glycerol
 Green_manure
 Herbicide
 Humectant
@@ -85,12 +94,18 @@ Hydrogen
 Hydrogen_storage
 Hydroponics
 Hydrothermal_liquefaction
+Hydroxymethylfurfural
 Incineration
 Industrial_fermentation
 Integrated_multi-trophic_aquaculture
 In-vessel_composting
+Isoprene
+Itaconic_acid
 Jet_fuel
+Lactic_acid
+Levulinic_acid
 Liquid_hydrogen
+Malic_acid
 Manure-derived_synthetic_crude_oil
 Manure_management
 Meat_and_bone_meal
@@ -129,8 +144,11 @@ Pyrolysis_gasoline
 Pyrolysis_oil
 Refuse-derived_fuel
 Resin
+Saccharic_acid
 Sequencing_batch_reactor
 Sewage_waste_energy
+Sorbitol
+Succinic_acid
 Surfactant
 Syngas
 Synthetic_fuel
@@ -146,3 +164,4 @@ Vinasse
 Windrow_composting
 Wood_fuel
 Wood_wool
+Xylitol
