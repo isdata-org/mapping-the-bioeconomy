@@ -11,6 +11,7 @@ Alcohol_fuel
 Algae_fuel
 Anaerobic_digestion
 Anaerobic_lagoon
+Animal_feed
 Aquaculture
 Arabitol
 Aspartic_acid
