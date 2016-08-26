@@ -101,6 +101,7 @@ Night_soil
 Organic_farming
 Organic_fertilizer
 Particle_board
+Pharmaceutical_drug
 Photofermentation
 Phytoremediation
 Polyethylene
