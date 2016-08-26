@@ -42,6 +42,7 @@ Commercial_fish_feed
 Compost
 Cooking_oil
 Corn_ethanol
+Cosmetics
 Cracking_(chemistry)
 Cyclonic_separation
 Dark_fermentation
