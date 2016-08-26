@@ -116,6 +116,7 @@ Refuse-derived_fuel
 Resin
 Sequencing_batch_reactor
 Sewage_waste_energy
+Surfactant
 Syngas
 Synthetic_fuel
 Thermal_depolymerization
