@@ -45,6 +45,7 @@ Corn_ethanol
 Cracking_(chemistry)
 Cyclonic_separation
 Dark_fermentation
+Desiccant
 Diesel_fuel
 Digestate
 Enzymatic_hydrolysis
