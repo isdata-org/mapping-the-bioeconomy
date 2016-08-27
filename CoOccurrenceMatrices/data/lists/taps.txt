@@ -15,7 +15,6 @@ Animal_feed
 Aquaculture
 Arabinose
 Arabitol
-Arabitol
 Aspartic_acid
 Bioadhesive
 Biochar
