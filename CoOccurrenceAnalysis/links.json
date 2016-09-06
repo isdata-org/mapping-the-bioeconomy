@@ -1,0 +1,683 @@
+[
+  {
+    "name": "Plantae|Arecales|coconut",
+    "imports": ["arabinose", "ecology|constructed wetland", "desiccant", "fuel cell", "energy|gas|gasification", "plantcomponents|hemicellulose", "agriculture|hydroponics", "plantcomponents|lignin", "energy|liquid|methanol", "agriculture|pesticide", "energy|liquid|pyrolysis"]
+  },
+  {
+    "name": "Plantae|Arecales|date",
+    "imports": ["process|biorefinery|polymer|polyhydroxyalkanoates"]
+  },
+  {
+    "name": "Plantae|Arecales|palm",
+    "imports": ["plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "ecology|bioremediation", "energy|liquid|diesel fuel", "energy|gas|gasification", "process|biorefinery|alcohol|glycerol", "process|biorefinery|acid|fumaric acid", "camphor", "plantcomponents|hemicellulose", "process|biorefinery|acid|malic acid", "energy|liquid|fuel oil", "product|briquette", "process|biorefinery|acid|fumaric acid", "product|briquette", "camphor", "process|biorefinery|polymer|isoprene", "agriculture|fertilizers|mulch", "product|briquette", "process|biorefinery|alcohol|butanol", "product|briquette", "process|biorefinery|acid|fumaric acid", "process|biorefinery|acid|fumaric acid", "agriculture|biochar", "agriculture|pesticide", "process|photocatalysis", "process|biorefinery|polyethylene", "process|biorefinery|polyethylene", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|acid|polylactic acid", "process|biorefinery|acid|polylactic acid", "pullulan", "starch", "energy|solid|torrefaction", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Plantae|Arecales|sago",
+    "imports": ["protein", "process|biorefinery|alcohol|glycerol", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|alcohol|glycerol", "energy|solid|refuse-derived fuel", "starch", "starch", "starch", "starch", "starch"]
+  },
+  {
+    "name": "Plantae|Asparagales|hyacinth",
+    "imports": ["biosorption", "ecology|bioremediation"]
+  },
+  {
+    "name": "Plantae|Asparagales|onion",
+    "imports": ["product|resin"]
+  },
+  {
+    "name": "Plantae|Asparagales|sisal",
+    "imports": ["collagen", "cracking (chemistry)", "pullulan", "energy|liquid|diesel fuel", "plantcomponents|hemicellulose"]
+  },
+  {
+    "name": "Plantae|Asterales|guayule",
+    "imports": ["product|essential oil", "product|resin", "starch"]
+  },
+  {
+    "name": "Plantae|Asterales|sunflower",
+    "imports": ["energy|liquid|diesel fuel", "protein", "plantcomponents|cellulose", "cracking (chemistry)", "process|biorefinery|furfural", "plantcomponents|hemicellulose", "energy|liquid|methanol", "product|resin", "energy|liquid|ethanol fuel", "energy|liquid|methanol", "energy|gas|syngas"]
+  },
+  {
+    "name": "Plantae|Brassicales|broccoli",
+    "imports": ["agriculture|fertilizers|mulch", "agriculture|pesticide"]
+  },
+  {
+    "name": "Plantae|Brassicales|cabbage",
+    "imports": ["agriculture|fertilizers|green manure", "protein"]
+  },
+  {
+    "name": "Plantae|Brassicales|canola",
+    "imports": ["product|bioadhesive", "process|biorefinery|polymer|bioplastic", "process|biorefinery|alcohol|butanol fuel", "agriculture|biochar", "energy|liquid|diesel fuel", "process|biorefinery|alcohol|glycerol", "energy|liquid|methanol", "energy|liquid|cellulosic ethanol", "energy|liquid|diesel fuel", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "energy|liquid|ethanol fuel", "energy|liquid|pyrolysis"]
+  },
+  {
+    "name": "Plantae|Brassicales|mustard",
+    "imports": ["plantcomponents|cellulose", "process|biorefinery|alcohol|glycerol", "process|biorefinery|fatty acid methyl ester", "process|biorefinery|alcohol|glycerol", "plantcomponents|lignin", "agriculture|fertilizers|green manure", "vinasse"]
+  },
+  {
+    "name": "Plantae|Brassicales|radish",
+    "imports": ["agriculture|fertilizers|digestate"]
+  },
+  {
+    "name": "Plantae|Brassicales|rapeseed",
+    "imports": ["arabinose", "energy|liquid|ethanol fuel", "energy|liquid|fuel oil", "arabinose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "process|biorefinery|furfural", "plantcomponents|hemicellulose", "process|biorefinery|alcohol|hydroxymethylfurfural", "process|biorefinery|acid|levulinic acid", "process|biorefinery|polymer|polyhydroxyalkanoates", "product|resin", "starch"]
+  },
+  {
+    "name": "Plantae|Caryophyllales|beet",
+    "imports": ["energy|liquid|ethanol fuel", "energy|gas|biogas", "energy|liquid|ethanol fuel", "agriculture|fertilizers|fertilizer", "energy|liquid|methanol", "process|biorefinery|polyethylene"]
+  },
+  {
+    "name": "Plantae|Cucurbitales|cucumber",
+    "imports": ["ecology|bioremediation", "agriculture|fertilizers|mulch", "agriculture|pesticide", "surfactant"]
+  },
+  {
+    "name": "Plantae|Cucurbitales|melon",
+    "imports": ["process|biorefinery|polymer|bioplastic", "energy|liquid|fuel oil", "agriculture|fertilizers|mulch", "process|biorefinery|acid|polylactic acid", "protein"]
+  },
+  {
+    "name": "Plantae|Ericales|cranberry",
+    "imports": ["agriculture|fertilizers|mulch", "agriculture|fertilizers|mulch"]
+  },
+  {
+    "name": "Plantae|Ericales|tea",
+    "imports": ["energy|synthetic fuel"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|alfalfa",
+    "imports": ["biosorption", "energy|solid|cogeneration", "plantcomponents|hemicellulose", "agriculture|fertilizers|mulch", "agriculture|fertilizers|organic farming", "protein"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|bean",
+    "imports": ["energy|liquid|diesel fuel", "energy|liquid|fuel oil", "process|biorefinery|polymer|bioplastic", "process|enzyme", "process|biorefinery|acid|humic acid", "product|meat and bone meal", "agriculture|fertilizers|mulch", "protein", "energy|liquid|pyrolysis", "starch"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|guar",
+    "imports": ["cracking (chemistry)", "starch"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|pea",
+    "imports": ["product|briquette", "plantcomponents|cellulose", "starch"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|peach",
+    "imports": ["biosorption", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "plantcomponents|lignin", "process|biorefinery|furfural"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|peanut",
+    "imports": ["energy|liquid|cellulosic ethanol", "product|cosmetics", "energy|liquid|diesel fuel", "process|biorefinery|alcohol|glycerol", "product|briquette", "product|cosmetics", "biosorption", "agriculture|biochar", "agriculture|fertilizers|organic farming", "starch", "surfactant"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|soy",
+    "imports": ["energy|liquid|diesel fuel", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "process|biorefinery|alcohol|butanol", "product|cosmetics", "desiccant", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "biosorption", "process|biorefinery|alcohol|glycerol", "product|particle board", "process|biorefinery|polymer|polymer", "protein", "process|biorefinery|alcohol|sorbitol", "starch", "starch", "starch"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|soybean",
+    "imports": ["process|biorefinery|acid|lactic acid", "product|briquette", "agriculture|fertilizers|fertilizer", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "energy|liquid|ethanol fuel", "plantcomponents|lignin", "process|biorefinery|acidogenesis", "product|bioadhesive", "process|biorefinery|alcohol|butanol fuel", "product|meat and bone meal", "energy|solid|refuse-derived fuel", "process|biorefinery|alcohol|butanol", "energy|liquid|diesel fuel", "energy|liquid|methanol", "agriculture|pesticide", "process|photocatalysis", "process|biorefinery|acid|polylactic acid", "process|biorefinery|polymer|bioplastic", "process|biorefinery|polymer|polyhydroxyalkanoates", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|alcohol|glycerol", "process|biorefinery|alcohol|butanol", "energy|liquid|diesel fuel", "energy|liquid|methanol", "surfactant", "vinasse"]
+  },
+  {
+    "name": "Plantae|Fabales|Fabaceae|tofu",
+    "imports": ["ecology|bioremediation"]
+  },
+  {
+    "name": "Plantae|Fabales|Fagaceae|chestnut",
+    "imports": ["product|resin"]
+  },
+  {
+    "name": "Plantae|Fabales|Fagaceae|oak",
+    "imports": ["activated carbon", "agriculture|biochar", "agriculture|biochar", "agriculture|biochar", "ecology|bioremediation", "product|cosmetics", "ecology|bioremediation", "biosorption", "biosorption", "process|biorefinery|alcohol|butanol", "process|biorefinery|alcohol|butanol fuel", "energy|liquid|cellulosic ethanol", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "process|photocatalysis", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis"]
+  },
+  {
+    "name": "Plantae|Fagales|hazelnut",
+    "imports": ["energy|liquid|alcohol fuel", "energy|liquid|diesel fuel", "process|biorefinery|fatty acid methyl ester", "energy|liquid|methanol"]
+  },
+  {
+    "name": "Plantae|Fagales|pecan",
+    "imports": ["agriculture|biochar"]
+  },
+  {
+    "name": "Plantae|Fagales|walnut",
+    "imports": ["plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "product|pharmaceutical drug", "product|briquette", "process|biorefinery|acid|levulinic acid", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "Plantae|Gentianales|coffee",
+    "imports": ["biosorption", "process|biorefinery|acidogenesis", "agriculture|biochar", "process|biorefinery|acidogenesis", "process|cyclonic separation", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|gas|hydrogen", "process|biorefinery|polymer|isoprene", "process|biorefinery|polymer|isoprene", "starch"]
+  },
+  {
+    "name": "Plantae|Lamiales|olive",
+    "imports": ["arabinose", "plantcomponents|hemicellulose", "energy|liquid|ethanol fuel", "energy|solid|cofiring", "arabinose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "energy|gas|hydrogen", "agriculture|fertilizers|mulch", "agriculture|fertilizers|organic farming", "process|biorefinery|acid|succinic acid"]
+  },
+  {
+    "name": "Plantae|Lamiales|sesame",
+    "imports": ["process|biorefinery|acid|humic acid", "agriculture|pesticide", "process|photocatalysis", "process|biorefinery|acid|polylactic acid", "plantcomponents|lignin", "energy|liquid|methanol", "product|essential oil", "surfactant"]
+  },
+  {
+    "name": "Plantae|Malpighiales|cassava",
+    "imports": ["agriculture|biochar", "process|biorefinery|alcohol|butanol", "process|biorefinery|alcohol|butanol", "plantcomponents|cellulose", "energy|solid|cogeneration", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "product|essential oil", "product|essential oil", "energy|liquid|ethanol fuel", "process|biorefinery|acid|glutamic acid", "plantcomponents|hemicellulose", "process|biorefinery|acid|lactic acid", "process|biorefinery|acid|lactic acid", "process|biorefinery|acid|polylactic acid", "pullulan", "starch", "starch", "starch", "starch", "starch", "starch", "starch"]
+  },
+  {
+    "name": "Plantae|Malpighiales|castor",
+    "imports": ["agriculture|biochar"]
+  },
+  {
+    "name": "Plantae|Malpighiales|flax",
+    "imports": ["collagen", "plantcomponents|cellulose", "plantcomponents|cellulose", "plantcomponents|cellulose", "plantcomponents|lignin", "plantcomponents|lignin", "process|biorefinery|acid|polylactic acid", "pullulan", "energy|liquid|pyrolysis", "product|resin"]
+  },
+  {
+    "name": "Plantae|Malpighiales|jatropha",
+    "imports": ["energy|liquid|diesel fuel", "energy|liquid|diesel fuel", "product|bioadhesive", "process|biorefinery|polymer|bioplastic", "process|biorefinery|alcohol|butanol fuel", "energy|liquid|diesel fuel", "process|biorefinery|alcohol|glycerol", "product|essential oil", "product|briquette", "energy|liquid|diesel fuel", "energy|liquid|cellulosic ethanol", "energy|liquid|diesel fuel", "energy|liquid|fuel oil", "plantcomponents|lignin", "pullulan", "energy|liquid|pyrolysis", "product|resin"]
+  },
+  {
+    "name": "Plantae|Malpighiales|poplar",
+    "imports": ["agriculture|hydroponics", "process|biorefinery|acid|levulinic acid", "plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|alcohol|glycerol", "plantcomponents|hemicellulose", "plantcomponents|lignin"]
+  },
+  {
+    "name": "Plantae|Malpighiales|rubber",
+    "imports": ["process|biorefinery|polymer|isoprene", "camphor", "process|biorefinery|polymer|isoprene", "agriculture|fertilizers|mulch", "process|biorefinery|acid|polylactic acid", "cracking (chemistry)", "energy|liquid|gasoline", "energy|liquid|methanol", "energy|liquid|gasoline", "process|biorefinery|polymer|isoprene", "pullulan"]
+  },
+  {
+    "name": "Plantae|Malpighiales|tapioca",
+    "imports": ["starch", "ecology|constructed wetland", "starch"]
+  },
+  {
+    "name": "Plantae|Malvales|cotton",
+    "imports": ["collagen", "agriculture|biochar", "plantcomponents|cellulose", "agriculture|fertilizers|mulch", "agriculture|fertilizers|mulch", "process|biorefinery|acid|succinic acid", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|gas|gasification", "process|biorefinery|acid|humic acid", "agriculture|fertilizers|mulch", "agriculture|fertilizers|mulch", "agriculture|fertilizers|mulch", "product|particle board", "protein", "pullulan", "energy|solid|refuse-derived fuel", "starch", "energy|solid|torrefaction", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Plantae|Malvales|durian",
+    "imports": ["product|briquette"]
+  },
+  {
+    "name": "Plantae|Malvales|jute",
+    "imports": ["process|biorefinery|acid|polylactic acid", "energy|liquid|pyrolysis", "product|resin"]
+  },
+  {
+    "name": "Plantae|Malvales|kenaf",
+    "imports": ["process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|polymer|polyhydroxybutyrate"]
+  },
+  {
+    "name": "Plantae|Malvales|okra",
+    "imports": ["agriculture|fertilizers|organic farming"]
+  },
+  {
+    "name": "Plantae|Myrtales|eucalyptus",
+    "imports": ["energy|liquid|diesel fuel", "agriculture|biochar", "agriculture|biochar", "product|essential oil", "fuel cell", "process|biorefinery|alcohol|glycerol", "plantcomponents|lignin", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "product|resin", "product|resin"]
+  },
+  {
+    "name": "Plantae|Myrtales|pomegranate",
+    "imports": ["energy|liquid|methanol", "energy|gas|biogas", "product|resin"]
+  },
+  {
+    "name": "Plantae|hardwood",
+    "imports": ["plantcomponents|cellulose", "energy|liquid|ethanol fuel", "agriculture|biochar", "forestry|black liquor", "agriculture|biochar", "plantcomponents|lignin", "plantcomponents|lignin", "plantcomponents|lignin", "energy|liquid|pyrolysis", "product|resin", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Plantae|softwood",
+    "imports": ["process|biorefinery|acid|humic acid", "agriculture|fertilizers|organic farming", "forestry|black liquor", "energy|liquid|cellulosic ethanol", "energy|liquid|ethanol fuel", "plantcomponents|lignin", "forestry|black liquor"]
+  },
+  {
+    "name": "Plantae|wood",
+    "imports": ["product|particle board", "product|meat and bone meal", "agriculture|biochar", "process|biorefinery|acid|lactic acid", "plantcomponents|cellulose", "plantcomponents|hemicellulose", "process|biorefinery|acid|polylactic acid", "energy|liquid|pyrolysis", "forestry|black liquor", "product|briquette", "desiccant", "process|biorefinery|acid|polylactic acid", "product|particle board", "process|biorefinery|acid|polylactic acid", "product|briquette", "energy|solid|cogeneration", "plantcomponents|cellulose", "plantcomponents|hemicellulose", "plantcomponents|lignin", "product|resin", "product|briquette", "energy|solid|cofiring", "energy|solid|cogeneration", "energy|solid|torrefaction", "arabinose", "plantcomponents|cellulose", "plantcomponents|lignin", "energy|synthetic fuel", "forestry|black liquor", "plantcomponents|lignin", "forestry|black liquor", "plantcomponents|lignin", "product|resin", "plantcomponents|cellulose", "plantcomponents|lignin", "starch", "agriculture|fertilizers|organic farming", "energy|liquid|alcohol fuel", "product|briquette", "energy|solid|cofiring", "product|particle board", "energy|liquid|pyrolysis", "product|resin"]
+  },
+  {
+    "name": "Plantae|Pinophyta|Pinopsida|Pinales|pine",
+    "imports": ["product|briquette", "agriculture|fertilizers|mulch", "agriculture|pesticide", "process|photocatalysis", "energy|liquid|methanol", "energy|liquid|diesel fuel", "agriculture|biochar", "cracking (chemistry)", "product|essential oil", "process|biorefinery|breakingdownmaterials|hydrothermal liquefaction", "energy|liquid|jet fuel", "product|particle board", "agriculture|herbicide", "agriculture|fertilizers|mulch", "energy|gas|gasification", "plantcomponents|cellulose", "process|biorefinery|acid|polylactic acid", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "energy|liquid|pyrolysis", "surfactant", "energy|gas|syngas", "energy|synthetic fuel"]
+  },
+  {
+    "name": "Plantae|Pinophyta|Pinopsida|Pinales|spruce",
+    "imports": ["energy|solid|incineration"]
+  },
+  {
+    "name": "Plantae|Poales|bamboo",
+    "imports": ["agriculture|biochar", "agriculture|biochar", "biosorption", "forestry|black liquor", "product|briquette", "plantcomponents|cellulose", "plantcomponents|cellulose", "energy|solid|cogeneration", "collagen", "cracking (chemistry)", "cracking (chemistry)", "cracking (chemistry)", "product|essential oil", "product|essential oil", "energy|liquid|ethanol fuel", "process|biorefinery|furfural", "process|biorefinery|furfural", "energy|gas|gasification", "plantcomponents|hemicellulose", "plantcomponents|hemicellulose", "agriculture|herbicide", "agriculture|herbicide", "agriculture|herbicide", "plantcomponents|lignin", "plantcomponents|lignin", "energy|liquid|methanol", "energy|liquid|methanol", "product|particle board", "process|biorefinery|acid|polylactic acid", "process|biorefinery|acid|polylactic acid", "process|biorefinery|acid|polylactic acid", "process|biorefinery|acid|polylactic acid", "pullulan", "energy|liquid|pyrolysis", "product|resin", "product|resin", "product|resin", "product|resin", "starch", "energy|gas|syngas", "energy|synthetic fuel", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "Plantae|Poales|barley",
+    "imports": ["arabinose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|furfural", "process|biorefinery|alcohol|hydroxymethylfurfural", "process|biorefinery|acid|levulinic acid", "agriculture|fertilizers|mulch", "starch", "energy|gas|syngas"]
+  },
+  {
+    "name": "Plantae|Poales|cane",
+    "imports": ["activated carbon", "energy|gas|biogas", "plantcomponents|cellulose", "plantcomponents|hemicellulose", "plantcomponents|lignin", "arabinose", "energy|liquid|ethanol fuel", "energy|liquid|cellulosic ethanol", "energy|solid|cogeneration", "energy|liquid|gasoline", "process|biorefinery|alcohol|glycerol", "agriculture|fertilizers|mulch", "starch", "vinasse", "vinasse", "vinasse", "vinasse"]
+  },
+  {
+    "name": "Plantae|Poales|corn",
+    "imports": ["agriculture|biochar", "plantcomponents|cellulose", "energy|liquid|alcohol fuel", "process|biorefinery|alcohol|butanol fuel", "arabinose", "energy|liquid|cellulosic ethanol", "plantcomponents|cellulose", "energy|liquid|alcohol fuel", "energy|liquid|cellulosic ethanol", "ecology|bioremediation", "desiccant", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "energy|liquid|ethanol fuel", "energy|liquid|ethanol fuel", "process|biorefinery|furfural", "plantcomponents|hemicellulose", "plantcomponents|hemicellulose", "plantcomponents|hemicellulose", "agriculture|herbicide", "agriculture|hydroponics", "process|biorefinery|acid|itaconic acid", "process|biorefinery|acid|itaconic acid", "plantcomponents|lignin", "energy|liquid|methanol", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|acid|polylactic acid", "protein", "process|biorefinery|alcohol|sorbitol", "starch", "starch", "starch", "starch", "energy|synthetic fuel", "process|biorefinery|breakingdownmaterials|thermal depolymerization", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Plantae|Poales|maize",
+    "imports": ["arabinose", "energy|liquid|cellulosic ethanol", "agriculture|fertilizers|fertilizer", "process|biorefinery|acid|lactic acid", "ecology|bioremediation", "process|biorefinery|polymer|epichlorohydrin", "agriculture|biochar", "agriculture|biochar", "agriculture|fertilizers|green manure", "agriculture|pesticide", "protein", "protein", "vinasse"]
+  },
+  {
+    "name": "Plantae|Poales|malt",
+    "imports": ["process|biorefinery|polymer|bioplastic", "process|biorefinery|polymer|polyhydroxyalkanoates", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|polymer|polymer"]
+  },
+  {
+    "name": "Plantae|Poales|oat",
+    "imports": ["energy|liquid|fuel oil", "plantcomponents|hemicellulose", "starch", "process|biorefinery|acid|succinic acid", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "Plantae|Poales|pineapple",
+    "imports": ["energy|liquid|ethanol fuel", "plantcomponents|hemicellulose", "agriculture|fertilizers|organic farming", "process|biorefinery|polymer|bioplastic", "process|biorefinery|acid|lactic acid", "process|biorefinery|acid|polylactic acid"]
+  },
+  {
+    "name": "Plantae|Poales|rice",
+    "imports": ["desiccant", "agriculture|biochar", "agriculture|biochar", "agriculture|biochar", "camphor", "process|biorefinery|polymer|isoprene", "agriculture|fertilizers|mulch", "process|biorefinery|acid|polylactic acid", "product|briquette", "energy|liquid|cellulosic ethanol", "process|biorefinery|alcohol|glycerol", "starch", "energy|solid|torrefaction", "vinasse"]
+  },
+  {
+    "name": "Plantae|Poales|sorghum",
+    "imports": ["plantcomponents|hemicellulose", "plantcomponents|lignin", "plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "plantcomponents|lignin", "energy|liquid|cellulosic ethanol", "product|resin", "product|essential oil", "agriculture|biochar", "plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "starch"]
+  },
+  {
+    "name": "Plantae|Poales|sugarcane",
+    "imports": ["plantcomponents|cellulose", "process|biorefinery|alcohol|glycerol", "plantcomponents|lignin", "process|biorefinery|polyethylene", "process|biorefinery|acid|polylactic acid", "energy|liquid|pyrolysis", "product|resin", "starch", "process|biorefinery|alcohol|butanol", "arabinose", "product|briquette", "energy|liquid|ethanol fuel", "plantcomponents|lignin", "product|resin", "process|biorefinery|acid|lactic acid", "plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel", "energy|liquid|gasoline", "process|biorefinery|acid|polylactic acid", "vinasse", "vinasse"]
+  },
+  {
+    "name": "Plantae|Poales|wheat",
+    "imports": ["plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "energy|liquid|ethanol fuel", "starch", "starch", "process|biorefinery|polymer|bioplastic", "agriculture|fertilizers|mulch", "process|biorefinery|acid|succinic acid", "process|biorefinery|acid|polylactic acid", "collagen", "plantcomponents|hemicellulose", "protein", "pullulan", "starch", "plantcomponents|cellulose", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "vinasse", "forestry|black liquor", "plantcomponents|lignin", "starch", "vinasse", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "plantcomponents|hemicellulose", "plantcomponents|lignin", "energy|gas|hydrogen", "starch", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "Plantae|Rosales|Cannabaceae|hemp",
+    "imports": ["collagen", "plantcomponents|hemicellulose", "agriculture|fertilizers|mulch", "pullulan", "starch"]
+  },
+  {
+    "name": "Plantae|Rosales|almond",
+    "imports": ["product|essential oil"]
+  },
+  {
+    "name": "Plantae|Rosales|apple",
+    "imports": ["ecology|bioremediation", "process|cyclonic separation", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "product|essential oil", "agriculture|fertilizers|mulch"]
+  },
+  {
+    "name": "Plantae|Rosales|apricot",
+    "imports": ["activated carbon", "activated carbon", "process|biorefinery|furfural"]
+  },
+  {
+    "name": "Plantae|Rosales|cherry",
+    "imports": ["energy|solid|cofiring"]
+  },
+  {
+    "name": "Plantae|Sapindales|cashew",
+    "imports": ["process|biorefinery|polymer|isoprene"]
+  },
+  {
+    "name": "Plantae|Sapindales|mango",
+    "imports": ["energy|liquid|diesel fuel", "process|biorefinery|fatty acid methyl ester", "plantcomponents|cellulose", "plantcomponents|hemicellulose", "plantcomponents|lignin", "plantcomponents|cellulose", "plantcomponents|hemicellulose", "plantcomponents|lignin", "starch", "starch"]
+  },
+  {
+    "name": "Plantae|Sapindales|neem",
+    "imports": ["product|essential oil", "product|meat and bone meal", "agriculture|fertilizers|mulch", "biosorption", "product|essential oil", "agriculture|fertilizers|organic farming", "agriculture|pesticide"]
+  },
+  {
+    "name": "Plantae|Sapindales|orange",
+    "imports": ["cracking (chemistry)", "agriculture|herbicide", "biosorption", "energy|liquid|methanol", "agriculture|fertilizers|digestate", "product|essential oil", "process|biorefinery|polymer|isoprene", "ecology|bioremediation", "product|pharmaceutical drug", "process|biorefinery|polyethylene", "process|biorefinery|acid|polylactic acid", "protein", "energy|liquid|pyrolysis", "product|resin", "process|biorefinery|acid|succinic acid"]
+  },
+  {
+    "name": "Plantae|Sapindales|pistachio",
+    "imports": ["plantcomponents|cellulose", "agriculture|biochar"]
+  },
+  {
+    "name": "Plantae|Solanales|potato",
+    "imports": ["process|biorefinery|alcohol|glycerol", "agriculture|hydroponics", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|acid|polylactic acid", "agriculture|fertilizers|green manure", "agriculture|fertilizers|mulch", "agriculture|hydroponics", "energy|liquid|ethanol fuel", "product|meat and bone meal", "starch", "pullulan", "starch", "starch", "starch", "starch", "process|biorefinery|acid|succinic acid"]
+  },
+  {
+    "name": "Plantae|Solanales|tobacco",
+    "imports": ["agriculture|fertilizers|organic farming", "agriculture|pesticide", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Plantae|Solanales|tomato",
+    "imports": ["ecology|constructed wetland", "agriculture|fertilizers|organic farming", "product|cosmetics", "plantcomponents|cellulose", "cracking (chemistry)", "energy|liquid|diesel fuel", "process|biorefinery|acid|polylactic acid", "product|resin", "process|biorefinery|sequencing batch reactor", "surfactant", "agriculture|fertilizers|green manure", "product|cosmetics"]
+  },
+  {
+    "name": "Plantae|Vitales|grape",
+    "imports": ["product|cosmetics", "process|biorefinery|acid|malic acid", "agriculture|fertilizers|mulch", "energy|solid|torrefaction", "vinasse", "vinasse", "process|biorefinery|xylitol", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "Plantae|Zingiberales|banana",
+    "imports": ["product|briquette", "collagen", "plantcomponents|hemicellulose", "process|biorefinery|alcohol|hydroxymethylfurfural", "process|biorefinery|alcohol|hydroxymethylfurfural", "pullulan"]
+  },
+  {
+    "name": "activated carbon",
+    "imports": []
+  },
+  {
+    "name": "agriculture|biochar",
+    "imports": []
+  },
+  {
+    "name": "agriculture|fertilizers|digestate",
+    "imports": []
+  },
+  {
+    "name": "agriculture|fertilizers|fertilizer",
+    "imports": []
+  },
+  {
+    "name": "agriculture|fertilizers|green manure",
+    "imports": []
+  },
+  {
+    "name": "agriculture|fertilizers|mulch",
+    "imports": []
+  },
+  {
+    "name": "agriculture|fertilizers|organic farming",
+    "imports": []
+  },
+  {
+    "name": "agriculture|herbicide",
+    "imports": []
+  },
+  {
+    "name": "agriculture|hydroponics",
+    "imports": []
+  },
+  {
+    "name": "agriculture|pesticide",
+    "imports": []
+  },
+  {
+    "name": "arabinose",
+    "imports": []
+  },
+  {
+    "name": "biosorption",
+    "imports": []
+  },
+  {
+    "name": "camphor",
+    "imports": []
+  },
+  {
+    "name": "collagen",
+    "imports": []
+  },
+  {
+    "name": "cracking (chemistry)",
+    "imports": []
+  },
+  {
+    "name": "desiccant",
+    "imports": []
+  },
+  {
+    "name": "ecology|bioremediation",
+    "imports": []
+  },
+  {
+    "name": "ecology|constructed wetland",
+    "imports": []
+  },
+  {
+    "name": "energy|gas|biogas",
+    "imports": []
+  },
+  {
+    "name": "energy|gas|gasification",
+    "imports": []
+  },
+  {
+    "name": "energy|gas|hydrogen",
+    "imports": []
+  },
+  {
+    "name": "energy|gas|syngas",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|alcohol fuel",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|cellulosic ethanol",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|diesel fuel",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|ethanol fuel",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|fuel oil",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|gasoline",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|jet fuel",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|methanol",
+    "imports": []
+  },
+  {
+    "name": "energy|liquid|pyrolysis",
+    "imports": []
+  },
+  {
+    "name": "energy|solid|cofiring",
+    "imports": []
+  },
+  {
+    "name": "energy|solid|cogeneration",
+    "imports": []
+  },
+  {
+    "name": "energy|solid|incineration",
+    "imports": []
+  },
+  {
+    "name": "energy|solid|refuse-derived fuel",
+    "imports": []
+  },
+  {
+    "name": "energy|solid|torrefaction",
+    "imports": []
+  },
+  {
+    "name": "energy|synthetic fuel",
+    "imports": []
+  },
+  {
+    "name": "forestry|black liquor",
+    "imports": []
+  },
+  {
+    "name": "fuel cell",
+    "imports": []
+  },
+  {
+    "name": "plantcomponents|cellulose",
+    "imports": []
+  },
+  {
+    "name": "plantcomponents|hemicellulose",
+    "imports": []
+  },
+  {
+    "name": "plantcomponents|lignin",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|fumaric acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|glutamic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|humic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|itaconic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|lactic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|levulinic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|malic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acidogenesis",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|polylactic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|succinic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|alcohol|butanol",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|alcohol|butanol fuel",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|alcohol|glycerol",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|alcohol|hydroxymethylfurfural",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|alcohol|sorbitol",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|breakingdownmaterials|hydrothermal liquefaction",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|breakingdownmaterials|thermal depolymerization",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|fatty acid methyl ester",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|furfural",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polyethylene",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|bioplastic",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|epichlorohydrin",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|isoprene",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|polyhydroxyalkanoates",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|polyhydroxybutyrate",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|polymer|polymer",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|sequencing batch reactor",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|xylitol",
+    "imports": []
+  },
+  {
+    "name": "process|cyclonic separation",
+    "imports": []
+  },
+  {
+    "name": "process|enzyme",
+    "imports": []
+  },
+  {
+    "name": "process|photocatalysis",
+    "imports": []
+  },
+  {
+    "name": "product|bioadhesive",
+    "imports": []
+  },
+  {
+    "name": "product|briquette",
+    "imports": []
+  },
+  {
+    "name": "product|cosmetics",
+    "imports": []
+  },
+  {
+    "name": "product|essential oil",
+    "imports": []
+  },
+  {
+    "name": "product|meat and bone meal",
+    "imports": []
+  },
+  {
+    "name": "product|particle board",
+    "imports": []
+  },
+  {
+    "name": "product|pharmaceutical drug",
+    "imports": []
+  },
+  {
+    "name": "product|resin",
+    "imports": []
+  },
+  {
+    "name": "protein",
+    "imports": []
+  },
+  {
+    "name": "pullulan",
+    "imports": []
+  },
+  {
+    "name": "starch",
+    "imports": []
+  },
+  {
+    "name": "surfactant",
+    "imports": []
+  },
+  {
+    "name": "vinasse",
+    "imports": []
+  }
+]
+
