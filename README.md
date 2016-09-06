@@ -13,7 +13,7 @@ Detailed Co-occurence maps,
 
 <table cellspacing="0" cellpadding="0"><tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/TopicModelling/Screenshot.png" width="400"></a></td>
-<td><a href="./CoOccurrenceMatrices/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceMatrices/images/Top50Species.png" width="420"></a></td></tr></table><table cellspacing="0" cellpadding="0"><tr>
+<td><a href="./CoOccurrenceAnalysis/README.md"><img src="https://github.com/isdata-org/mapping-the-bioeconomy/raw/master/CoOccurrenceAnalysis/images/Top50Species.png" width="420"></a></td></tr></table><table cellspacing="0" cellpadding="0"><tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_31.png" width=100%></a></td>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_5.png" width=100%></a></td>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="./TopicModelling/TopicWordClouds/Topic_10.png" width=100%></a></td>
@@ -29,5 +29,3 @@ Detailed Co-occurence maps,
 > In this study, over 53,000 articles were topic modelled and mapped. The Topic Modelling presented an overview of 50 clusters of research around secondary organic resources, processes, and disciplines (such as systems analysis). The Co-occurrence Mapping helped to understand which processes are researched in relation to a broad spectrum of organic resources. When applied to waste taxonomies, the method mapped out the intersections of 63 waste materials to 112 technologies, applications, and products (TAPs). When applied to biological classifications the Co-occurrence Mapping gave even more results, 4,523 (non-zero) intersections of bio-materials and TAPs on the Order level of life.
 
 > Such macro-survey approaches could assist in clarifying and detailing the general context of complex systems involving many processes, setting the stage for deeper studies and tool development. In addition to being of interest to new students, journal editors, and inter-disciplinary scientists, such mapping out of emerging opportunities and best practices in the field of waste and resource management could also be of use for market actors such as waste management developers, resource intensive industries, or new market entrants.
-
-
