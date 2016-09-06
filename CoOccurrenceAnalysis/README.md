@@ -1,9 +1,8 @@
-# Co-occurrence Matrices
+# Co-occurrence Analysis
 
 Table of Contents
 =================
-  * [Co-occurrence Matrices](#co-occurrence-matrices)
-  * [Table of Contents](#table-of-contents)
+    * [Co-occurence Visualization](#co-occurence-visualization)
     * [Top 50 Organisms and Technologies, Applications &amp; Products](#top-50-organisms-and-technologies-applications--products)
     * [Wastes](#wastes)
       * [Top 20](#top-20)
@@ -21,6 +20,9 @@ Table of Contents
     * [Taxonomical Classes &amp; Energy](#taxonomical-classes--energy)
     * [Insects](#insects)
 
+## Co-occurence Visualization
+
+[![Co-occurrence Visualization](./images/CircleCoOccurLayout.png)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html)
 
 ## Top 50 Organisms and Technologies, Applications & Products
 [![Co-occurrence Matrices](./images/Top50Species.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/Top50Species.png)
