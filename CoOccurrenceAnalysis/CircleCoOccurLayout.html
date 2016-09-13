@@ -242,7 +242,10 @@ function mouseovered(d) {
 													.attr("y1", from_y[match])
 													.attr("x2", 245)
 													.attr("y2", to_y[linkDetail.imports[k].name])
-													.attr("stroke-width", 2)
+													.attr("from_name", match)
+													.attr("to_name", linkDetail.imports[k].name)
+													.attr("stroke-width", 3*linkDetail.imports[k].npmi)
+													.attr("stroke-opacity", linkDetail.imports[k].npmi)
 													.attr("stroke", "black");
 
 						// per link we need to add information about its documents
@@ -257,8 +260,10 @@ function mouseovered(d) {
 													.attr("y1", from_y[match])
 													.attr("x2", 245)
 													.attr("y2", to_y_offset)
-													.attr("stroke-width", (1-linkDetail.imports[k].npmi))
-													.attr("stroke-opacity", (1-linkDetail.imports[k].npmi))
+													.attr("from_name", match)
+													.attr("to_name", linkDetail.imports[k].name)
+													.attr("stroke-width", 3*linkDetail.imports[k].npmi)
+													.attr("stroke-opacity", linkDetail.imports[k].npmi)
 													.attr("stroke", "black");
 						to_y[linkDetail.imports[k].name] = to_y_offset;
 						to_y_offset = to_y_offset + 20;
