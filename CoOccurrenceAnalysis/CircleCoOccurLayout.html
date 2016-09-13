@@ -51,7 +51,6 @@
 <table>
 <tr><td><div name='circlePlot'/></td>
 <td valign="top"><p name='LinkDetailsColumn1'/></td>
-<td valign="top"><p name='LinkDetailsColumn2'/></td>
 </tr>
 </table>
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -133,11 +132,9 @@ function mouseovered(d) {
 
   //erase previous values
   d3.select("p[name='LinkDetailsColumn1']").text("");
-  d3.select("p[name='LinkDetailsColumn2']").text("");
 
   //add in svg elements
-  d3.select("p[name='LinkDetailsColumn1']").append("svg")
-  d3.select("p[name='LinkDetailsColumn2']").append("svg")
+  d3.select("p[name='LinkDetailsColumn1']").append("svg").attr("width", 400).attr("height", 800)
 
   //d3.select("p[name='LinkDetailsColumn1']").append('b').text("Waste");
   //d3.select("p[name='LinkDetailsColumn2']").append('b').text("TAPs");
@@ -151,14 +148,18 @@ function mouseovered(d) {
   //d3.select("p[name='LinkDetailsColumn1']").select('ul').append('li').append('b').text(nonHierarchyName);
 
   // look up alt waste names here
+  
+  var from_Names = []
   var y_offset = 20;
   for (i in detailedLinkData){
 	var val = detailedLinkData[i];
 	if (val.name.indexOf(nonHierarchyName) > -1){
 		// CD: trying to figure out how to place nodes
 		// This works - offset for x and y is relative to <p>
-		d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(val.name)).attr("x", 0).attr("y", y_offset);
-		y_offset = y_offset + 20;
+		//d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(val.name)).attr("x", 0).attr("y", y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
+		//y_offset = y_offset + 20;
+
+		from_Names.push(getNonHierarchyName(val.name));
 		//d3.select("p[name='LinkDetailsColumn1']").select("ul").append('li').text(getNonHierarchyName(val.name));
 		// by traversing the imports we can then get the TAPs and the NPMI scores along with the documents describing them
 		// don't even need to get linkages from the main circle
@@ -178,31 +179,101 @@ function mouseovered(d) {
       .classed("node--target", function(n) { return n.target; })
       .classed("node--source", function(n) { return n.source; });
 
+	//alert(from_Names);
+
 
 	// this is the list of all the things that the source has been matched with
-	var matchList = [];
+	//var matchList = [];
 
-	d3.select("p[name='LinkDetailsColumn2']").append('ul');
+	//d3.select("p[name='LinkDetailsColumn2']").append('ul');
+	// TODO probably don't need this
+/*
 	d3.selectAll('.link').filter(function(l){
 						if (l.source === d){
 						  //return l.target.name;
 						  matchList.push(l.target.name);
 						}
 						});
-
+*/
 	// create a unique list of matches - seems that duplicates aren't filtered out in the R code always.
+/*
         var y_offset = 20;
 	matchList = Array.from(new Set(matchList));
+
 	for (i in matchList){
 		var match = matchList[i];
-		d3.select("p[name='LinkDetailsColumn2']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 0).attr("y", y_offset);
+		//d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 150).attr("y", y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
 		y_offset = y_offset + 20;
-		//d3.select("p[name='detailedLinks']").select("ul").append('li').text(getNonHierarchyName(l.target.name));
-		//d3.select("p[name='LinkDetailsColumn2']").select("ul").append('li').text(getNonHierarchyName(match));
-		
 	}
+*/
+
+	// keep track of coordinates for left and right sides
+	var from_y_offset = 20;
+	var to_y_offset = 20;
+
+	var from_x = {};
+	var from_y = {};
+
+	var to_x = {};
+	var to_y = {};
 
 	// need to create list of "from" and "to" and then scan the detailedLinkData data (links2.json file)
+	for (i in from_Names){
+
+		var match = from_Names[i];
+
+		d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 150).attr("y", from_y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif').style("text-anchor","end");
+
+		from_y[match] = from_y_offset;
+		from_y_offset = from_y_offset + 20;
+
+		for (j in detailedLinkData){
+			linkDetail = detailedLinkData[j]
+			if (linkDetail.name == match){
+				for (k in linkDetail.imports){
+					// figure out coordinates of the from label
+					//alert(d3.select("p[name='LinkDetailsColumn1']").select("svg").select('text[value="' + match + '"]'));
+					//alert(linkDetail.imports[k].name + ', ' + linkDetail.imports[k].npmi);
+
+					if (linkDetail.imports[k].name in to_y) {
+						
+						d3.select("p[name='LinkDetailsColumn1']").select("svg").append('line')
+													.attr("x1", 155)
+													.attr("y1", from_y[match])
+													.attr("x2", 245)
+													.attr("y2", to_y[linkDetail.imports[k].name])
+													.attr("stroke-width", 2)
+													.attr("stroke", "black");
+
+						// per link we need to add information about its documents
+
+					} else {
+						// add text, hasn't been drawn yet
+						d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(linkDetail.imports[k].name)).attr("x", 250).attr("y", to_y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
+
+						// TODO make a link here!  Don't add a new link if we've already placed one
+						d3.select("p[name='LinkDetailsColumn1']").select("svg").append('line')
+													.attr("x1", 155)
+													.attr("y1", from_y[match])
+													.attr("x2", 245)
+													.attr("y2", to_y_offset)
+													.attr("stroke-width", (1-linkDetail.imports[k].npmi))
+													.attr("stroke-opacity", (1-linkDetail.imports[k].npmi))
+													.attr("stroke", "black");
+						to_y[linkDetail.imports[k].name] = to_y_offset;
+						to_y_offset = to_y_offset + 20;
+
+					}
+
+
+				}
+			}
+
+
+		}
+	}
+
+	
 }
 
 function mouseouted(d) {
