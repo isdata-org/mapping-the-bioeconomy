@@ -11,6 +11,32 @@
   fill: #000;
 }
 
+.from-link-selected {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.from-link-normal {
+  font-weight: normal;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.to-link-selected {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.to-link-normal {
+  font-weight: normal;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
 .link {
   stroke: steelblue;
   stroke-opacity: .4;
@@ -126,9 +152,11 @@ function getNonHierarchyName(fullName) {
 	return(fullName.substring(fullName.lastIndexOf("|")+1));
 }
 
-function mouseovered(d) {
+function displayDocuments(from_term, to_term){
+	alert(from_term + ',' + to_term);
+}
 
-  
+function mouseovered(d) {
 
   //erase previous values
   d3.select("p[name='LinkDetailsColumn1']").text("");
@@ -211,10 +239,7 @@ function mouseovered(d) {
 	var from_y_offset = 20;
 	var to_y_offset = 20;
 
-	var from_x = {};
 	var from_y = {};
-
-	var to_x = {};
 	var to_y = {};
 
 	// need to create list of "from" and "to" and then scan the detailedLinkData data (links2.json file)
@@ -222,7 +247,21 @@ function mouseovered(d) {
 
 		var match = from_Names[i];
 
-		d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 150).attr("y", from_y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif').style("text-anchor","end");
+		d3.select("p[name='LinkDetailsColumn1']")
+			.select("svg")
+			.append("svg:text")
+			.text(getNonHierarchyName(match))
+			.attr("x", 150)
+			.attr("y", from_y_offset)
+			.style("text-anchor","end")
+			.classed("from-link-normal", true)
+			.on("mouseover", function(){
+				d3.selectAll(".from-link-selected").classed("from-link-selected", false).classed("from-link-normal", true);
+				d3.select(this).classed("from-link-selected", true).classed("from-link-normal", false);
+			});
+
+
+
 
 		from_y[match] = from_y_offset;
 		from_y_offset = from_y_offset + 20;
@@ -231,54 +270,65 @@ function mouseovered(d) {
 			linkDetail = detailedLinkData[j]
 			if (linkDetail.name == match){
 				for (k in linkDetail.imports){
-					// figure out coordinates of the from label
-					//alert(d3.select("p[name='LinkDetailsColumn1']").select("svg").select('text[value="' + match + '"]'));
-					//alert(linkDetail.imports[k].name + ', ' + linkDetail.imports[k].npmi);
-
 					if (linkDetail.imports[k].name in to_y) {
-						
-						d3.select("p[name='LinkDetailsColumn1']").select("svg").append('line')
-													.attr("x1", 155)
-													.attr("y1", from_y[match])
-													.attr("x2", 245)
-													.attr("y2", to_y[linkDetail.imports[k].name])
-													.attr("from_name", match)
-													.attr("to_name", linkDetail.imports[k].name)
-													.attr("stroke-width", 3*linkDetail.imports[k].npmi)
-													.attr("stroke-opacity", linkDetail.imports[k].npmi)
-													.attr("stroke", "black");
+						to_name = linkDetail.imports[k].name
+						d3.select("p[name='LinkDetailsColumn1']").
+							select("svg")
+							.append('line')
+							.attr("x1", 155)
+							.attr("y1", from_y[match])
+							.attr("x2", 245)
+							.attr("y2", to_y[linkDetail.imports[k].name])
+							.attr("fromname", match)
+							.attr("toname", linkDetail.imports[k].name)
+							.attr("stroke-width", 3*linkDetail.imports[k].npmi)
+							.attr("stroke-opacity", linkDetail.imports[k].npmi)
+							.attr("stroke", "black");
 
 						// per link we need to add information about its documents
 
 					} else {
+						to_name = linkDetail.imports[k].name
 						// add text, hasn't been drawn yet
-						d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(linkDetail.imports[k].name)).attr("x", 250).attr("y", to_y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
+						d3.select("p[name='LinkDetailsColumn1']")
+							.select("svg")
+							.append("svg:text")
+							.text(getNonHierarchyName(linkDetail.imports[k].name))
+							.attr("x", 250)
+							.attr("y", to_y_offset)
+							.classed("to-link-normal", true)
+							.on("mouseover", function(){
+								d3.selectAll(".to-link-selected")
+									.classed("to-link-selected", false)
+									.classed("to-link-normal", true);
+								d3.select(this)
+									.classed("to-link-selected", true)
+									.classed("to-link-normal", false);
+							});
+							
 
 						// TODO make a link here!  Don't add a new link if we've already placed one
-						d3.select("p[name='LinkDetailsColumn1']").select("svg").append('line')
-													.attr("x1", 155)
-													.attr("y1", from_y[match])
-													.attr("x2", 245)
-													.attr("y2", to_y_offset)
-													.attr("from_name", match)
-													.attr("to_name", linkDetail.imports[k].name)
-													.attr("stroke-width", 3*linkDetail.imports[k].npmi)
-													.attr("stroke-opacity", linkDetail.imports[k].npmi)
-													.attr("stroke", "black");
+						d3.select("p[name='LinkDetailsColumn1']")
+							.select("svg")
+							.append('line')
+							.attr("x1", 155)
+							.attr("y1", from_y[match])
+							.attr("x2", 245)
+							.attr("y2", to_y_offset)
+							.attr("from_name", match)
+							.attr("to_name", linkDetail.imports[k].name)
+							.attr("stroke-width", 3*linkDetail.imports[k].npmi)
+							.attr("stroke-opacity", linkDetail.imports[k].npmi)
+							.attr("stroke", "black");
+
 						to_y[linkDetail.imports[k].name] = to_y_offset;
 						to_y_offset = to_y_offset + 20;
 
 					}
-
-
 				}
 			}
-
-
 		}
 	}
-
-	
 }
 
 function mouseouted(d) {
