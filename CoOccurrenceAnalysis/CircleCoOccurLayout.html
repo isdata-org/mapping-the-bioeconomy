@@ -156,84 +156,25 @@ function displayDocuments(from_term, to_term){
 	alert(from_term + ',' + to_term);
 }
 
-function mouseovered(d) {
-
-  //erase previous values
+function show2ndGraph(sourceName){
+ //erase previous values
   d3.select("p[name='LinkDetailsColumn1']").text("");
 
   //add in svg elements
   d3.select("p[name='LinkDetailsColumn1']").append("svg").attr("width", 400).attr("height", 800)
-
-  //d3.select("p[name='LinkDetailsColumn1']").append('b').text("Waste");
-  //d3.select("p[name='LinkDetailsColumn2']").append('b').text("TAPs");
-
 	
-  // this is what our mouse is over
-  var nonHierarchyName = getNonHierarchyName(d.name);
-
-  //detailedLinkData
-  //d3.select("p[name='LinkDetailsColumn1']").append('ul');
-  //d3.select("p[name='LinkDetailsColumn1']").select('ul').append('li').append('b').text(nonHierarchyName);
+  var nonHierarchyName = getNonHierarchyName(sourceName);
 
   // look up alt waste names here
-  
   var from_Names = []
   var y_offset = 20;
   for (i in detailedLinkData){
 	var val = detailedLinkData[i];
 	if (val.name.indexOf(nonHierarchyName) > -1){
-		// CD: trying to figure out how to place nodes
-		// This works - offset for x and y is relative to <p>
-		//d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(val.name)).attr("x", 0).attr("y", y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
-		//y_offset = y_offset + 20;
-
 		from_Names.push(getNonHierarchyName(val.name));
-		//d3.select("p[name='LinkDetailsColumn1']").select("ul").append('li').text(getNonHierarchyName(val.name));
-		// by traversing the imports we can then get the TAPs and the NPMI scores along with the documents describing them
-		// don't even need to get linkages from the main circle
 	}
   }
 
-  node
-      .each(function(n) { n.target = n.source = false; });
-
-  link
-      .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-      .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-      .filter(function(l) { return l.target === d || l.source === d; })
-      .each(function() { this.parentNode.appendChild(this); });
-
-  node
-      .classed("node--target", function(n) { return n.target; })
-      .classed("node--source", function(n) { return n.source; });
-
-	//alert(from_Names);
-
-
-	// this is the list of all the things that the source has been matched with
-	//var matchList = [];
-
-	//d3.select("p[name='LinkDetailsColumn2']").append('ul');
-	// TODO probably don't need this
-/*
-	d3.selectAll('.link').filter(function(l){
-						if (l.source === d){
-						  //return l.target.name;
-						  matchList.push(l.target.name);
-						}
-						});
-*/
-	// create a unique list of matches - seems that duplicates aren't filtered out in the R code always.
-/*
-        var y_offset = 20;
-	matchList = Array.from(new Set(matchList));
-
-	for (i in matchList){
-		var match = matchList[i];
-		//d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 150).attr("y", y_offset).style("font",'300 11px "Helvetica Neue", Helvetica, Arial, sans-serif');
-		y_offset = y_offset + 20;
-	}
-*/
 
 	// keep track of coordinates for left and right sides
 	var from_y_offset = 20;
@@ -329,6 +270,26 @@ function mouseovered(d) {
 			}
 		}
 	}
+
+}
+
+function mouseovered(d) {
+  node
+      .each(function(n) { n.target = n.source = false; });
+
+  link
+      .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+      .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+      .filter(function(l) { return l.target === d || l.source === d; })
+      .each(function() { this.parentNode.appendChild(this); });
+
+  node
+      .classed("node--target", function(n) { return n.target; })
+      .classed("node--source", function(n) { return n.source; });
+
+   //d3.select('.link--source').each(function(l){alert(l.source.name);})
+   d3.select('.link--source').each(function(l){show2ndGraph(l.source.name);})
+  
 }
 
 function mouseouted(d) {
@@ -339,6 +300,7 @@ function mouseouted(d) {
   node
       .classed("node--target", false)
       .classed("node--source", false);
+
 }
 
 d3.select(self.frameElement).style("height", diameter + "px");
