@@ -7,6 +7,11 @@
   fill: #bbb;
 }
 
+.documents-panel-header {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .node:hover {
   fill: #000;
 }
@@ -300,7 +305,19 @@ function displayDocuments(){
 
 		d3.select("p[name='DocumentsPanel']").text("");
 		// using a table makes wordwrap easy
-		d3.select("p[name='DocumentsPanel']").append("table").attr("width", 400);
+
+		d3.select("p[name='DocumentsPanel']")
+			.append("table")
+			.attr("width", 400)
+			.append("tr")
+			.append("td")
+			.append("foreignObject")
+			    .attr("width", 480)
+			    .attr("height", 500)
+			  .append("xhtml:body")
+			    .html("Documents for <b>" + from_name + "</b> + <b>" + to_name + "</b>")
+			    .classed('documents-panel-header', true);
+
 		y_offset = 20;
 		//track down documents for this combination
 		for (i in detailedLinkData){
@@ -344,13 +361,27 @@ function show2ndGraph(sourceName){
   d3.select("p[name='LinkDetailsColumn1']").text("");
 
   //add in svg elements
-  d3.select("p[name='LinkDetailsColumn1']").append("svg").attr("width", 400).attr("height", 800)
+  d3.select("p[name='LinkDetailsColumn1']")
+	.append("svg")
+		.attr("width", 400)
+		.attr("height", 800)
+	.append("foreignObject")
+    		.attr("width", 400)
+		.attr("height", 500)
+		.append("xhtml:body")
+			.html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'><ul><li><font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> are the ones you have selected.  <li><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);'>Terms with shadows</font> co-occur with the <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font>.<li>Select a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>left term</font> and a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>right term</font> to see documents mentioning that co-occurrence.")
+			.attr("x", 0)
+			.attr("y", 20);
 	
+ 
+
+
+
   var nonHierarchyName = getNonHierarchyName(sourceName);
 
   // look up alt waste names here
   var from_Names = []
-  var y_offset = 20;
+  var y_offset = 100;
   for (i in detailedLinkData){
 	var val = detailedLinkData[i];
 	if (val.name.indexOf(nonHierarchyName) > -1){
@@ -359,8 +390,8 @@ function show2ndGraph(sourceName){
   }
 
 	// keep track of coordinates for left and right sides
-	var from_y_offset = 20;
-	var to_y_offset = 20;
+	var from_y_offset = 100;
+	var to_y_offset = 100;
 
 	var from_y = {};
 	var to_y = {};
