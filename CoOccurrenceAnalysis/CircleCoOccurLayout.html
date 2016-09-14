@@ -1,587 +1,632 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
-.node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #bbb;
-}
-
-.documents-panel-header {
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.node:hover {
-  fill: #000;
-}
-
-.document-link {
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 11px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
-.text-preview-no-selection {
-
-}
-
-.text-preview-selection {
- text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-}
-
-
-.from-link-selected {
-  font-weight: bold;
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.from-link-normal {
-  font-weight: normal;
-  font-size: 11px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
-.to-link-selected {
-  font-weight: bold;
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.to-link-normal {
-  font-weight: normal;
-  font-size: 11px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
-.cooccurlink-normal {
-  stroke-dasharray: 3, 3;
-  stroke: black;
-}
-
-.cooccurlink-highlighted {
-  stroke: black;
-}
-
-
-.link {
-  stroke: steelblue;
-  stroke-opacity: .4;
-  fill: none;
-  pointer-events: none;
-}
-
-.node:hover,
-.node--source,
-.node--target {
-  font-weight: 700;
-}
-
-.node--source {
-  fill: #2ca02c;
-}
-
-.node--target {
-  fill: #d62728;
-}
-
-.link--source,
-.link--target {
-  stroke-opacity: 1;
-  stroke-width: 2px;
-}
-
-.link--source {
-  stroke: #d62728;
-}
-
-.link--target {
-  stroke: #2ca02c;
-}
-
-</style>
-<body>
-<table>
-<tr><td><div name='circlePlot'/></td>
-<td valign="top"><p name='LinkDetailsColumn1'/></td>
-<td valign="top"><p name='DocumentsPanel'/></td>
-</tr>
-</table>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
-
-var diameter = 960,
-    radius = diameter / 2,
-    innerRadius = radius - 120;
-
-var cluster = d3.layout.cluster()
-    .size([360, innerRadius])
-    .sort(null)
-    .value(function(d) { return d.size; });
-
-var bundle = d3.layout.bundle();
-
-var line = d3.svg.line.radial()
-    .interpolate("bundle")
-    .tension(.85)
-    .radius(function(d) { return d.y; })
-    .angle(function(d) { return d.x / 180 * Math.PI; });
-
-var svg = d3.select("div[name='circlePlot']").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
-  .append("g")
-    .attr("transform", "translate(" + radius + "," + radius + ")");
-
-var link = svg.append("g").selectAll(".link"),
-    node = svg.append("g").selectAll(".node");
-
-//readme-flare-imports.json
-d3.json("links.json", function(error, classes) {
-  if (error) throw error;
-
-  var nodes = cluster.nodes(packageHierarchy(classes)),
-      links = packageImports(nodes);
-
-  link = link
-      .data(bundle(links))
-    .enter().append("path")
-      .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-      .attr("class", "link")
-      .attr("d", line);
-
-  node = node
-      .data(nodes.filter(function(n) { return !n.children; }))
-    .enter().append("text")
-      .attr("class", "node")
-      .attr("dy", ".31em")
-      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-      .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-      .text(function(d) { return d.key; })
-      .on("mouseover", mouseovered)
-      .on("mouseout", mouseouted);
-});
-
-var detailedLinkData;
-
-d3.json("links2.json", function(error, json) {
-  if (error) return console.warn(error);
-  detailedLinkData = json;
-});
-
-var abstractMetaData;
-d3.json("abstracts.json", function(error, json) {
-  if (error) return console.warn(error);
-  abstractMetaData = json;
-});
-
-
-function getNonHierarchyName(fullName) {
-	return(fullName.substring(fullName.lastIndexOf("|")+1));
-}
-
-
-function getAllToNames(){
-	var all_to_links = []
-	d3.selectAll(".to-link-normal").each(function(){
-							all_to_links.push(d3.select(this).text());
-						});
-	d3.selectAll(".to-link-selected").each(function(){
-							all_to_links.push(d3.select(this).text());
-						});
-	return(all_to_links);
-}
-
-function getAllFromNames(){
-		var all_from_links = []
-		d3.selectAll(".from-link-normal").each(function(){
-								all_from_links.push(d3.select(this).text());
-							});
-		d3.selectAll(".from-link-selected").each(function(){
-								all_from_links.push(d3.select(this).text());
-							});
-	return(all_from_links);
-}
-
-function clearHighlightedCoOccurrenceLinks(){
-	d3.selectAll('.cooccurlink')
-		.classed('cooccurlink-highlighted', false)
-		.classed('cooccurlink-normal', true);
-}
-
-function displayDocuments(){
-	var from_name = null
-	d3.select(".from-link-selected").each(function(){ 
-								if (this != null) {
-									from_name = d3.select(this).text();
-								}
-							});
-
-	var to_name = null
-	d3.select(".to-link-selected").each(function(){
-								if (this != null) {
-									to_name = d3.select(this).text();
-								}
-							});
-
-	if ((from_name != null) && (to_name == null)){
-		// clear all highlighted links
-		clearHighlightedCoOccurrenceLinks();
-
-		// clear selection previews (drop shadows)
-		d3.selectAll('.text-preview-selection')
-			.classed('text-preview-selection', false)
-			.classed('text-preview-no-selection', true);
-
-		d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
-			.classed('cooccurlink-highlighted', true)
-			.classed('cooccurlink-normal', false)
-			.each(function(d){
-						var toname = d3.select(this).attr("toname");
-						d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
-							.classed('text-preview-selection', true)
-							.classed('text-preview-no-selection', false);
-					});
-
-	} else if ((from_name == null) && (to_name != null)){
-		// clear all highlighted links
-		clearHighlightedCoOccurrenceLinks();
-
-		// clear selection previews (drop shadows)
-		d3.selectAll('.text-preview-selection')
-			.classed('text-preview-selection', false)
-			.classed('text-preview-no-selection', true);
-
-
-		// highlight the link between these two
-		d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
-			.classed('cooccurlink-highlighted', true)
-			.classed('cooccurlink-normal', false)
-			.each(function(d){
-						var fromname = d3.select(this).attr("fromname");
-						d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
-							.classed('text-preview-selection', true)
-							.classed('text-preview-no-selection', false);
-					});
-
-
-	} else if ((from_name != null) && (to_name != null)){
-		// clear all highlighted links
-		clearHighlightedCoOccurrenceLinks();
-
-		// clear selection previews (drop shadows)
-		d3.selectAll('.text-preview-selection')
-			.classed('text-preview-selection', false)
-			.classed('text-preview-no-selection', true);
-
-		// highlight the links leading to to_name
-		d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
-			.classed('cooccurlink-highlighted', true)
-			.classed('cooccurlink-normal', false)
-			.each(function(d){
-						var fromname = d3.select(this).attr("fromname");
-						d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
-							.classed('text-preview-selection', true)
-							.classed('text-preview-no-selection', false);
-					});
-
-		// highlight the links leading to from_name
-		d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
-			.classed('cooccurlink-highlighted', true)
-			.classed('cooccurlink-normal', false)
-			.each(function(d){
-						var toname = d3.select(this).attr("toname");
-						d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
-							.classed('text-preview-selection', true)
-							.classed('text-preview-no-selection', false);
-					});
-
-
-
-		d3.select("p[name='DocumentsPanel']").text("");
-		// using a table makes wordwrap easy
-
-		d3.select("p[name='DocumentsPanel']")
-			.append("table")
-			.attr("width", 400)
-			.append("tr")
-			.append("td")
-			.append("foreignObject")
-			    .attr("width", 480)
-			    .attr("height", 500)
-			  .append("xhtml:body")
-			    .html("Documents for <b>" + from_name + "</b> + <b>" + to_name + "</b>")
-			    .classed('documents-panel-header', true);
-
-		y_offset = 20;
-		//track down documents for this combination
-		for (i in detailedLinkData){
-			var val = detailedLinkData[i];
-			if (val.name == from_name){ // find the related documents
-				for (k in val.imports){
-					if (val.imports[k].name == to_name) {
-						for (l in val.imports[k].documents){
-							for (a in abstractMetaData){
-								if (val.imports[k].documents[l].document == abstractMetaData[a].id){
-									title = abstractMetaData[a].title;
-									url = abstractMetaData[a].url;
-
-									d3.select("p[name='DocumentsPanel']")
-										.select("table")
-										.append("tr")
-										.append("td")
-										.text("• ")
-										.append("a")
-										.attr("href", url)
-										.attr("target", "_blank")
-										.text(title)
-										.classed("document-link", true);
-
-									y_offset = y_offset + 20;
-
-								}
-							}
-
-						}
-					}
-				}
-
-			}
-		}
-	}								
-}
-
-function show2ndGraph(sourceName){
- //erase previous values
-  d3.select("p[name='LinkDetailsColumn1']").text("");
-
-  //add in svg elements
-  d3.select("p[name='LinkDetailsColumn1']")
-	.append("svg")
-		.attr("width", 400)
-		.attr("height", 800)
-	.append("foreignObject")
-    		.attr("width", 400)
-		.attr("height", 500)
-		.append("xhtml:body")
-			.html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'><ul><li><font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> are the ones you have selected.  <li><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);'>Terms with shadows</font> co-occur with the <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font>.<li>Select a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>left term</font> and a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>right term</font> to see documents mentioning that co-occurrence.")
-			.attr("x", 0)
-			.attr("y", 20);
-	
- 
-
-
-
-  var nonHierarchyName = getNonHierarchyName(sourceName);
-
-  // look up alt waste names here
-  var from_Names = []
-  var y_offset = 100;
-  for (i in detailedLinkData){
-	var val = detailedLinkData[i];
-	if (val.name.indexOf(nonHierarchyName) > -1){
-		from_Names.push(getNonHierarchyName(val.name));
-	}
-  }
-
-	// keep track of coordinates for left and right sides
-	var from_y_offset = 100;
-	var to_y_offset = 100;
-
-	var from_y = {};
-	var to_y = {};
-
-	// need to create list of "from" and "to" and then scan the detailedLinkData data (links2.json file)
-	for (i in from_Names){
-		var match = from_Names[i];
-
-		d3.select("p[name='LinkDetailsColumn1']")
-			.select("svg")
-			.append("svg:text")
-			.text(getNonHierarchyName(match))
-			.attr("text_value", getNonHierarchyName(match))
-			.attr("x", 150)
-			.attr("y", from_y_offset)
-			.style("text-anchor","end")
-			.classed("from-link-normal", true)
-			.classed("text-preview-no-selection", true)
-			.on("click", function(d){d3.select(this)
-							.classed("from-link-normal", true)
-							.classed("from-link-selected", false);
-						d3.selectAll('.text-preview-selection')
-							.classed('text-preview-selection', false)
-							.classed('text-preview-no-selection', true);
-						})
-			.on("mouseover", function(d){
-				d3.selectAll(".from-link-selected")
-					.classed("from-link-selected", false)
-					.classed("from-link-normal", true);
-				d3.select(this)
-					.classed("from-link-selected", true)
-					.classed("from-link-normal", false);
-				displayDocuments();
-			});
-
-		
-
-		from_y[match] = from_y_offset;
-		from_y_offset = from_y_offset + 20;
-
-		for (j in detailedLinkData){
-			linkDetail = detailedLinkData[j]
-			if (linkDetail.name == match){
-				for (k in linkDetail.imports){
-					if (linkDetail.imports[k].name in to_y) {
-						d3.select("p[name='LinkDetailsColumn1']").
-							select("svg")
-							.append('line')
-							.attr("x1", 155)
-							.attr("y1", from_y[match])
-							.attr("x2", 245)
-							.attr("y2", to_y[linkDetail.imports[k].name])
-							.attr("fromname", match)
-							.attr("toname", linkDetail.imports[k].name)
-							.classed('cooccurlink', true)
-							.classed('cooccurlink-normal', true)
-							.attr("stroke-width", 7*linkDetail.imports[k].npmi)
-							.attr("stroke-opacity", linkDetail.imports[k].npmi);
-
-					} else {
-						// add text, hasn't been drawn yet
-
-						to_link_name = linkDetail.imports[k].name;
-						d3.select("p[name='LinkDetailsColumn1']")
-							.select("svg")
-							.append("svg:text")
-							.text(getNonHierarchyName(linkDetail.imports[k].name))
-							.attr("text_value", linkDetail.imports[k].name)
-							.attr("x", 250)
-							.attr("y", to_y_offset)
-							.classed("to-link-normal", true)
-							.classed("text-preview-no-selection", true)
-							.on("click", function(d){d3.select(this)
-											.classed("to-link-normal", true)
-											.classed("to-link-selected", false);
-										d3.selectAll('.text-preview-selection')
-											.classed('text-preview-selection', false)
-											.classed('text-preview-no-selection', true);
-										})
-							.on("mouseover", function(){
-								d3.selectAll(".to-link-selected")
-									.classed("to-link-selected", false)
-									.classed("to-link-normal", true);
-								d3.select(this)
-									.classed("to-link-selected", true)
-									.classed("to-link-normal", false);
-								displayDocuments();
-							});
-							
-
-						// make a link here!
-						d3.select("p[name='LinkDetailsColumn1']")
-							.select("svg")
-							.append('line')
-							.attr("x1", 155)
-							.attr("y1", from_y[match])
-							.attr("x2", 245)
-							.attr("y2", to_y_offset)
-							.attr("fromname", match)
-							.attr("toname", linkDetail.imports[k].name)
-							.classed('cooccurlink', true)
-							.classed('cooccurlink-normal', true)
-							.attr("stroke-width", 7*linkDetail.imports[k].npmi)
-							.attr("stroke-opacity", linkDetail.imports[k].npmi);
-
-						to_y[linkDetail.imports[k].name] = to_y_offset;
-						to_y_offset = to_y_offset + 20;
-
-					}
-				}
-			}
-		}
-	}
-}
-
-function mouseovered(d) {
-  node
-      .each(function(n) { n.target = n.source = false; });
-
-  link
-      .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-      .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-      .filter(function(l) { return l.target === d || l.source === d; })
-      .each(function() { this.parentNode.appendChild(this); });
-
-  node
-      .classed("node--target", function(n) { return n.target; })
-      .classed("node--source", function(n) { return n.source; });
-
-   d3.select('.link--source').each(function(l){show2ndGraph(l.source.name);})
-  
-}
-
-function mouseouted(d) {
-  link
-      .classed("link--target", false)
-      .classed("link--source", false);
-
-  node
-      .classed("node--target", false)
-      .classed("node--source", false);
-
-}
-
-d3.select(self.frameElement).style("height", diameter + "px");
-
-// Lazily construct the package hierarchy from class names.
-function packageHierarchy(classes) {
-  var map = {};
-
-  function find(name, data) {
-    var node = map[name], i;
-    if (!node) {
-      node = map[name] = data || {name: name, children: []};
-      if (name.length) {
-        //node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-	node.parent = find(name.substring(0, i = name.lastIndexOf("|")));
-        node.parent.children.push(node);
-        node.key = name.substring(i + 1);
-      }
+    .node {
+        font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        fill: #bbb;
     }
-    return node;
-  }
+    
+    .documents-panel-header {
+        font-size: 14px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .node:hover {
+        fill: #000;
+    }
+    
+    .document-link {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 11px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .text-preview-no-selection {}
+    
+    .text-preview-selection {
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    }
+    
+    .from-link-selected {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .from-link-normal {
+        font-weight: normal;
+        font-size: 11px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .to-link-selected {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .to-link-normal {
+        font-weight: normal;
+        font-size: 11px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    .cooccurlink-normal {
+        stroke-dasharray: 3, 3;
+        stroke: black;
+    }
+    
+    .cooccurlink-highlighted {
+        stroke: black;
+    }
+    
+    .link {
+        stroke: steelblue;
+        stroke-opacity: .4;
+        fill: none;
+        pointer-events: none;
+    }
+    
+    .node:hover,
+    .node--source,
+    .node--target {
+        font-weight: 700;
+    }
+    
+    .node--source {
+        fill: #2ca02c;
+    }
+    
+    .node--target {
+        fill: #d62728;
+    }
+    
+    .link--source,
+    .link--target {
+        stroke-opacity: 1;
+        stroke-width: 2px;
+    }
+    
+    .link--source {
+        stroke: #d62728;
+    }
+    
+    .link--target {
+        stroke: #2ca02c;
+    }
+</style>
 
-  classes.forEach(function(d) {
-    find(d.name, d);
-  });
+<body>
+    <table>
+        <tr>
+            <td>
+                <div name='circlePlot' />
+            </td>
+            <td valign="top">
+                <p name='LinkDetailsColumn1' />
+            </td>
+            <td valign="top">
+                <p name='DocumentsPanel' />
+            </td>
+        </tr>
+    </table>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script>
+        var diameter = 960,
+            radius = diameter / 2,
+            innerRadius = radius - 120;
 
-  return map[""];
-}
+        var cluster = d3.layout.cluster()
+            .size([360, innerRadius])
+            .sort(null)
+            .value(function(d) {
+                return d.size;
+            });
 
-// Return a list of imports for the given array of nodes.
-function packageImports(nodes) {
-  var map = {},
-      imports = [];
+        var bundle = d3.layout.bundle();
 
-  // Compute a map from name to node.
-  nodes.forEach(function(d) {
-    map[d.name] = d;
-  });
+        var line = d3.svg.line.radial()
+            .interpolate("bundle")
+            .tension(.85)
+            .radius(function(d) {
+                return d.y;
+            })
+            .angle(function(d) {
+                return d.x / 180 * Math.PI;
+            });
 
-  // For each import, construct a link from the source to target node.
-  nodes.forEach(function(d) {
-    if (d.imports) d.imports.forEach(function(i) {
-      imports.push({source: map[d.name], target: map[i]});
-    });
-  });
+        var svg = d3.select("div[name='circlePlot']").append("svg")
+            .attr("width", diameter)
+            .attr("height", diameter)
+            .append("g")
+            .attr("transform", "translate(" + radius + "," + radius + ")");
 
-  return imports;
-}
+        var link = svg.append("g").selectAll(".link"),
+            node = svg.append("g").selectAll(".node");
 
-</script>
+        //readme-flare-imports.json
+        d3.json("links.json", function(error, classes) {
+            if (error) throw error;
 
+            var nodes = cluster.nodes(packageHierarchy(classes)),
+                links = packageImports(nodes);
+
+            link = link
+                .data(bundle(links))
+                .enter().append("path")
+                .each(function(d) {
+                    d.source = d[0], d.target = d[d.length - 1];
+                })
+                .attr("class", "link")
+                .attr("d", line);
+
+            node = node
+                .data(nodes.filter(function(n) {
+                    return !n.children;
+                }))
+                .enter().append("text")
+                .attr("class", "node")
+                .attr("dy", ".31em")
+                .attr("transform", function(d) {
+                    return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)");
+                })
+                .style("text-anchor", function(d) {
+                    return d.x < 180 ? "start" : "end";
+                })
+                .text(function(d) {
+                    return d.key;
+                })
+                .on("mouseover", mouseoverBypass) // should customize this - want to find the connections when we mouse over this specific node
+                .on("mouseout", mouseouted);
+
+		//.on("mouseover", mouseovered) // should customize this - want to find the connections when we mouse over this specific node
+
+        });
+
+	function mouseoverBypass(d){
+                show2ndGraph(d3.select(this).text());
+	}
+
+        var detailedLinkData;
+
+        d3.json("links2.json", function(error, json) {
+            if (error) return console.warn(error);
+            detailedLinkData = json;
+        });
+
+        var abstractMetaData;
+        d3.json("abstracts.json", function(error, json) {
+            if (error) return console.warn(error);
+            abstractMetaData = json;
+        });
+
+
+        function getNonHierarchyName(fullName) {
+            return (fullName.substring(fullName.lastIndexOf("|") + 1));
+        }
+
+
+        function getAllToNames() {
+            var all_to_links = []
+            d3.selectAll(".to-link-normal").each(function() {
+                all_to_links.push(d3.select(this).text());
+            });
+            d3.selectAll(".to-link-selected").each(function() {
+                all_to_links.push(d3.select(this).text());
+            });
+            return (all_to_links);
+        }
+
+        function getAllFromNames() {
+            var all_from_links = []
+            d3.selectAll(".from-link-normal").each(function() {
+                all_from_links.push(d3.select(this).text());
+            });
+            d3.selectAll(".from-link-selected").each(function() {
+                all_from_links.push(d3.select(this).text());
+            });
+            return (all_from_links);
+        }
+
+        function clearHighlightedCoOccurrenceLinks() {
+            d3.selectAll('.cooccurlink')
+                .classed('cooccurlink-highlighted', false)
+                .classed('cooccurlink-normal', true);
+        }
+
+        function displayDocuments() {
+            var from_name = null
+            d3.select(".from-link-selected").each(function() {
+                if (this != null) {
+                    from_name = d3.select(this).text();
+                }
+            });
+
+            var to_name = null
+            d3.select(".to-link-selected").each(function() {
+                if (this != null) {
+                    to_name = d3.select(this).text();
+                }
+            });
+
+            if ((from_name != null) && (to_name == null)) {
+                // clear all highlighted links
+                clearHighlightedCoOccurrenceLinks();
+
+                // clear selection previews (drop shadows)
+                d3.selectAll('.text-preview-selection')
+                    .classed('text-preview-selection', false)
+                    .classed('text-preview-no-selection', true);
+
+                d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
+                    .classed('cooccurlink-highlighted', true)
+                    .classed('cooccurlink-normal', false)
+                    .each(function(d) {
+                        var toname = d3.select(this).attr("toname");
+                        d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
+                            .classed('text-preview-selection', true)
+                            .classed('text-preview-no-selection', false);
+                    });
+
+            } else if ((from_name == null) && (to_name != null)) {
+                // clear all highlighted links
+                clearHighlightedCoOccurrenceLinks();
+
+                // clear selection previews (drop shadows)
+                d3.selectAll('.text-preview-selection')
+                    .classed('text-preview-selection', false)
+                    .classed('text-preview-no-selection', true);
+
+
+                // highlight the link between these two
+                d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
+                    .classed('cooccurlink-highlighted', true)
+                    .classed('cooccurlink-normal', false)
+                    .each(function(d) {
+                        var fromname = d3.select(this).attr("fromname");
+                        d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
+                            .classed('text-preview-selection', true)
+                            .classed('text-preview-no-selection', false);
+                    });
+
+
+            } else if ((from_name != null) && (to_name != null)) {
+                // clear all highlighted links
+                clearHighlightedCoOccurrenceLinks();
+
+                // clear selection previews (drop shadows)
+                d3.selectAll('.text-preview-selection')
+                    .classed('text-preview-selection', false)
+                    .classed('text-preview-no-selection', true);
+
+                // highlight the links leading to to_name
+                d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
+                    .classed('cooccurlink-highlighted', true)
+                    .classed('cooccurlink-normal', false)
+                    .each(function(d) {
+                        var fromname = d3.select(this).attr("fromname");
+                        d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
+                            .classed('text-preview-selection', true)
+                            .classed('text-preview-no-selection', false);
+                    });
+
+                // highlight the links leading to from_name
+                d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
+                    .classed('cooccurlink-highlighted', true)
+                    .classed('cooccurlink-normal', false)
+                    .each(function(d) {
+                        var toname = d3.select(this).attr("toname");
+                        d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
+                            .classed('text-preview-selection', true)
+                            .classed('text-preview-no-selection', false);
+                    });
+
+
+
+                d3.select("p[name='DocumentsPanel']").text("");
+                // using a table makes wordwrap easy
+
+                d3.select("p[name='DocumentsPanel']")
+                    .append("table")
+                    .attr("width", 400)
+                    .append("tr")
+                    .append("td")
+                    .append("foreignObject")
+                    .attr("width", 480)
+                    .attr("height", 500)
+                    .append("xhtml:body")
+                    .html("Documents for <b>" + from_name + "</b> + <b>" + to_name + "</b>")
+                    .classed('documents-panel-header', true);
+
+                y_offset = 20;
+                //track down documents for this combination
+                for (i in detailedLinkData) {
+                    var val = detailedLinkData[i];
+                    if (val.name == from_name) { // find the related documents
+                        for (k in val.imports) {
+                            if (val.imports[k].name == to_name) {
+                                for (l in val.imports[k].documents) {
+                                    for (a in abstractMetaData) {
+                                        if (val.imports[k].documents[l].document == abstractMetaData[a].id) {
+                                            title = abstractMetaData[a].title;
+                                            url = abstractMetaData[a].url;
+
+                                            d3.select("p[name='DocumentsPanel']")
+                                                .select("table")
+                                                .append("tr")
+                                                .append("td")
+                                                .text("• ")
+                                                .append("a")
+                                                .attr("href", url)
+                                                .attr("target", "_blank")
+                                                .text(title)
+                                                .classed("document-link", true);
+
+                                            y_offset = y_offset + 20;
+
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        function show2ndGraph(sourceName) {
+
+            //erase previous values
+            d3.select("p[name='LinkDetailsColumn1']").text("");
+
+            //add in svg elements
+            d3.select("p[name='LinkDetailsColumn1']")
+                .append("svg")
+                .attr("width", 420)
+                .attr("height", 800)
+                .append("foreignObject")
+                .attr("width", 420)
+                .attr("height", 500)
+                .append("xhtml:body")
+                .html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'><ul><li><font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> are the ones you have selected.  <li><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);'>Terms with shadows</font> co-occur with <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> in the other column.<li>Select a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>left term</font> and a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>right term</font> to see documents mentioning that co-occurrence.<li>Line widths show the relevance of that co-occurrence.")
+                .attr("x", 0)
+                .attr("y", 20);
+
+
+            var nonHierarchyName = getNonHierarchyName(sourceName);
+
+            // look up alt waste names here
+            var from_Names = []
+            for (i in detailedLinkData) {
+                var val = detailedLinkData[i];
+                if (val.name.indexOf(nonHierarchyName) > -1) {
+                    from_Names.push(getNonHierarchyName(val.name));
+                }
+            }
+
+            // keep track of coordinates for left and right sides
+            var from_y_offset = 120;
+            var to_y_offset = 120;
+
+            var from_y = {};
+            var to_y = {};
+
+            // need to create list of "from" and "to" and then scan the detailedLinkData data (links2.json file)
+            for (i in from_Names) {
+                var match = from_Names[i];
+
+                d3.select("p[name='LinkDetailsColumn1']")
+                    .select("svg")
+                    .append("svg:text")
+                    .text(getNonHierarchyName(match))
+                    .attr("text_value", getNonHierarchyName(match))
+                    .attr("x", 150)
+                    .attr("y", from_y_offset)
+                    .style("text-anchor", "end")
+                    .classed("from-link-normal", true)
+                    .classed("text-preview-no-selection", true)
+                    .on("click", function(d) {
+                        d3.select(this)
+                            .classed("from-link-normal", true)
+                            .classed("from-link-selected", false);
+                        d3.selectAll('.text-preview-selection')
+                            .classed('text-preview-selection', false)
+                            .classed('text-preview-no-selection', true);
+                    })
+                    .on("mouseover", function(d) {
+                        d3.selectAll(".from-link-selected")
+                            .classed("from-link-selected", false)
+                            .classed("from-link-normal", true);
+                        d3.select(this)
+                            .classed("from-link-selected", true)
+                            .classed("from-link-normal", false);
+                        displayDocuments();
+                    });
+
+
+                from_y[match] = from_y_offset;
+                from_y_offset = from_y_offset + 20;
+
+                for (j in detailedLinkData) {
+                    linkDetail = detailedLinkData[j]
+                    if (linkDetail.name == match) {
+                        for (k in linkDetail.imports) {
+                            if (linkDetail.imports[k].name in to_y) {
+                                d3.select("p[name='LinkDetailsColumn1']").
+                                select("svg")
+                                    .append('line')
+                                    .attr("x1", 155)
+                                    .attr("y1", from_y[match])
+                                    .attr("x2", 245)
+                                    .attr("y2", to_y[linkDetail.imports[k].name])
+                                    .attr("fromname", match)
+                                    .attr("toname", linkDetail.imports[k].name)
+                                    .classed('cooccurlink', true)
+                                    .classed('cooccurlink-normal', true)
+                                    .attr("stroke-width", 7 * linkDetail.imports[k].npmi)
+                                    .attr("stroke-opacity", linkDetail.imports[k].npmi);
+
+                            } else {
+                                // add text, hasn't been drawn yet
+
+                                to_link_name = linkDetail.imports[k].name;
+                                d3.select("p[name='LinkDetailsColumn1']")
+                                    .select("svg")
+                                    .append("svg:text")
+                                    .text(getNonHierarchyName(linkDetail.imports[k].name))
+                                    .attr("text_value", linkDetail.imports[k].name)
+                                    .attr("x", 250)
+                                    .attr("y", to_y_offset)
+                                    .classed("to-link-normal", true)
+                                    .classed("text-preview-no-selection", true)
+                                    .on("click", function(d) {
+                                        d3.select(this)
+                                            .classed("to-link-normal", true)
+                                            .classed("to-link-selected", false);
+                                        d3.selectAll('.text-preview-selection')
+                                            .classed('text-preview-selection', false)
+                                            .classed('text-preview-no-selection', true);
+                                    })
+                                    .on("mouseover", function() {
+                                        d3.selectAll(".to-link-selected")
+                                            .classed("to-link-selected", false)
+                                            .classed("to-link-normal", true);
+                                        d3.select(this)
+                                            .classed("to-link-selected", true)
+                                            .classed("to-link-normal", false);
+                                        displayDocuments();
+                                    });
+
+
+                                // make a link here!
+                                d3.select("p[name='LinkDetailsColumn1']")
+                                    .select("svg")
+                                    .append('line')
+                                    .attr("x1", 155)
+                                    .attr("y1", from_y[match])
+                                    .attr("x2", 245)
+                                    .attr("y2", to_y_offset)
+                                    .attr("fromname", match)
+                                    .attr("toname", linkDetail.imports[k].name)
+                                    .classed('cooccurlink', true)
+                                    .classed('cooccurlink-normal', true)
+                                    .attr("stroke-width", 7 * linkDetail.imports[k].npmi)
+                                    .attr("stroke-opacity", linkDetail.imports[k].npmi);
+
+                                to_y[linkDetail.imports[k].name] = to_y_offset;
+                                to_y_offset = to_y_offset + 20;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function mouseovered(d) {
+            node
+                .each(function(n) {
+                    n.target = n.source = false;
+                });
+
+            link
+                .classed("link--target", function(l) {
+                    if (l.target === d) return l.source.source = true;
+                })
+                .classed("link--source", function(l) {
+                    if (l.source === d) return l.target.target = true;
+                })
+                .filter(function(l) {
+                    return l.target === d || l.source === d;
+                })
+                .each(function() {
+                    this.parentNode.appendChild(this);
+                });
+
+            node
+                .classed("node--target", function(n) {
+                    return n.target;
+                })
+                .classed("node--source", function(n) {
+                    return n.source;
+                });
+
+
+	/*
+            d3.selectAll('.link--source').each(function(l) {
+                show2ndGraph(l.source.name);
+            })
+*/
+        }
+
+        function mouseouted(d) {
+            // keep the main circle links highlighted even as after our mouse leaves it
+
+            /*
+              link
+                  .classed("link--target", false)
+                  .classed("link--source", false);
+
+              node
+                  .classed("node--target", false)
+                  .classed("node--source", false);
+            */
+        }
+
+        d3.select(self.frameElement).style("height", diameter + "px");
+
+        // Lazily construct the package hierarchy from class names.
+        function packageHierarchy(classes) {
+            var map = {};
+
+            function find(name, data) {
+                var node = map[name],
+                    i;
+                if (!node) {
+                    node = map[name] = data || {
+                        name: name,
+                        children: []
+                    };
+                    if (name.length) {
+                        //node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+                        node.parent = find(name.substring(0, i = name.lastIndexOf("|")));
+                        node.parent.children.push(node);
+                        node.key = name.substring(i + 1);
+                    }
+                }
+                return node;
+            }
+
+            classes.forEach(function(d) {
+                find(d.name, d);
+            });
+
+            return map[""];
+        }
+
+        // Return a list of imports for the given array of nodes.
+        function packageImports(nodes) {
+            var map = {},
+                imports = [];
+
+            // Compute a map from name to node.
+            nodes.forEach(function(d) {
+                map[d.name] = d;
+            });
+
+            // For each import, construct a link from the source to target node.
+            nodes.forEach(function(d) {
+                if (d.imports) d.imports.forEach(function(i) {
+                    imports.push({
+                        source: map[d.name],
+                        target: map[i]
+                    });
+                });
+            });
+
+            return imports;
+        }
+    </script>
