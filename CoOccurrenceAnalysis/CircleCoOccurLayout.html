@@ -11,6 +11,23 @@
   fill: #000;
 }
 
+.document-link {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.text-preview-no-selection {
+
+}
+
+.text-preview-selection {
+ text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+
 .from-link-selected {
   font-weight: bold;
   font-size: 14px;
@@ -34,6 +51,16 @@
   font-weight: normal;
   font-size: 11px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.cooccurlink-normal {
+  stroke-dasharray: 3, 3;
+  stroke: black;
+}
+
+.cooccurlink-highlighted {
+  stroke: black;
 }
 
 
@@ -154,43 +181,127 @@ function getNonHierarchyName(fullName) {
 }
 
 
-function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
+function getAllToNames(){
+	var all_to_links = []
+	d3.selectAll(".to-link-normal").each(function(){
+							all_to_links.push(d3.select(this).text());
+						});
+	d3.selectAll(".to-link-selected").each(function(){
+							all_to_links.push(d3.select(this).text());
+						});
+	return(all_to_links);
+}
+
+function getAllFromNames(){
+		var all_from_links = []
+		d3.selectAll(".from-link-normal").each(function(){
+								all_from_links.push(d3.select(this).text());
+							});
+		d3.selectAll(".from-link-selected").each(function(){
+								all_from_links.push(d3.select(this).text());
+							});
+	return(all_from_links);
+}
+
+function clearHighlightedCoOccurrenceLinks(){
+	d3.selectAll('.cooccurlink')
+		.classed('cooccurlink-highlighted', false)
+		.classed('cooccurlink-normal', true);
 }
 
 function displayDocuments(){
-	from_name = d3.select(".from-link-selected").text();
-	to_name = d3.select(".to-link-selected").text();
+	var from_name = null
+	d3.select(".from-link-selected").each(function(){ 
+								if (this != null) {
+									from_name = d3.select(this).text();
+								}
+							});
 
-	if ((from_name != null) && (to_name != null)){
+	var to_name = null
+	d3.select(".to-link-selected").each(function(){
+								if (this != null) {
+									to_name = d3.select(this).text();
+								}
+							});
+
+	if ((from_name != null) && (to_name == null)){
+		// clear all highlighted links
+		clearHighlightedCoOccurrenceLinks();
+
+		// clear selection previews (drop shadows)
+		d3.selectAll('.text-preview-selection')
+			.classed('text-preview-selection', false)
+			.classed('text-preview-no-selection', true);
+
+		d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
+			.classed('cooccurlink-highlighted', true)
+			.classed('cooccurlink-normal', false)
+			.each(function(d){
+						var toname = d3.select(this).attr("toname");
+						d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
+							.classed('text-preview-selection', true)
+							.classed('text-preview-no-selection', false);
+					});
+
+	} else if ((from_name == null) && (to_name != null)){
+		// clear all highlighted links
+		clearHighlightedCoOccurrenceLinks();
+
+		// clear selection previews (drop shadows)
+		d3.selectAll('.text-preview-selection')
+			.classed('text-preview-selection', false)
+			.classed('text-preview-no-selection', true);
+
+
+		// highlight the link between these two
+		d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
+			.classed('cooccurlink-highlighted', true)
+			.classed('cooccurlink-normal', false)
+			.each(function(d){
+						var fromname = d3.select(this).attr("fromname");
+						d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
+							.classed('text-preview-selection', true)
+							.classed('text-preview-no-selection', false);
+					});
+
+
+	} else if ((from_name != null) && (to_name != null)){
+		// clear all highlighted links
+		clearHighlightedCoOccurrenceLinks();
+
+		// clear selection previews (drop shadows)
+		d3.selectAll('.text-preview-selection')
+			.classed('text-preview-selection', false)
+			.classed('text-preview-no-selection', true);
+
+		// highlight the links leading to to_name
+		d3.selectAll('.cooccurlink[toname="' + to_name + '"]')
+			.classed('cooccurlink-highlighted', true)
+			.classed('cooccurlink-normal', false)
+			.each(function(d){
+						var fromname = d3.select(this).attr("fromname");
+						d3.select('.text-preview-no-selection[text_value="' + fromname + '"]')
+							.classed('text-preview-selection', true)
+							.classed('text-preview-no-selection', false);
+					});
+
+		// highlight the links leading to from_name
+		d3.selectAll('.cooccurlink[fromname="' + from_name + '"]')
+			.classed('cooccurlink-highlighted', true)
+			.classed('cooccurlink-normal', false)
+			.each(function(d){
+						var toname = d3.select(this).attr("toname");
+						d3.select('.text-preview-no-selection[text_value="' + toname + '"]')
+							.classed('text-preview-selection', true)
+							.classed('text-preview-no-selection', false);
+					});
+
+
 
 		d3.select("p[name='DocumentsPanel']").text("");
-		
-		//d3.select("p[name='DocumentsPanel']").append("svg").attr("width", 400).attr("height", 800);
+		// using a table makes wordwrap easy
 		d3.select("p[name='DocumentsPanel']").append("table").attr("width", 400);
-
 		y_offset = 20;
-		//alert('checking for docs for ' + from_name + ' and ' + to_name);
 		//track down documents for this combination
 		for (i in detailedLinkData){
 			var val = detailedLinkData[i];
@@ -198,7 +309,6 @@ function displayDocuments(){
 				for (k in val.imports){
 					if (val.imports[k].name == to_name) {
 						for (l in val.imports[k].documents){
-
 							for (a in abstractMetaData){
 								if (val.imports[k].documents[l].document == abstractMetaData[a].id){
 									title = abstractMetaData[a].title;
@@ -207,27 +317,13 @@ function displayDocuments(){
 									d3.select("p[name='DocumentsPanel']")
 										.select("table")
 										.append("tr")
-										.append("td") //.append("ul").append("li")
+										.append("td")
 										.text("• ")
 										.append("a")
 										.attr("href", url)
-										.style("text-decoration", "none")
 										.attr("target", "_blank")
 										.text(title)
-										.classed("from-link-normal", true);
-
-									/*
-									d3.select("p[name='DocumentsPanel']")
-										.select("svg")
-										.append("a")
-										.attr("xlink:href", url)
-										.attr("target", "_blank")
-										.append("svg:text")
-										.text(title)
-										.attr("x", 0)
-										.attr("y", y_offset)
-										.classed("from-link-normal", true);
-									*/
+										.classed("document-link", true);
 
 									y_offset = y_offset + 20;
 
@@ -277,10 +373,19 @@ function show2ndGraph(sourceName){
 			.select("svg")
 			.append("svg:text")
 			.text(getNonHierarchyName(match))
+			.attr("text_value", getNonHierarchyName(match))
 			.attr("x", 150)
 			.attr("y", from_y_offset)
 			.style("text-anchor","end")
 			.classed("from-link-normal", true)
+			.classed("text-preview-no-selection", true)
+			.on("click", function(d){d3.select(this)
+							.classed("from-link-normal", true)
+							.classed("from-link-selected", false);
+						d3.selectAll('.text-preview-selection')
+							.classed('text-preview-selection', false)
+							.classed('text-preview-no-selection', true);
+						})
 			.on("mouseover", function(d){
 				d3.selectAll(".from-link-selected")
 					.classed("from-link-selected", false)
@@ -310,9 +415,10 @@ function show2ndGraph(sourceName){
 							.attr("y2", to_y[linkDetail.imports[k].name])
 							.attr("fromname", match)
 							.attr("toname", linkDetail.imports[k].name)
-							.attr("stroke-width", 3*linkDetail.imports[k].npmi)
-							.attr("stroke-opacity", linkDetail.imports[k].npmi)
-							.attr("stroke", "black");
+							.classed('cooccurlink', true)
+							.classed('cooccurlink-normal', true)
+							.attr("stroke-width", 7*linkDetail.imports[k].npmi)
+							.attr("stroke-opacity", linkDetail.imports[k].npmi);
 
 					} else {
 						// add text, hasn't been drawn yet
@@ -322,9 +428,18 @@ function show2ndGraph(sourceName){
 							.select("svg")
 							.append("svg:text")
 							.text(getNonHierarchyName(linkDetail.imports[k].name))
+							.attr("text_value", linkDetail.imports[k].name)
 							.attr("x", 250)
 							.attr("y", to_y_offset)
 							.classed("to-link-normal", true)
+							.classed("text-preview-no-selection", true)
+							.on("click", function(d){d3.select(this)
+											.classed("to-link-normal", true)
+											.classed("to-link-selected", false);
+										d3.selectAll('.text-preview-selection')
+											.classed('text-preview-selection', false)
+											.classed('text-preview-no-selection', true);
+										})
 							.on("mouseover", function(){
 								d3.selectAll(".to-link-selected")
 									.classed("to-link-selected", false)
@@ -344,9 +459,12 @@ function show2ndGraph(sourceName){
 							.attr("y1", from_y[match])
 							.attr("x2", 245)
 							.attr("y2", to_y_offset)
-							.attr("stroke-width", 3*linkDetail.imports[k].npmi)
-							.attr("stroke-opacity", linkDetail.imports[k].npmi)
-							.attr("stroke", "black");
+							.attr("fromname", match)
+							.attr("toname", linkDetail.imports[k].name)
+							.classed('cooccurlink', true)
+							.classed('cooccurlink-normal', true)
+							.attr("stroke-width", 7*linkDetail.imports[k].npmi)
+							.attr("stroke-opacity", linkDetail.imports[k].npmi);
 
 						to_y[linkDetail.imports[k].name] = to_y_offset;
 						to_y_offset = to_y_offset + 20;
