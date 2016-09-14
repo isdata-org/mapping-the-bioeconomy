@@ -186,6 +186,7 @@
 
 	function mouseoverBypass(d){
                 show2ndGraph(d3.select(this).text());
+		mouseovered(d);
 	}
 
         var detailedLinkData;
@@ -418,6 +419,7 @@
             for (i in from_Names) {
                 var match = from_Names[i];
 
+		// this is the from column (left side)
                 d3.select("p[name='LinkDetailsColumn1']")
                     .select("svg")
                     .append("svg:text")
