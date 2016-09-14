@@ -185,7 +185,9 @@ function displayDocuments(){
 	if ((from_name != null) && (to_name != null)){
 
 		d3.select("p[name='DocumentsPanel']").text("");
-		d3.select("p[name='DocumentsPanel']").append("svg").attr("width", 400).attr("height", 800)
+		
+		//d3.select("p[name='DocumentsPanel']").append("svg").attr("width", 400).attr("height", 800);
+		d3.select("p[name='DocumentsPanel']").append("table").attr("width", 400);
 
 		y_offset = 20;
 		//alert('checking for docs for ' + from_name + ' and ' + to_name);
@@ -203,6 +205,19 @@ function displayDocuments(){
 									url = abstractMetaData[a].url;
 
 									d3.select("p[name='DocumentsPanel']")
+										.select("table")
+										.append("tr")
+										.append("td") //.append("ul").append("li")
+										.text("• ")
+										.append("a")
+										.attr("href", url)
+										.style("text-decoration", "none")
+										.attr("target", "_blank")
+										.text(title)
+										.classed("from-link-normal", true);
+
+									/*
+									d3.select("p[name='DocumentsPanel']")
 										.select("svg")
 										.append("a")
 										.attr("xlink:href", url)
@@ -212,6 +227,7 @@ function displayDocuments(){
 										.attr("x", 0)
 										.attr("y", y_offset)
 										.classed("from-link-normal", true);
+									*/
 
 									y_offset = y_offset + 20;
 
