@@ -1,15 +1,23 @@
 [
   {
+    "name": "abattoir",
+    "imports": ["process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|acid|humic acid", "agriculture|fertilizers|organic farming", "protein"]
+  },
+  {
     "name": "activated carbon",
-    "imports": ["Plantae|Rosales|apricot", "Plantae|Poales|cane", "Plantae|Sapindales|mango", "Plantae|Fabales|Fagaceae|oak", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Malpighiales|rubber", "Plantae|Arecales|sago", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|wood"]
+    "imports": ["algae", "Plantae|Rosales|apricot", "Plantae|Poales|cane", "cardboard", "Plantae|Sapindales|mango", "Plantae|Fabales|Fagaceae|oak", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Malpighiales|rubber", "Plantae|Arecales|sago", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|wood"]
+  },
+  {
+    "name": "agriculture|aquaculture",
+    "imports": ["animal feed", "denitrification", "process|biorefinery|sequencing batch reactor"]
   },
   {
     "name": "agriculture|biochar",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Brassicales|canola", "Plantae|Malpighiales|castor", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Myrtales|eucalyptus", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Poales|maize", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Fagales|pecan", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Sapindales|pistachio", "Plantae|Poales|rice", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Fagales|walnut", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "brewery", "Plantae|Brassicales|canola", "Plantae|Malpighiales|castor", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "dairy", "Plantae|Myrtales|eucalyptus", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Poales|maize", "mill", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Fagales|pecan", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Sapindales|pistachio", "Animalia|Chordata|Aves|Galliformes|poultry", "Plantae|Poales|rice", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soybean", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "Plantae|Fagales|walnut", "Plantae|wood"]
   },
   {
     "name": "agriculture|fertilizers|digestate",
-    "imports": ["Plantae|Rosales|apple", "Plantae|Sapindales|orange", "Plantae|Solanales|potato", "Plantae|Brassicales|radish"]
+    "imports": ["algae", "Plantae|Rosales|apple", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Sapindales|orange", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Solanales|potato", "Animalia|Chordata|Aves|Galliformes|poultry", "Plantae|Brassicales|radish", "seaweed", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "winery"]
   },
   {
     "name": "agriculture|fertilizers|fertilizer",
@@ -17,51 +25,203 @@
   },
   {
     "name": "agriculture|fertilizers|green manure",
-    "imports": ["Plantae|Brassicales|cabbage", "Plantae|Poales|maize", "Plantae|Brassicales|mustard", "Plantae|Solanales|potato", "Plantae|Fabales|Fabaceae|soy", "Plantae|Solanales|tomato"]
+    "imports": ["Plantae|Brassicales|cabbage", "Animalia|Chordata|fish", "Plantae|Poales|maize", "mill", "Fungi|mushroom", "Plantae|Brassicales|mustard", "Plantae|Solanales|potato", "Plantae|Fabales|Fabaceae|soy", "Plantae|Solanales|tomato"]
   },
   {
     "name": "agriculture|fertilizers|mulch",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Brassicales|broccoli", "Plantae|Poales|cane", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Cucurbitales|cucumber", "Plantae|Vitales|grape", "Plantae|Malvales|jute", "Plantae|Cucurbitales|melon", "Plantae|Sapindales|neem", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Solanales|potato", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Brassicales|broccoli", "Plantae|Poales|cane", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Cucurbitales|cucumber", "forest", "Plantae|Vitales|grape", "Plantae|Malvales|jute", "Plantae|Cucurbitales|melon", "Plantae|Sapindales|neem", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Solanales|potato", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|wheat"]
   },
   {
     "name": "agriculture|fertilizers|organic farming",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|neem", "Plantae|Malvales|okra", "Plantae|Lamiales|olive", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["abattoir", "Plantae|Fabales|Fabaceae|alfalfa", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cattle", "cheese", "Animalia|Chordata|fish", "Animalia|Chordata|Mammalia|Artiodactyla|hog", "Plantae|Malpighiales|jatropha", "Fungi|mushroom", "Plantae|Sapindales|neem", "Plantae|Malvales|okra", "Plantae|Lamiales|olive", "Plantae|Fabales|Fabaceae|peanut", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Animalia|Chordata|Aves|Galliformes|poultry", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "agriculture|herbicide",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Lamiales|olive", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Poales|bamboo", "Animalia|Arthropoda|crustacean", "Plantae|Lamiales|olive", "paper", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Animalia|Chordata|Aves|Galliformes|poultry", "Plantae|Poales|wheat"]
   },
   {
     "name": "agriculture|hydroponics",
-    "imports": ["Plantae|Poales|maize", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato"]
+    "imports": ["Animalia|Chordata|fish", "livestock", "Plantae|Poales|maize", "Fungi|mushroom", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "tannery", "Fungi|yeast"]
   },
   {
     "name": "agriculture|pesticide",
-    "imports": ["Plantae|Brassicales|broccoli", "Plantae|Fabales|Fagaceae|chestnut", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Plantae|Cucurbitales|cucumber", "Plantae|Arecales|date", "Plantae|Poales|maize", "Plantae|Sapindales|neem", "Plantae|Asparagales|onion", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Solanales|tobacco"]
+    "imports": ["Plantae|Brassicales|broccoli", "Plantae|Fabales|Fagaceae|chestnut", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Animalia|Arthropoda|crustacean", "Plantae|Cucurbitales|cucumber", "Plantae|Arecales|date", "distillery", "Animalia|Chordata|fish", "Plantae|Poales|maize", "Plantae|Sapindales|neem", "Plantae|Asparagales|onion", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Solanales|tobacco"]
+  },
+  {
+    "name": "algae",
+    "imports": ["activated carbon", "ecology|bioremediation", "cracking (chemistry)", "energy|liquid|diesel fuel", "agriculture|fertilizers|digestate", "energy|liquid|ethanol fuel", "energy|gas|gasification", "process|biorefinery|breakingdownmaterials|hydrothermal liquefaction", "energy|liquid|jet fuel", "energy|gas|syngas", "energy|synthetic fuel"]
+  },
+  {
+    "name": "animal feed",
+    "imports": ["agriculture|aquaculture", "Animalia|Chordata|fish"]
+  },
+  {
+    "name": "Animalia|Arthropoda|crustacean",
+    "imports": ["plantcomponents|cellulose", "product|cosmetics", "agriculture|herbicide", "agriculture|pesticide"]
+  },
+  {
+    "name": "Animalia|Arthropoda|Malacostraca|Decapoda|lobster",
+    "imports": ["process|enzyme"]
+  },
+  {
+    "name": "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp",
+    "imports": ["collagen", "product|cosmetics", "process|enzyme", "energy|liquid|methanol", "product|pharmaceutical drug", "protein", "process|biorefinery|sequencing batch reactor"]
+  },
+  {
+    "name": "Animalia|Arthropoda|prawn",
+    "imports": ["process|biorefinery|acid|lactic acid", "process|biorefinery|acid|polylactic acid", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|chicken",
+    "imports": ["agriculture|biochar", "biosorption", "energy|liquid|cellulosic ethanol", "collagen", "energy|liquid|diesel fuel", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|gas|hydrogen", "product|meat and bone meal", "energy|liquid|methanol", "protein", "starch"]
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|hen",
+    "imports": ["process|enzyme", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|poultry",
+    "imports": ["agriculture|biochar", "ecology|bioremediation", "denitrification", "agriculture|fertilizers|digestate", "process|enzyme", "agriculture|herbicide", "energy|gas|hydrogen", "agriculture|fertilizers|organic farming", "protein", "process|biorefinery|breakingdownmaterials|thermal depolymerization"]
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|turkey",
+    "imports": ["energy|liquid|diesel fuel", "product|essential oil", "energy|liquid|gasoline", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|fish",
+    "imports": ["animal feed", "collagen", "cracking (chemistry)", "energy|liquid|diesel fuel", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|enzyme", "agriculture|fertilizers|green manure", "agriculture|hydroponics", "process|biorefinery|acid|lactic acid", "product|meat and bone meal", "energy|liquid|methanol", "agriculture|fertilizers|organic farming", "agriculture|pesticide", "product|pharmaceutical drug", "protein", "energy|gas|syngas", "vinasse"]
+  },
+  {
+    "name": "Animalia|Chordata|fishery",
+    "imports": ["collagen", "product|cosmetics", "process|enzyme", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|beef",
+    "imports": ["process|biorefinery|sequencing batch reactor"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine",
+    "imports": ["energy|liquid|diesel fuel", "agriculture|fertilizers|digestate", "process|enzyme", "process|biorefinery|alcohol|glycerol", "energy|solid|incineration", "plantcomponents|lignin", "product|meat and bone meal", "energy|liquid|methanol", "agriculture|fertilizers|organic farming", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cattle",
+    "imports": ["agriculture|fertilizers|organic farming", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow",
+    "imports": ["agriculture|biochar", "ecology|bioremediation", "plantcomponents|cellulose", "collagen", "desiccant", "energy|gas|gasification", "plantcomponents|hemicellulose", "energy|gas|hydrogen", "product|meat and bone meal"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|goat",
+    "imports": ["energy|liquid|diesel fuel", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather",
+    "imports": ["ecology|bioremediation", "collagen", "product|cosmetics", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|polymer|epichlorohydrin", "process|biorefinery|acid|glutamic acid", "process|biorefinery|polyethylene", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep",
+    "imports": ["process|biorefinery|acid|aspartic acid", "energy|liquid|diesel fuel", "agriculture|fertilizers|digestate", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|biorefinery|acid|glutamic acid", "plantcomponents|hemicellulose", "energy|liquid|methanol", "agriculture|fertilizers|organic farming"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|hog",
+    "imports": ["energy|solid|cofiring", "energy|gas|hydrogen", "agriculture|fertilizers|organic farming"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|pig",
+    "imports": ["agriculture|biochar", "agriculture|fertilizers|digestate", "process|enzyme", "energy|solid|incineration", "night soil", "agriculture|fertilizers|organic farming", "process|biorefinery|polyethylene", "protein"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|swine",
+    "imports": ["agriculture|biochar", "ecology|bioremediation", "ecology|constructed wetland", "agriculture|fertilizers|digestate", "energy|gas|gasification", "product|meat and bone meal", "product|resin"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Lagomorpha|rabbit",
+    "imports": ["collagen", "protein", "starch", "vinasse"]
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Perissodactyla|horse",
+    "imports": ["energy|gas|hydrogen"]
+  },
+  {
+    "name": "Animalia|Mollusca|Bivalvia|clam",
+    "imports": ["plantcomponents|cellulose"]
+  },
+  {
+    "name": "Animalia|Mollusca|Bivalvia|oyster",
+    "imports": ["process|cyclonic separation", "energy|liquid|diesel fuel", "process|biorefinery|fatty acid methyl ester", "product|meat and bone meal"]
+  },
+  {
+    "name": "Animalia|Mollusca|Gastropoda|gastropod",
+    "imports": ["protein"]
   },
   {
     "name": "arabinose",
-    "imports": ["Plantae|Poales|barley", "Plantae|Poales|cane", "Plantae|Arecales|coconut", "Plantae|Vitales|grape", "Plantae|Poales|maize", "Plantae|Lamiales|olive", "Plantae|Brassicales|rapeseed", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|barley", "Plantae|Poales|cane", "Plantae|Arecales|coconut", "distillery", "Plantae|Vitales|grape", "Plantae|Poales|maize", "mill", "Plantae|Lamiales|olive", "Plantae|Brassicales|rapeseed", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+  },
+  {
+    "name": "beer",
+    "imports": ["protein", "process|biorefinery|sequencing batch reactor"]
   },
   {
     "name": "biosorption",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Poales|bamboo", "Plantae|Caryophyllales|beet", "Plantae|Gentianales|coffee", "Plantae|Vitales|grape", "Plantae|Asparagales|hyacinth", "Plantae|Sapindales|neem", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Sapindales|orange", "Plantae|Fabales|Fabaceae|peach", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Poales|rice", "Plantae|Ericales|tea"]
+    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Poales|bamboo", "Plantae|Caryophyllales|beet", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Gentianales|coffee", "Plantae|Vitales|grape", "Plantae|Asparagales|hyacinth", "Plantae|Sapindales|neem", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Sapindales|orange", "Plantae|Fabales|Fabaceae|peach", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Poales|rice", "sugar", "Plantae|Ericales|tea"]
+  },
+  {
+    "name": "brewery",
+    "imports": ["agriculture|biochar", "process|biorefinery|polymer|bioplastic", "energy|solid|incineration", "process|biorefinery|acid|lactic acid", "process|biorefinery|polymer|polyhydroxyalkanoates", "process|biorefinery|polymer|polyhydroxybutyrate", "process|biorefinery|sequencing batch reactor", "surfactant", "energy|gas|syngas"]
+  },
+  {
+    "name": "cardboard",
+    "imports": ["activated carbon", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "energy|liquid|ethanol fuel"]
+  },
+  {
+    "name": "carpet",
+    "imports": ["ecology|constructed wetland", "process|biorefinery|polyethylene"]
+  },
+  {
+    "name": "cheese",
+    "imports": ["process|biorefinery|acidogenesis", "product|cosmetics", "energy|gas|hydrogen", "agriculture|fertilizers|organic farming", "process|biorefinery|sequencing batch reactor"]
+  },
+  {
+    "name": "collagen",
+    "imports": ["Animalia|Chordata|Aves|Galliformes|chicken", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "egg", "Animalia|Chordata|fish", "Animalia|Chordata|fishery", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Animalia|Chordata|Mammalia|Lagomorpha|rabbit", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "slaughterhouse", "tannery"]
   },
   {
     "name": "cracking (chemistry)",
-    "imports": ["Plantae|Lamiales|olive", "Plantae|Pinophyta|Pinopsida|Pinales|pine"]
+    "imports": ["algae", "Animalia|Chordata|fish", "forest", "livestock", "Plantae|Lamiales|olive", "Plantae|Pinophyta|Pinopsida|Pinales|pine"]
+  },
+  {
+    "name": "dairy",
+    "imports": ["process|biorefinery|acetogenesis", "agriculture|biochar", "process|biorefinery|polymer|bioplastic", "plantcomponents|hemicellulose", "energy|gas|hydrogen", "process|biorefinery|alcohol|hydroxymethylfurfural", "process|biorefinery|polymer|polyhydroxyalkanoates", "protein", "surfactant"]
+  },
+  {
+    "name": "demolition",
+    "imports": ["energy|gas|gasification", "energy|gas|hydrogen", "energy|gas|syngas"]
+  },
+  {
+    "name": "denitrification",
+    "imports": ["agriculture|aquaculture", "Animalia|Chordata|Aves|Galliformes|poultry"]
   },
   {
     "name": "desiccant",
-    "imports": ["Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya"]
+    "imports": ["Plantae|Arecales|coconut", "Plantae|Poales|corn", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya"]
+  },
+  {
+    "name": "distillery",
+    "imports": ["arabinose", "ecology|bioremediation", "plantcomponents|cellulose", "process|enzyme", "energy|liquid|ethanol fuel", "plantcomponents|hemicellulose", "energy|liquid|methanol", "agriculture|pesticide", "protein", "starch", "vinasse"]
   },
   {
     "name": "ecology|bioremediation",
-    "imports": ["Plantae|Rosales|apple", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Cucurbitales|cucumber", "Plantae|Asparagales|hyacinth", "Plantae|Poales|maize", "Plantae|Brassicales|mustard", "Plantae|Fabales|Fagaceae|oak", "Plantae|Sapindales|orange", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["algae", "Plantae|Rosales|apple", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "Plantae|Cucurbitales|cucumber", "distillery", "Plantae|Asparagales|hyacinth", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Poales|maize", "mill", "Plantae|Brassicales|mustard", "Plantae|Fabales|Fagaceae|oak", "Plantae|Sapindales|orange", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Animalia|Chordata|Aves|Galliformes|poultry", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "tannery", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "ecology|constructed wetland",
-    "imports": ["Plantae|Arecales|coconut", "Plantae|Malpighiales|tapioca"]
+    "imports": ["carpet", "Plantae|Arecales|coconut", "slag", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "Plantae|Malpighiales|tapioca"]
+  },
+  {
+    "name": "egg",
+    "imports": ["collagen"]
   },
   {
     "name": "energy|gas|biogas",
@@ -69,47 +229,47 @@
   },
   {
     "name": "energy|gas|gasification",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Poales|cane", "Plantae|Arecales|coconut", "Plantae|Malvales|cotton", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soya", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|wood"]
+    "imports": ["algae", "Plantae|Poales|bamboo", "Plantae|Poales|cane", "Plantae|Arecales|coconut", "Plantae|Malvales|cotton", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "demolition", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "slag", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soya", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "Plantae|wood"]
   },
   {
     "name": "energy|gas|hydrogen",
-    "imports": ["Plantae|Rosales|apple", "Plantae|Malpighiales|cassava", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Malpighiales|poplar", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soya", "Plantae|Asterales|sunflower", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Rosales|apple", "Plantae|Malpighiales|cassava", "cheese", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Arecales|coconut", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "dairy", "demolition", "farm", "forest", "Animalia|Chordata|Mammalia|Artiodactyla|hog", "Animalia|Chordata|Mammalia|Perissodactyla|horse", "mill", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "paper", "Plantae|Malpighiales|poplar", "Animalia|Chordata|Aves|Galliformes|poultry", "slag", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soya", "Plantae|Asterales|sunflower", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Poales|wheat"]
   },
   {
     "name": "energy|gas|syngas",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Poales|barley", "Plantae|Poales|corn", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["algae", "Plantae|Poales|bamboo", "Plantae|Poales|barley", "brewery", "Plantae|Poales|corn", "demolition", "Animalia|Chordata|fish", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "slag", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "energy|liquid|alcohol fuel",
-    "imports": ["Plantae|Fagales|hazelnut", "Plantae|Poales|maize", "Plantae|wood"]
+    "imports": ["Plantae|Fagales|hazelnut", "Plantae|Poales|maize", "seaweed", "Plantae|wood"]
   },
   {
     "name": "energy|liquid|cellulosic ethanol",
-    "imports": ["Plantae|Poales|cane", "Plantae|Brassicales|canola", "Plantae|Poales|corn", "Plantae|Malpighiales|jatropha", "Plantae|Poales|maize", "Plantae|Fabales|Fagaceae|oak", "Plantae|Poales|oat", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peach", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Poales|rice", "Plantae|softwood", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|cane", "Plantae|Brassicales|canola", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Poales|corn", "forest", "Plantae|Malpighiales|jatropha", "Plantae|Poales|maize", "mill", "Plantae|Fabales|Fagaceae|oak", "Plantae|Poales|oat", "Plantae|Arecales|palm", "paper", "Plantae|Fabales|Fabaceae|peach", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Poales|rice", "Plantae|softwood", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "energy|liquid|diesel fuel",
-    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Brassicales|canola", "Plantae|Arecales|coconut", "Plantae|Fagales|hazelnut", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|mango", "Plantae|Cucurbitales|melon", "Plantae|Brassicales|mustard", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Asterales|sunflower", "Plantae|Solanales|tomato"]
+    "imports": ["algae", "Plantae|Fabales|Fabaceae|bean", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Brassicales|canola", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Arecales|coconut", "Animalia|Chordata|fish", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|goat", "Plantae|Fagales|hazelnut", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|mango", "Plantae|Cucurbitales|melon", "Plantae|Brassicales|mustard", "Plantae|Sapindales|orange", "Animalia|Mollusca|Bivalvia|oyster", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "slag", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Asterales|sunflower", "Plantae|Solanales|tomato", "Animalia|Chordata|Aves|Galliformes|turkey"]
   },
   {
     "name": "energy|liquid|ethanol fuel",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Fabales|Fabaceae|bean", "Plantae|Caryophyllales|beet", "Plantae|Poales|cane", "Plantae|Brassicales|canola", "Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|hardwood", "Plantae|Poales|maize", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat"]
+    "imports": ["algae", "Plantae|Poales|bamboo", "Plantae|Fabales|Fabaceae|bean", "Plantae|Caryophyllales|beet", "Plantae|Poales|cane", "Plantae|Brassicales|canola", "cardboard", "Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "distillery", "forest", "Plantae|hardwood", "Plantae|Poales|maize", "mill", "newspaper", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "paper", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat"]
   },
   {
     "name": "energy|liquid|fuel oil",
-    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Malpighiales|jatropha", "Plantae|Cucurbitales|melon", "Plantae|Poales|oat", "Plantae|Arecales|palm", "Plantae|Brassicales|rapeseed", "Plantae|wood"]
+    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Malpighiales|jatropha", "Plantae|Cucurbitales|melon", "newspaper", "Plantae|Poales|oat", "Plantae|Arecales|palm", "Plantae|Brassicales|rapeseed", "Plantae|wood"]
   },
   {
     "name": "energy|liquid|gasoline",
-    "imports": ["Plantae|Poales|cane", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Malpighiales|rubber", "Plantae|Poales|sugarcane"]
+    "imports": ["Plantae|Poales|cane", "mill", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Malpighiales|rubber", "Plantae|Poales|sugarcane", "Animalia|Chordata|Aves|Galliformes|turkey"]
   },
   {
     "name": "energy|liquid|jet fuel",
-    "imports": ["Plantae|Pinophyta|Pinopsida|Pinales|pine"]
+    "imports": ["algae", "Plantae|Pinophyta|Pinopsida|Pinales|pine"]
   },
   {
     "name": "energy|liquid|methanol",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Brassicales|canola", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Fagales|hazelnut", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Myrtales|pomegranate", "Plantae|Malpighiales|rubber", "Plantae|Lamiales|sesame", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Brassicales|canola", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "distillery", "Animalia|Chordata|fish", "Plantae|Fagales|hazelnut", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Myrtales|pomegranate", "Plantae|Malpighiales|rubber", "Plantae|Lamiales|sesame", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "Plantae|softwood", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|Poales|wheat", "wine", "Plantae|wood"]
   },
   {
     "name": "energy|liquid|pyrolysis",
@@ -117,15 +277,15 @@
   },
   {
     "name": "energy|solid|cofiring",
-    "imports": ["Plantae|Rosales|cherry"]
+    "imports": ["Plantae|Rosales|cherry", "Animalia|Chordata|Mammalia|Artiodactyla|hog", "paper"]
   },
   {
     "name": "energy|solid|cogeneration",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Poales|cane", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Poales|cane", "forest", "livestock", "Fungi|mushroom", "paper", "slag", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "energy|solid|incineration",
-    "imports": ["Plantae|Poales|corn", "Plantae|Arecales|date", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Poales|rice", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|wood"]
+    "imports": ["Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "brewery", "Plantae|Poales|corn", "Plantae|Arecales|date", "forest", "kraft", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Poales|rice", "slag", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Asterales|sunflower", "Plantae|wood"]
   },
   {
     "name": "energy|solid|refuse-derived fuel",
@@ -133,19 +293,75 @@
   },
   {
     "name": "energy|solid|torrefaction",
-    "imports": ["Plantae|Malvales|cotton", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Poales|maize", "Plantae|Arecales|palm", "Plantae|Poales|rice", "Plantae|Solanales|tobacco", "Plantae|wood"]
+    "imports": ["Plantae|Malvales|cotton", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Poales|maize", "Fungi|mushroom", "Plantae|Arecales|palm", "Plantae|Poales|rice", "Plantae|Solanales|tobacco", "winery", "Plantae|wood"]
   },
   {
     "name": "energy|synthetic fuel",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Ericales|tea", "Plantae|wood"]
+    "imports": ["algae", "Plantae|Poales|bamboo", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Ericales|tea", "Plantae|wood"]
+  },
+  {
+    "name": "farm",
+    "imports": ["plantcomponents|cellulose", "energy|gas|hydrogen", "product|resin"]
+  },
+  {
+    "name": "forest",
+    "imports": ["product|briquette", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "energy|solid|cogeneration", "cracking (chemistry)", "product|essential oil", "energy|liquid|ethanol fuel", "energy|gas|hydrogen", "energy|solid|incineration", "agriculture|fertilizers|mulch"]
   },
   {
     "name": "forestry|black liquor",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|hardwood", "Plantae|softwood", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|hardwood", "kraft", "mill", "paper", "Plantae|softwood", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "fuel cell",
     "imports": ["Plantae|Arecales|coconut", "Plantae|Arecales|sago"]
+  },
+  {
+    "name": "Fungi|mushroom",
+    "imports": ["product|briquette", "plantcomponents|cellulose", "energy|solid|cogeneration", "process|biorefinery|furfural", "agriculture|fertilizers|green manure", "agriculture|hydroponics", "process|biorefinery|alcohol|hydroxymethylfurfural", "agriculture|fertilizers|organic farming", "energy|solid|torrefaction"]
+  },
+  {
+    "name": "Fungi|yeast",
+    "imports": ["process|biorefinery|acid|fumaric acid", "process|biorefinery|furfural", "process|biorefinery|alcohol|glycerol", "agriculture|hydroponics", "process|biorefinery|acid|lactic acid", "protein", "process|biorefinery|acid|succinic acid"]
+  },
+  {
+    "name": "greenhouse",
+    "imports": ["plantcomponents|cellulose"]
+  },
+  {
+    "name": "horticultural",
+    "imports": ["plantcomponents|hemicellulose", "process|biorefinery|acid|humic acid"]
+  },
+  {
+    "name": "kraft",
+    "imports": ["wastewater|biofilter", "forestry|black liquor", "plantcomponents|cellulose", "process|enzyme", "process|biorefinery|alcohol|hydroxymethylfurfural", "energy|solid|incineration", "plantcomponents|lignin", "process|photocatalysis", "process|biorefinery|sequencing batch reactor"]
+  },
+  {
+    "name": "livestock",
+    "imports": ["plantcomponents|cellulose", "energy|solid|cogeneration", "cracking (chemistry)", "process|enzyme", "plantcomponents|hemicellulose", "agriculture|hydroponics"]
+  },
+  {
+    "name": "milk",
+    "imports": ["process|biorefinery|polymer|bioplastic", "process|biorefinery|acid|lactic acid", "process|biorefinery|polymer|polyhydroxyalkanoates", "process|biorefinery|polymer|polyhydroxybutyrate", "protein", "starch"]
+  },
+  {
+    "name": "mill",
+    "imports": ["process|biorefinery|acidogenesis", "arabinose", "agriculture|biochar", "process|biorefinery|polymer|bioplastic", "ecology|bioremediation", "forestry|black liquor", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "process|enzyme", "energy|liquid|ethanol fuel", "energy|liquid|gasoline", "agriculture|fertilizers|green manure", "plantcomponents|hemicellulose", "process|biorefinery|acid|humic acid", "energy|gas|hydrogen", "process|biorefinery|acid|lactic acid", "plantcomponents|lignin", "process|photocatalysis", "process|biorefinery|polymer|polyhydroxyalkanoates", "process|biorefinery|polymer|polyhydroxybutyrate", "protein", "product|resin", "process|biorefinery|sequencing batch reactor", "starch"]
+  },
+  {
+    "name": "newspaper",
+    "imports": ["process|biorefinery|alcohol|butanol", "plantcomponents|cellulose", "energy|liquid|ethanol fuel", "energy|liquid|fuel oil", "process|biorefinery|furfural", "process|biorefinery|alcohol|hydroxymethylfurfural", "product|resin", "starch"]
+  },
+  {
+    "name": "newsprint",
+    "imports": ["plantcomponents|cellulose", "process|biorefinery|sequencing batch reactor"]
+  },
+  {
+    "name": "night soil",
+    "imports": ["Animalia|Chordata|Mammalia|Artiodactyla|pig"]
+  },
+  {
+    "name": "paper",
+    "imports": ["process|biorefinery|polymer|bioplastic", "forestry|black liquor", "plantcomponents|cellulose", "energy|liquid|cellulosic ethanol", "energy|solid|cofiring", "energy|solid|cogeneration", "process|enzyme", "energy|liquid|ethanol fuel", "process|biorefinery|fatty acid methyl ester", "agriculture|herbicide", "energy|gas|hydrogen", "process|biorefinery|acid|lactic acid", "plantcomponents|lignin", "product|particle board", "process|biorefinery|polymer|polyhydroxyalkanoates", "starch", "process|biorefinery|xylitol"]
   },
   {
     "name": "Plantae|Arecales|coconut",
@@ -493,23 +709,35 @@
   },
   {
     "name": "plantcomponents|cellulose",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Zingiberales|banana", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Malpighiales|castor", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Cucurbitales|cucumber", "Plantae|Myrtales|eucalyptus", "Plantae|Malpighiales|flax", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|jute", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "Plantae|Brassicales|mustard", "Plantae|Fabales|Fagaceae|oak", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peach", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Sapindales|pistachio", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Malpighiales|rubber", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|Zingiberales|banana", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Malpighiales|castor", "Animalia|Mollusca|Bivalvia|clam", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "Animalia|Arthropoda|crustacean", "Plantae|Cucurbitales|cucumber", "distillery", "Plantae|Myrtales|eucalyptus", "farm", "Plantae|Malpighiales|flax", "forest", "Plantae|Vitales|grape", "greenhouse", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|jute", "kraft", "livestock", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "mill", "Fungi|mushroom", "Plantae|Brassicales|mustard", "newspaper", "newsprint", "Plantae|Fabales|Fagaceae|oak", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "paper", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peach", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Sapindales|pistachio", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Malpighiales|rubber", "seaweed", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "sugar", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "textile", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "plantcomponents|hemicellulose",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Zingiberales|banana", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Vitales|grape", "Plantae|hardwood", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "Plantae|Fabales|Fagaceae|oak", "Plantae|Poales|oat", "Plantae|Lamiales|olive", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Asparagales|sisal", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Asterales|sunflower", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Zingiberales|banana", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "dairy", "distillery", "Plantae|Vitales|grape", "Plantae|hardwood", "horticultural", "livestock", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "mill", "Plantae|Fabales|Fagaceae|oak", "Plantae|Poales|oat", "Plantae|Lamiales|olive", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "seaweed", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "Plantae|Asparagales|sisal", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Asterales|sunflower", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "plantcomponents|lignin",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Zingiberales|banana", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Myrtales|eucalyptus", "Plantae|Malpighiales|flax", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|kenaf", "Plantae|Poales|malt", "Plantae|Sapindales|mango", "Plantae|Brassicales|mustard", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peach", "Plantae|Poales|pineapple", "Plantae|Myrtales|pomegranate", "Plantae|Malpighiales|poplar", "Plantae|Poales|rice", "Plantae|Lamiales|sesame", "Plantae|softwood", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|Zingiberales|banana", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Myrtales|eucalyptus", "Plantae|Malpighiales|flax", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|kenaf", "kraft", "Plantae|Poales|malt", "Plantae|Sapindales|mango", "mill", "Plantae|Brassicales|mustard", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "paper", "Plantae|Fabales|Fabaceae|peach", "Plantae|Poales|pineapple", "Plantae|Myrtales|pomegranate", "Plantae|Malpighiales|poplar", "Plantae|Poales|rice", "Plantae|Lamiales|sesame", "Plantae|softwood", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
+  },
+  {
+    "name": "process|biorefinery|acetogenesis",
+    "imports": ["dairy"]
+  },
+  {
+    "name": "process|biorefinery|acid|aspartic acid",
+    "imports": ["Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep"]
+  },
+  {
+    "name": "process|biorefinery|acid|fumaric acid",
+    "imports": ["Fungi|yeast"]
   },
   {
     "name": "process|biorefinery|acid|glutamic acid",
-    "imports": ["Plantae|Malpighiales|cassava", "Plantae|Poales|maize"]
+    "imports": ["Plantae|Malpighiales|cassava", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Poales|maize", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "sugar"]
   },
   {
     "name": "process|biorefinery|acid|humic acid",
-    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Arecales|coconut", "Plantae|Malvales|cotton", "Plantae|softwood"]
+    "imports": ["abattoir", "Plantae|Fabales|Fabaceae|bean", "Plantae|Arecales|coconut", "Plantae|Malvales|cotton", "horticultural", "mill", "Plantae|softwood"]
   },
   {
     "name": "process|biorefinery|acid|itaconic acid",
@@ -517,7 +745,7 @@
   },
   {
     "name": "process|biorefinery|acid|lactic acid",
-    "imports": ["Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "Plantae|Vitales|grape", "Plantae|Poales|maize", "Plantae|Poales|pineapple", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|wood"]
+    "imports": ["brewery", "Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "Animalia|Chordata|fish", "Plantae|Vitales|grape", "Plantae|Poales|maize", "milk", "mill", "paper", "Plantae|Poales|pineapple", "Animalia|Arthropoda|prawn", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "textile", "Plantae|wood", "Fungi|yeast"]
   },
   {
     "name": "process|biorefinery|acid|levulinic acid",
@@ -529,19 +757,19 @@
   },
   {
     "name": "process|biorefinery|acidogenesis",
-    "imports": ["Plantae|Gentianales|coffee", "Plantae|Fabales|Fabaceae|soybean"]
+    "imports": ["cheese", "Plantae|Gentianales|coffee", "mill", "Plantae|Fabales|Fabaceae|soybean"]
   },
   {
     "name": "process|biorefinery|acid|polylactic acid",
-    "imports": ["Plantae|Poales|corn", "Plantae|Malpighiales|flax", "Plantae|Malvales|jute", "Plantae|Poales|maize", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Plantae|Poales|rice", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|corn", "Plantae|Malpighiales|flax", "Plantae|Malvales|jute", "Plantae|Poales|maize", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|pineapple", "Plantae|Solanales|potato", "Animalia|Arthropoda|prawn", "Plantae|Poales|rice", "Plantae|Poales|sugarcane", "textile", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "process|biorefinery|acid|succinic acid",
-    "imports": ["Plantae|Caryophyllales|beet", "Plantae|Malvales|cotton", "Plantae|Poales|oat", "Plantae|Sapindales|orange", "Plantae|Solanales|potato", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Caryophyllales|beet", "Plantae|Malvales|cotton", "Plantae|Poales|oat", "Plantae|Sapindales|orange", "Plantae|Solanales|potato", "Plantae|Poales|wheat", "Fungi|yeast"]
   },
   {
     "name": "process|biorefinery|alcohol|butanol",
-    "imports": ["Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "Plantae|Fabales|Fagaceae|oak", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|wood"]
+    "imports": ["Plantae|Malpighiales|cassava", "Plantae|Poales|corn", "newspaper", "Plantae|Fabales|Fagaceae|oak", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|wood"]
   },
   {
     "name": "process|biorefinery|alcohol|butanol fuel",
@@ -549,11 +777,11 @@
   },
   {
     "name": "process|biorefinery|alcohol|glycerol",
-    "imports": ["Plantae|Poales|cane", "Plantae|Brassicales|canola", "Plantae|Malpighiales|jatropha", "Plantae|Brassicales|mustard", "Plantae|Poales|oat", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat"]
+    "imports": ["Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Poales|cane", "Plantae|Brassicales|canola", "Plantae|Malpighiales|jatropha", "Plantae|Brassicales|mustard", "Plantae|Poales|oat", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Fungi|yeast"]
   },
   {
     "name": "process|biorefinery|alcohol|hydroxymethylfurfural",
-    "imports": ["Plantae|Zingiberales|banana", "Plantae|Poales|barley", "Plantae|Brassicales|rapeseed"]
+    "imports": ["Plantae|Zingiberales|banana", "Plantae|Poales|barley", "dairy", "kraft", "Fungi|mushroom", "newspaper", "Plantae|Brassicales|rapeseed"]
   },
   {
     "name": "process|biorefinery|alcohol|sorbitol",
@@ -561,35 +789,35 @@
   },
   {
     "name": "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis",
-    "imports": ["Plantae|Rosales|apple", "Plantae|Poales|barley", "Plantae|Brassicales|canola", "Plantae|Malpighiales|cassava", "Plantae|Gentianales|coffee", "Plantae|Malvales|cotton", "Plantae|Poales|maize", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Arecales|sago", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["abattoir", "Plantae|Rosales|apple", "Plantae|Poales|barley", "Plantae|Brassicales|canola", "cardboard", "Plantae|Malpighiales|cassava", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Gentianales|coffee", "Plantae|Malvales|cotton", "Animalia|Chordata|fish", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Poales|maize", "Plantae|Fabales|Fagaceae|oak", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Arecales|sago", "seaweed", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "process|biorefinery|breakingdownmaterials|hydrothermal liquefaction",
-    "imports": ["Plantae|Pinophyta|Pinopsida|Pinales|pine"]
+    "imports": ["algae", "Plantae|Pinophyta|Pinopsida|Pinales|pine"]
   },
   {
     "name": "process|biorefinery|breakingdownmaterials|thermal depolymerization",
-    "imports": ["Plantae|Poales|maize"]
+    "imports": ["Plantae|Poales|maize", "Animalia|Chordata|Aves|Galliformes|poultry"]
   },
   {
     "name": "process|biorefinery|fatty acid methyl ester",
-    "imports": ["Plantae|Fagales|hazelnut", "Plantae|Sapindales|mango", "Plantae|Brassicales|mustard", "Plantae|Fabales|Fabaceae|soybean"]
+    "imports": ["Plantae|Fagales|hazelnut", "Plantae|Sapindales|mango", "Plantae|Brassicales|mustard", "Animalia|Mollusca|Bivalvia|oyster", "paper", "Plantae|Fabales|Fabaceae|soybean"]
   },
   {
     "name": "process|biorefinery|furfural",
-    "imports": ["Plantae|Rosales|apricot", "Plantae|Poales|barley", "Plantae|Poales|corn", "Plantae|Poales|maize", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peach", "Plantae|Brassicales|rapeseed", "Plantae|Asterales|sunflower"]
+    "imports": ["Plantae|Rosales|apricot", "Plantae|Poales|barley", "Plantae|Poales|corn", "Plantae|Poales|maize", "Fungi|mushroom", "newspaper", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|peach", "Plantae|Brassicales|rapeseed", "Plantae|Asterales|sunflower", "Fungi|yeast"]
   },
   {
     "name": "process|biorefinery|polyethylene",
-    "imports": ["Plantae|Caryophyllales|beet", "Plantae|Poales|corn", "Plantae|hardwood", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Malpighiales|rubber", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Caryophyllales|beet", "carpet", "Plantae|Poales|corn", "Plantae|hardwood", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Malpighiales|rubber", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "wine", "Plantae|wood"]
   },
   {
     "name": "process|biorefinery|polymer|bioplastic",
-    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Brassicales|canola", "Plantae|Malpighiales|cassava", "Plantae|Malpighiales|jatropha", "Plantae|Poales|malt", "Plantae|Cucurbitales|melon", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Fabales|Fabaceae|bean", "brewery", "Plantae|Brassicales|canola", "Plantae|Malpighiales|cassava", "dairy", "Plantae|Malpighiales|jatropha", "Plantae|Poales|malt", "Plantae|Cucurbitales|melon", "milk", "mill", "Plantae|Arecales|palm", "paper", "Plantae|Poales|pineapple", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|wheat"]
   },
   {
     "name": "process|biorefinery|polymer|epichlorohydrin",
-    "imports": ["Plantae|Poales|maize"]
+    "imports": ["Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Poales|maize"]
   },
   {
     "name": "process|biorefinery|polymer|isoprene",
@@ -597,11 +825,11 @@
   },
   {
     "name": "process|biorefinery|polymer|polyhydroxyalkanoates",
-    "imports": ["Plantae|Caryophyllales|beet", "Plantae|Poales|corn", "Plantae|Arecales|date", "Plantae|Poales|malt", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Brassicales|rapeseed", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean"]
+    "imports": ["Plantae|Caryophyllales|beet", "brewery", "Plantae|Poales|corn", "dairy", "Plantae|Arecales|date", "Plantae|Poales|malt", "milk", "mill", "Plantae|Arecales|palm", "paper", "Plantae|Poales|pineapple", "Plantae|Brassicales|rapeseed", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean"]
   },
   {
     "name": "process|biorefinery|polymer|polyhydroxybutyrate",
-    "imports": ["Plantae|Malvales|kenaf", "Plantae|Poales|maize", "Plantae|Poales|malt", "Plantae|Arecales|palm", "Plantae|Solanales|potato", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean"]
+    "imports": ["brewery", "Plantae|Malvales|kenaf", "Plantae|Poales|maize", "Plantae|Poales|malt", "milk", "mill", "Plantae|Arecales|palm", "Plantae|Solanales|potato", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean"]
   },
   {
     "name": "process|biorefinery|polymer|polymer",
@@ -609,23 +837,23 @@
   },
   {
     "name": "process|biorefinery|sequencing batch reactor",
-    "imports": ["Plantae|Caryophyllales|beet", "Plantae|Myrtales|eucalyptus", "Plantae|Brassicales|mustard", "Plantae|Fabales|Fabaceae|peach", "Plantae|Solanales|tobacco"]
+    "imports": ["agriculture|aquaculture", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|beef", "beer", "Plantae|Caryophyllales|beet", "brewery", "cheese", "Plantae|Myrtales|eucalyptus", "kraft", "mill", "Plantae|Brassicales|mustard", "newsprint", "Plantae|Fabales|Fabaceae|peach", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "slaughterhouse", "textile", "Plantae|Solanales|tobacco"]
   },
   {
     "name": "process|biorefinery|xylitol",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Vitales|grape", "Plantae|Poales|oat", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|Vitales|grape", "Plantae|Poales|oat", "paper", "Plantae|Poales|wheat", "winery"]
   },
   {
     "name": "process|cyclonic separation",
-    "imports": ["Plantae|Rosales|apple", "Plantae|Gentianales|coffee"]
+    "imports": ["Plantae|Rosales|apple", "Plantae|Gentianales|coffee", "Animalia|Mollusca|Bivalvia|oyster", "textile"]
   },
   {
     "name": "process|enzyme",
-    "imports": ["Plantae|Rosales|almond", "Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Caryophyllales|beet", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Malpighiales|castor", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Arecales|date", "Plantae|Myrtales|eucalyptus", "Plantae|Fabales|Fabaceae|groundnut", "Plantae|Malpighiales|jatropha", "Plantae|Poales|maize", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "Plantae|Poales|pineapple", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Plantae|Arecales|sago", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Rosales|almond", "Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Caryophyllales|beet", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Malpighiales|castor", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Arecales|date", "distillery", "Plantae|Myrtales|eucalyptus", "Animalia|Chordata|fish", "Animalia|Chordata|fishery", "Plantae|Fabales|Fabaceae|groundnut", "Animalia|Chordata|Aves|Galliformes|hen", "Plantae|Malpighiales|jatropha", "kraft", "livestock", "Animalia|Arthropoda|Malacostraca|Decapoda|lobster", "Plantae|Poales|maize", "mill", "Plantae|Lamiales|olive", "Plantae|Arecales|palm", "paper", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Poales|pineapple", "Plantae|Malpighiales|poplar", "Plantae|Solanales|potato", "Animalia|Chordata|Aves|Galliformes|poultry", "Plantae|Arecales|sago", "seaweed", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Poales|sugarcane", "Plantae|Solanales|tobacco", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
   },
   {
     "name": "process|photocatalysis",
-    "imports": ["Plantae|Fabales|Fagaceae|oak"]
+    "imports": ["kraft", "mill", "Plantae|Fabales|Fagaceae|oak", "textile"]
   },
   {
     "name": "product|bioadhesive",
@@ -633,58 +861,98 @@
   },
   {
     "name": "product|briquette",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Malvales|durian", "Plantae|Malpighiales|jatropha", "Plantae|Poales|maize", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Fagales|walnut", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|Malvales|durian", "forest", "Plantae|Malpighiales|jatropha", "Plantae|Poales|maize", "Fungi|mushroom", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Fagales|walnut", "Plantae|wood"]
   },
   {
     "name": "product|cosmetics",
-    "imports": ["Plantae|Vitales|grape", "Plantae|Fabales|Fagaceae|oak", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tomato"]
+    "imports": ["cheese", "Animalia|Arthropoda|crustacean", "Animalia|Chordata|fishery", "Plantae|Vitales|grape", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Fabales|Fagaceae|oak", "Plantae|Fabales|Fabaceae|peanut", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tomato"]
   },
   {
     "name": "product|essential oil",
-    "imports": ["Plantae|Rosales|almond", "Plantae|Malpighiales|cassava", "Plantae|Myrtales|eucalyptus", "Plantae|Asterales|guayule", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|neem", "Plantae|Sapindales|orange", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Lamiales|sesame", "Plantae|Poales|sorghum"]
+    "imports": ["Plantae|Rosales|almond", "Plantae|Malpighiales|cassava", "Plantae|Myrtales|eucalyptus", "forest", "Plantae|Asterales|guayule", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|neem", "Plantae|Sapindales|orange", "Plantae|Pinophyta|Pinopsida|Pinales|pine", "Plantae|Lamiales|sesame", "Plantae|Poales|sorghum", "Animalia|Chordata|Aves|Galliformes|turkey"]
   },
   {
     "name": "product|meat and bone meal",
-    "imports": ["Plantae|Fabales|Fabaceae|bean", "Plantae|Sapindales|neem", "Plantae|Solanales|potato", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Plantae|wood"]
+    "imports": ["Plantae|Fabales|Fabaceae|bean", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Animalia|Chordata|Aves|Galliformes|chicken", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow", "Animalia|Chordata|fish", "Plantae|Sapindales|neem", "Animalia|Mollusca|Bivalvia|oyster", "Plantae|Solanales|potato", "slaughterhouse", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soybean", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "Plantae|wood"]
   },
   {
     "name": "product|particle board",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "paper", "Plantae|wood"]
   },
   {
     "name": "product|pharmaceutical drug",
-    "imports": ["Plantae|Vitales|grape", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|orange", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tobacco"]
+    "imports": ["Animalia|Chordata|fish", "Plantae|Vitales|grape", "Plantae|Malpighiales|jatropha", "Plantae|Sapindales|orange", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tobacco"]
   },
   {
     "name": "product|resin",
-    "imports": ["Plantae|Poales|bamboo", "Plantae|Brassicales|canola", "Plantae|Fabales|Fagaceae|chestnut", "Plantae|Malvales|cotton", "Plantae|Myrtales|eucalyptus", "Plantae|Malpighiales|flax", "Plantae|Fabales|Fabaceae|groundnut", "Plantae|Asterales|guayule", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|jute", "Plantae|Sapindales|mango", "Plantae|Asparagales|onion", "Plantae|Arecales|palm", "Plantae|Myrtales|pomegranate", "Plantae|Brassicales|rapeseed", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "Plantae|wood"]
+    "imports": ["Plantae|Poales|bamboo", "Plantae|Brassicales|canola", "Plantae|Fabales|Fagaceae|chestnut", "Plantae|Malvales|cotton", "Plantae|Myrtales|eucalyptus", "farm", "Plantae|Malpighiales|flax", "Plantae|Fabales|Fabaceae|groundnut", "Plantae|Asterales|guayule", "Plantae|hardwood", "Plantae|Malpighiales|jatropha", "Plantae|Malvales|jute", "Plantae|Sapindales|mango", "mill", "newspaper", "Plantae|Asparagales|onion", "Plantae|Arecales|palm", "Plantae|Myrtales|pomegranate", "Plantae|Brassicales|rapeseed", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Pinophyta|Pinopsida|Pinales|spruce", "Plantae|Poales|sugarcane", "Plantae|Asterales|sunflower", "Animalia|Chordata|Mammalia|Artiodactyla|swine", "Plantae|wood"]
   },
   {
     "name": "protein",
-    "imports": ["Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Fabales|Fabaceae|bean", "Plantae|Brassicales|cabbage", "Plantae|Brassicales|canola", "Plantae|Sapindales|cashew", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Cucurbitales|cucumber", "Plantae|Malpighiales|flax", "Plantae|Vitales|grape", "Plantae|Fabales|Fabaceae|groundnut", "Plantae|Malpighiales|jatropha", "Plantae|Malpighiales|linseed", "Plantae|Poales|maize", "Plantae|Cucurbitales|melon", "Plantae|Brassicales|mustard", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|pea", "Plantae|Rosales|plum", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Lamiales|sesame", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Asterales|sunflower", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Solanales|tomato", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["abattoir", "Plantae|Fabales|Fabaceae|alfalfa", "Plantae|Rosales|apple", "Plantae|Fabales|Fabaceae|bean", "beer", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine", "Plantae|Brassicales|cabbage", "Plantae|Brassicales|canola", "Plantae|Sapindales|cashew", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cattle", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Arecales|coconut", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Ericales|cranberry", "Plantae|Cucurbitales|cucumber", "dairy", "distillery", "Animalia|Chordata|fish", "Animalia|Chordata|fishery", "Plantae|Malpighiales|flax", "Animalia|Mollusca|Gastropoda|gastropod", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|goat", "Plantae|Vitales|grape", "Plantae|Fabales|Fabaceae|groundnut", "Animalia|Chordata|Aves|Galliformes|hen", "Plantae|Malpighiales|jatropha", "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather", "Plantae|Malpighiales|linseed", "Plantae|Poales|maize", "Plantae|Cucurbitales|melon", "milk", "mill", "Plantae|Brassicales|mustard", "Plantae|Sapindales|orange", "Plantae|Arecales|palm", "Plantae|Fabales|Fabaceae|pea", "Animalia|Chordata|Mammalia|Artiodactyla|pig", "Plantae|Rosales|plum", "Plantae|Solanales|potato", "Animalia|Chordata|Aves|Galliformes|poultry", "Animalia|Arthropoda|prawn", "Animalia|Chordata|Mammalia|Lagomorpha|rabbit", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Lamiales|sesame", "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp", "slaughterhouse", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Asterales|sunflower", "Plantae|Fabales|Fabaceae|tofu", "Plantae|Solanales|tomato", "Animalia|Chordata|Aves|Galliformes|turkey", "Plantae|Poales|wheat", "Plantae|wood", "Fungi|yeast"]
   },
   {
     "name": "pullulan",
-    "imports": ["Plantae|Malpighiales|jatropha", "Plantae|Arecales|palm", "Plantae|Solanales|potato"]
+    "imports": ["Plantae|Malpighiales|jatropha", "Plantae|Arecales|palm", "Plantae|Solanales|potato", "winery"]
+  },
+  {
+    "name": "seaweed",
+    "imports": ["energy|liquid|alcohol fuel", "plantcomponents|cellulose", "agriculture|fertilizers|digestate", "process|biorefinery|breakingdownmaterials|enzymatic hydrolysis", "process|enzyme", "plantcomponents|hemicellulose"]
+  },
+  {
+    "name": "slag",
+    "imports": ["energy|solid|cogeneration", "ecology|constructed wetland", "energy|liquid|diesel fuel", "energy|gas|gasification", "energy|gas|hydrogen", "energy|solid|incineration", "energy|gas|syngas"]
+  },
+  {
+    "name": "slaughterhouse",
+    "imports": ["collagen", "product|meat and bone meal", "protein", "process|biorefinery|sequencing batch reactor"]
   },
   {
     "name": "starch",
-    "imports": ["Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "Plantae|Fabales|Fabaceae|guar", "Plantae|Asterales|guayule", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "Plantae|Poales|oat", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Solanales|potato", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Malpighiales|tapioca", "Plantae|Poales|wheat", "Plantae|wood"]
+    "imports": ["Plantae|Poales|barley", "Plantae|Fabales|Fabaceae|bean", "Plantae|Poales|cane", "Plantae|Malpighiales|cassava", "Animalia|Chordata|Aves|Galliformes|chicken", "Plantae|Gentianales|coffee", "Plantae|Poales|corn", "Plantae|Malvales|cotton", "distillery", "Plantae|Fabales|Fabaceae|guar", "Plantae|Asterales|guayule", "Plantae|Poales|maize", "Plantae|Sapindales|mango", "milk", "mill", "newspaper", "Plantae|Poales|oat", "paper", "Plantae|Fabales|Fabaceae|pea", "Plantae|Fabales|Fabaceae|peanut", "Plantae|Solanales|potato", "Animalia|Chordata|Mammalia|Lagomorpha|rabbit", "Plantae|Brassicales|rapeseed", "Plantae|Poales|rice", "Plantae|Arecales|sago", "Plantae|Poales|sorghum", "Plantae|Fabales|Fabaceae|soy", "Plantae|Fabales|Fabaceae|soya", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Malpighiales|tapioca", "textile", "Plantae|Poales|wheat", "Plantae|wood"]
+  },
+  {
+    "name": "sugar",
+    "imports": ["biosorption", "plantcomponents|cellulose", "process|biorefinery|acid|glutamic acid"]
   },
   {
     "name": "surfactant",
-    "imports": ["Plantae|Malvales|cotton", "Plantae|Cucurbitales|cucumber", "Plantae|Arecales|date", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tomato"]
+    "imports": ["brewery", "Plantae|Malvales|cotton", "Plantae|Cucurbitales|cucumber", "dairy", "Plantae|Arecales|date", "Plantae|Fabales|Fabaceae|soya", "Plantae|Solanales|tomato"]
+  },
+  {
+    "name": "tannery",
+    "imports": ["ecology|bioremediation", "collagen", "agriculture|hydroponics"]
+  },
+  {
+    "name": "textile",
+    "imports": ["plantcomponents|cellulose", "process|cyclonic separation", "process|biorefinery|acid|lactic acid", "process|photocatalysis", "process|biorefinery|acid|polylactic acid", "process|biorefinery|sequencing batch reactor", "starch"]
   },
   {
     "name": "vinasse",
-    "imports": ["Plantae|Poales|cane", "Plantae|Vitales|grape", "Plantae|Poales|maize", "Plantae|Brassicales|mustard", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat"]
+    "imports": ["Plantae|Poales|cane", "distillery", "Animalia|Chordata|fish", "Plantae|Vitales|grape", "Plantae|Poales|maize", "Plantae|Brassicales|mustard", "Animalia|Chordata|Mammalia|Lagomorpha|rabbit", "Plantae|Poales|rice", "Plantae|Fabales|Fabaceae|soybean", "Plantae|Poales|sugarcane", "Plantae|Poales|wheat", "wine", "winery"]
   },
   {
     "name": "wastewater|biofilter",
-    "imports": ["Plantae|Arecales|date"]
+    "imports": ["Plantae|Arecales|date", "kraft"]
+  },
+  {
+    "name": "wine",
+    "imports": ["energy|liquid|methanol", "process|biorefinery|polyethylene", "vinasse"]
+  },
+  {
+    "name": "winery",
+    "imports": ["agriculture|fertilizers|digestate", "pullulan", "energy|solid|torrefaction", "vinasse", "process|biorefinery|xylitol"]
+  },
+  {
+    "name": "abattoir",
+    "imports": []
   },
   {
     "name": "activated carbon",
+    "imports": []
+  },
+  {
+    "name": "agriculture|aquaculture",
     "imports": []
   },
   {
@@ -724,7 +992,119 @@
     "imports": []
   },
   {
+    "name": "algae",
+    "imports": []
+  },
+  {
+    "name": "animal feed",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Arthropoda|crustacean",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Arthropoda|Malacostraca|Decapoda|lobster",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Arthropoda|Malacostraca|Decapoda|shrimp",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Arthropoda|prawn",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|chicken",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|hen",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|poultry",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Aves|Galliformes|turkey",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|fish",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|fishery",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|beef",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|bovine",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cattle",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|cow",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|goat",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|leather",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|Bovidae|sheep",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|hog",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|pig",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Artiodactyla|swine",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Lagomorpha|rabbit",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Chordata|Mammalia|Perissodactyla|horse",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Mollusca|Bivalvia|clam",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Mollusca|Bivalvia|oyster",
+    "imports": []
+  },
+  {
+    "name": "Animalia|Mollusca|Gastropoda|gastropod",
+    "imports": []
+  },
+  {
     "name": "arabinose",
+    "imports": []
+  },
+  {
+    "name": "beer",
     "imports": []
   },
   {
@@ -732,11 +1112,47 @@
     "imports": []
   },
   {
+    "name": "brewery",
+    "imports": []
+  },
+  {
+    "name": "cardboard",
+    "imports": []
+  },
+  {
+    "name": "carpet",
+    "imports": []
+  },
+  {
+    "name": "cheese",
+    "imports": []
+  },
+  {
+    "name": "collagen",
+    "imports": []
+  },
+  {
     "name": "cracking (chemistry)",
     "imports": []
   },
   {
+    "name": "dairy",
+    "imports": []
+  },
+  {
+    "name": "demolition",
+    "imports": []
+  },
+  {
+    "name": "denitrification",
+    "imports": []
+  },
+  {
     "name": "desiccant",
+    "imports": []
+  },
+  {
+    "name": "distillery",
     "imports": []
   },
   {
@@ -745,6 +1161,10 @@
   },
   {
     "name": "ecology|constructed wetland",
+    "imports": []
+  },
+  {
+    "name": "egg",
     "imports": []
   },
   {
@@ -824,11 +1244,67 @@
     "imports": []
   },
   {
+    "name": "farm",
+    "imports": []
+  },
+  {
+    "name": "forest",
+    "imports": []
+  },
+  {
     "name": "forestry|black liquor",
     "imports": []
   },
   {
     "name": "fuel cell",
+    "imports": []
+  },
+  {
+    "name": "Fungi|mushroom",
+    "imports": []
+  },
+  {
+    "name": "Fungi|yeast",
+    "imports": []
+  },
+  {
+    "name": "greenhouse",
+    "imports": []
+  },
+  {
+    "name": "horticultural",
+    "imports": []
+  },
+  {
+    "name": "kraft",
+    "imports": []
+  },
+  {
+    "name": "livestock",
+    "imports": []
+  },
+  {
+    "name": "milk",
+    "imports": []
+  },
+  {
+    "name": "mill",
+    "imports": []
+  },
+  {
+    "name": "newspaper",
+    "imports": []
+  },
+  {
+    "name": "newsprint",
+    "imports": []
+  },
+  {
+    "name": "night soil",
+    "imports": []
+  },
+  {
+    "name": "paper",
     "imports": []
   },
   {
@@ -1188,6 +1664,18 @@
     "imports": []
   },
   {
+    "name": "process|biorefinery|acetogenesis",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|aspartic acid",
+    "imports": []
+  },
+  {
+    "name": "process|biorefinery|acid|fumaric acid",
+    "imports": []
+  },
+  {
     "name": "process|biorefinery|acid|glutamic acid",
     "imports": []
   },
@@ -1352,11 +1840,35 @@
     "imports": []
   },
   {
+    "name": "seaweed",
+    "imports": []
+  },
+  {
+    "name": "slag",
+    "imports": []
+  },
+  {
+    "name": "slaughterhouse",
+    "imports": []
+  },
+  {
     "name": "starch",
     "imports": []
   },
   {
+    "name": "sugar",
+    "imports": []
+  },
+  {
     "name": "surfactant",
+    "imports": []
+  },
+  {
+    "name": "tannery",
+    "imports": []
+  },
+  {
+    "name": "textile",
     "imports": []
   },
   {
@@ -1365,6 +1877,14 @@
   },
   {
     "name": "wastewater|biofilter",
+    "imports": []
+  },
+  {
+    "name": "wine",
+    "imports": []
+  },
+  {
+    "name": "winery",
     "imports": []
   }
 ]
