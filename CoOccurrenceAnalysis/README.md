@@ -22,7 +22,7 @@ Table of Contents
 
 ## Co-occurence Visualization
 
-[![Co-occurrence Visualization](./images/CircleCoOccurLayout.png)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html)
+[![Co-occurrence Visualization](./images/ExampleofUseGIF.gif)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html)
 
 ## Top 50 Organisms and Technologies, Applications & Products
 [![Co-occurrence Matrices](./images/Top50Species.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/Top50Species.png)
