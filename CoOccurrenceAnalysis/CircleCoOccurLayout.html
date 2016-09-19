@@ -43,17 +43,11 @@
 }
 
 .link--target {
-  stroke: #d62728;
+  stroke: #2ca02c;
 }
 
 </style>
 <body>
-<table>
-<tr><td><div name='circlePlot'/></td>
-<td valign="top"><p name='LinkDetailsColumn1'/></td>
-<td valign="top"><p name='LinkDetailsColumn2'/></td>
-</tr>
-</table>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -74,7 +68,7 @@ var line = d3.svg.line.radial()
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 
-var svg = d3.select("div[name='circlePlot']").append("svg")
+var svg = d3.select("body").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
   .append("g")
@@ -109,100 +103,19 @@ d3.json("links.json", function(error, classes) {
       .on("mouseout", mouseouted);
 });
 
-var detailedLinkData;
-
-d3.json("links2.json", function(error, json) {
-  if (error) return console.warn(error);
-  detailedLinkData = json;
-});
-
-var abstractMetaData;
-d3.json("abstracts.json", function(error, json) {
-  if (error) return console.warn(error);
-  abstractMetaData = json;
-});
-
-
-function getNonHierarchyName(fullName) {
-	return(fullName.substring(fullName.lastIndexOf("|")+1));
-}
-
 function mouseovered(d) {
-
-  
-
-  //erase previous values
-  d3.select("p[name='LinkDetailsColumn1']").text("");
-  d3.select("p[name='LinkDetailsColumn2']").text("");
-
-  //add in svg elements
-  d3.select("p[name='LinkDetailsColumn1']").append("svg")
-  d3.select("p[name='LinkDetailsColumn2']").append("svg")
-
-  //d3.select("p[name='LinkDetailsColumn1']").append('b').text("Waste");
-  //d3.select("p[name='LinkDetailsColumn2']").append('b').text("TAPs");
-
-	
-  // this is what our mouse is over
-  var nonHierarchyName = getNonHierarchyName(d.name);
-
-  //detailedLinkData
-  //d3.select("p[name='LinkDetailsColumn1']").append('ul');
-  //d3.select("p[name='LinkDetailsColumn1']").select('ul').append('li').append('b').text(nonHierarchyName);
-
-  // look up alt waste names here
-  var y_offset = 20;
-  for (i in detailedLinkData){
-	var val = detailedLinkData[i];
-	if (val.name.indexOf(nonHierarchyName) > -1){
-		// CD: trying to figure out how to place nodes
-		// This works - offset for x and y is relative to <p>
-		d3.select("p[name='LinkDetailsColumn1']").select("svg").append("svg:text").text(getNonHierarchyName(val.name)).attr("x", 0).attr("y", y_offset);
-		y_offset = y_offset + 20;
-		//d3.select("p[name='LinkDetailsColumn1']").select("ul").append('li').text(getNonHierarchyName(val.name));
-		// by traversing the imports we can then get the TAPs and the NPMI scores along with the documents describing them
-		// don't even need to get linkages from the main circle
-	}
-  }
-
   node
       .each(function(n) { n.target = n.source = false; });
 
   link
       .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
       .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-      .filter(function(l) { return l.target === d || l.source === d; })
+    .filter(function(l) { return l.target === d || l.source === d; })
       .each(function() { this.parentNode.appendChild(this); });
 
   node
       .classed("node--target", function(n) { return n.target; })
       .classed("node--source", function(n) { return n.source; });
-
-
-	// this is the list of all the things that the source has been matched with
-	var matchList = [];
-
-	d3.select("p[name='LinkDetailsColumn2']").append('ul');
-	d3.selectAll('.link').filter(function(l){
-						if (l.source === d){
-						  //return l.target.name;
-						  matchList.push(l.target.name);
-						}
-						});
-
-	// create a unique list of matches - seems that duplicates aren't filtered out in the R code always.
-        var y_offset = 20;
-	matchList = Array.from(new Set(matchList));
-	for (i in matchList){
-		var match = matchList[i];
-		d3.select("p[name='LinkDetailsColumn2']").select("svg").append("svg:text").text(getNonHierarchyName(match)).attr("x", 0).attr("y", y_offset);
-		y_offset = y_offset + 20;
-		//d3.select("p[name='detailedLinks']").select("ul").append('li').text(getNonHierarchyName(l.target.name));
-		//d3.select("p[name='LinkDetailsColumn2']").select("ul").append('li').text(getNonHierarchyName(match));
-		
-	}
-
-	// need to create list of "from" and "to" and then scan the detailedLinkData data (links2.json file)
 }
 
 function mouseouted(d) {
