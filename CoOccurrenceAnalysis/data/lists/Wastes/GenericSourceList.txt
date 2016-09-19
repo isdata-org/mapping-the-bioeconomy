@@ -1,0 +1,189 @@
+abattoir
+alfalfa
+algae
+almond
+apple
+apricot
+aquaculture
+babassu
+bamboo
+banagrass
+banana
+barley
+bean
+beef
+beer
+beet
+bivalve
+bovine
+brewery
+broccoli
+cabbage
+cacao
+cane
+canola
+cardboard
+carpet
+cashew
+cashew nut
+cassava
+castor
+castor bean
+cattle
+cheese
+cherry
+chestnut
+chicken
+clam
+coconut
+coffee
+corn
+cotton
+cotton gin
+cow
+cranberry
+crustacean
+cucumber
+dairy
+date
+date palm
+demolition
+distillery
+duck
+durian
+dye
+earthworm
+egg
+eucalyptus
+farm
+farmyard
+fish
+fishery
+flax
+forest
+fungi
+furniture
+garden
+gastropod
+goat
+grape
+greenhouse
+groundnut
+guar
+guayule
+hair dye
+hardwood
+hardwood kraft
+hazelnut
+hemp
+hen
+hog
+horse
+horticultural
+household
+hyacinth
+jatropha
+jute
+kenaf
+kitchen
+kraft
+kraft mill
+leather
+lettuce
+linseed
+livestock
+lobster
+longan
+lucerne
+lychee
+maize
+malt
+mango
+melon
+milk
+mill
+mill kraft
+mushroom
+mussel
+mustard
+neem
+newspaper
+newsprint
+oak
+oat
+oat mill
+oil palm
+okra
+olive
+olive mill
+onion
+orange
+oyster
+palm
+paper
+paper mill
+pea
+peach
+peanut
+pecan
+pig
+pig farm
+piggery
+pineapple
+pine
+pistachio
+plum
+pomegranate
+poplar
+potato
+poultry
+prawn
+prune
+rabbit
+radish
+rapeseed
+rice
+rice mill
+rubber
+sago
+seafood
+seaweed
+sesame
+slaughterhouse
+sheep
+shrimp
+shrimp farm
+sisal
+slag
+snail
+softwood
+softwood kraft
+sorghum
+soy
+soya
+soybean
+spirulina
+spruce
+sugar
+sugar beet
+sugarcane
+sugar cane
+sugar mill
+sugar palm
+sunflower
+swine
+tannery
+tapioca
+tea
+textile
+tobacco
+tofu
+tomato
+turkey
+walnut
+wheat
+wine
+wine distillery
+winery
+wood
+yeast
