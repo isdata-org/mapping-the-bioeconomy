@@ -7,6 +7,7 @@ Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Val
 This additional material includes:
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
 [The Co-Occurrence](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html) GUI,
+and additional [Co-Occurence matrices] (https://github.com/isdata-org/mapping-the-bioeconomy/tree/master/CoOccurrenceAnalysis)
 ...
 
 <table cellspacing="0" cellpadding="0"><tr>
