@@ -5,8 +5,8 @@ This is additional online material relating to the research presented in the art
 Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Value Pathways in Academic Literature (DOI)
 
 This additional material includes:
-Detailed Co-occurence maps,
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
+[The Co-Occurrence](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html) GUI,
 ...
 
 <table cellspacing="0" cellpadding="0"><tr>
