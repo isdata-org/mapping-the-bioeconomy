@@ -179,9 +179,9 @@
                 .text(function(d) {
                     return d.key;
                 })
+		.on("click", mouseClickOnNode)
                 .on("mouseover", mouseoverBypass)
-                .on("mouseout", mouseouted)
-		.on("click", mouseClickOnNode);
+                .on("mouseout", mouseouted);
 
 
         });
@@ -195,6 +195,10 @@
 		} else {
 			// somebody is selected, unselect them
 			d3.selectAll('.node').classed('node-locked', false);
+
+			//show the graph for the currently selected node
+	                show2ndGraph(d3.select(this).text());
+			mouseovered(d);
 		}
 	}
 
