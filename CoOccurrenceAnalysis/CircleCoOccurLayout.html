@@ -10,7 +10,8 @@
         font-size: 14px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    
+
+    .node-locked,
     .node:hover {
         fill: #000;
     }
@@ -68,6 +69,7 @@
         pointer-events: none;
     }
     
+    .node-locked,
     .node:hover,
     .node--source,
     .node--target {
@@ -177,16 +179,30 @@
                 .text(function(d) {
                     return d.key;
                 })
-                .on("mouseover", mouseoverBypass) // should customize this - want to find the connections when we mouse over this specific node
-                .on("mouseout", mouseouted);
+                .on("mouseover", mouseoverBypass)
+                .on("mouseout", mouseouted)
+		.on("click", mouseClickOnNode);
 
-		//.on("mouseover", mouseovered) // should customize this - want to find the connections when we mouse over this specific node
 
         });
 
+	function mouseClickOnNode(d){
+		// need to be able to toggle the state of this node
+
+		if (d3.selectAll('.node-locked').empty()){
+			// if nobody is seleced, then select someone			
+	                d3.select(this).classed('node-locked', true);
+		} else {
+			// somebody is selected, unselect them
+			d3.selectAll('.node').classed('node-locked', false);
+		}
+	}
+
 	function mouseoverBypass(d){
-                show2ndGraph(d3.select(this).text());
-		mouseovered(d);
+		if (d3.selectAll('.node-locked').empty()){
+	                show2ndGraph(d3.select(this).text());
+			mouseovered(d);
+		}
 	}
 
         var detailedLinkData;
