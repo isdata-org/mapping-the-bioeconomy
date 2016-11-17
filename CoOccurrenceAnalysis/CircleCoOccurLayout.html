@@ -10,7 +10,8 @@
         font-size: 14px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    
+
+    .node-locked,
     .node:hover {
         fill: #000;
     }
@@ -68,6 +69,7 @@
         pointer-events: none;
     }
     
+    .node-locked,
     .node:hover,
     .node--source,
     .node--target {
@@ -100,11 +102,12 @@
 <body>
     <table>
         <tr>
+	    <td valign="top"><div name='instructions'/></td>
             <td>
                 <div name='circlePlot' />
             </td>
             <td valign="top">
-                <p name='LinkDetailsColumn1' />
+                <p name='LinkDetailsColumn1'/></p>
             </td>
             <td valign="top">
                 <p name='DocumentsPanel' />
@@ -136,14 +139,31 @@
                 return d.x / 180 * Math.PI;
             });
 
-        var svg = d3.select("div[name='circlePlot']").append("svg")
+
+        var svg = d3.select("div[name='circlePlot']")
+		.append("svg")
             .attr("width", diameter)
             .attr("height", diameter)
-            .append("g")
+            .append("g").attr("y", -100)
             .attr("transform", "translate(" + radius + "," + radius + ")");
+
 
         var link = svg.append("g").selectAll(".link"),
             node = svg.append("g").selectAll(".node");
+
+
+	    d3.select("p[name='LinkDetailsColumn1']")
+		.append("svg")
+		.attr("width", 420)
+		.attr("height", 800)
+		.append("foreignObject")
+		.attr("width", 420)
+		.attr("height", 500)
+		.append("xhtml:body")
+		.html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>The circle to the left shows wastes and TAPs (technologies, applications and processes) that are co-mentioned in literature.  <ul><li>Put your mouse over a term to locate its connections<li>Directly below you'll see a network with more details<li>Use Ctrl-f to search for terms<li>Ctrl +/- allows you to zoom in/out<li>Click on a term in the circle to lock the current selection<li>Click on another term in the circle to unlock the current selection</ul>")
+		.attr("x", 0)
+		.attr("y", 20);
+
 
         //readme-flare-imports.json
         d3.json("links.json", function(error, classes) {
@@ -177,16 +197,34 @@
                 .text(function(d) {
                     return d.key;
                 })
-                .on("mouseover", mouseoverBypass) // should customize this - want to find the connections when we mouse over this specific node
+		.on("click", mouseClickOnNode)
+                .on("mouseover", mouseoverBypass)
                 .on("mouseout", mouseouted);
 
-		//.on("mouseover", mouseovered) // should customize this - want to find the connections when we mouse over this specific node
 
         });
 
+	function mouseClickOnNode(d){
+		// need to be able to toggle the state of this node
+
+		if (d3.selectAll('.node-locked').empty()){
+			// if nobody is seleced, then select someone			
+	                d3.select(this).classed('node-locked', true);
+		} else {
+			// somebody is selected, unselect them
+			d3.selectAll('.node').classed('node-locked', false);
+
+			//show the graph for the currently selected node
+	                show2ndGraph(d3.select(this).text());
+			mouseovered(d);
+		}
+	}
+
 	function mouseoverBypass(d){
-                show2ndGraph(d3.select(this).text());
-		mouseovered(d);
+		if (d3.selectAll('.node-locked').empty()){
+	                show2ndGraph(d3.select(this).text());
+			mouseovered(d);
+		}
 	}
 
         var detailedLinkData;
@@ -392,7 +430,7 @@
                 .attr("width", 420)
                 .attr("height", 500)
                 .append("xhtml:body")
-                .html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'><ul><li><font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> are the ones you have selected.  <li><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);'>Terms with shadows</font> co-occur with <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> in the other column.<li>Select a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>left term</font> and a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>right term</font> to see documents mentioning that co-occurrence.<li>Line widths show the relevance of that co-occurrence.")
+                .html("<font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>The circle to the left shows wastes and TAPs (technologies, applications and processes) that are co-mentioned in literature.  <ul><li>Put your mouse over a term to locate its connections<li>Directly below you'll see a network with more details<li>Use Ctrl-f to search for terms<li>Ctrl +/- allows you to zoom in/out<li>Click on a term in the circle to lock the current selection<li>Click on another term in the circle to unlock the current selection</ul><p>For the visualization below:<br><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'><ul><li>Use your mouse to select combinations of terms in the left and right columns<li><font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> are the ones you have selected.  <li><font style='font-weight: normal; font-size: 11px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);'>Terms with shadows</font> co-occur with <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>Terms in bold</font> in the other column.<li>Select a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>left term</font> and a <font style='font-weight: bold; font-size: 14px; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;'>right term</font> to see documents mentioning that co-occurrence.<li>Line widths show the relevance of that co-occurrence.")
                 .attr("x", 0)
                 .attr("y", 20);
 
@@ -409,8 +447,8 @@
             }
 
             // keep track of coordinates for left and right sides
-            var from_y_offset = 120;
-            var to_y_offset = 120;
+            var from_y_offset = 350;  //was 120 for both
+            var to_y_offset = 350;
 
             var from_y = {};
             var to_y = {};
@@ -632,3 +670,7 @@
             return imports;
         }
     </script>
+
+
+
+
