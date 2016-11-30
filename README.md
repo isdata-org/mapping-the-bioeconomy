@@ -2,7 +2,7 @@
 ##Topic modelling and co-occurrence analysis of the bio-economy
 
 This is additional online material relating to the research presented in the article:
-Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Value Pathways in Academic Literature (DOI)
+<i>Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Value Pathways in Academic Literature</i>
 
 This additional material includes:
 [Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
@@ -16,11 +16,14 @@ and additional [Co-Occurence matrices] (https://github.com/isdata-org/mapping-th
 <td width=420 valign="top"><center>Co-occurrence Mapping of Wastes and TAPs<br>(<b>T</b>echnologies, <b>A</b>pplications and <b>P</b>roducts)</center></td>
 </tr>
 <tr>
-<td><h6><i>Overview of literature of organic byproduct valorization</i></h6></td>
-<td><h6><i>Shows potential valorization pathways for waste products along with relevant literature references showing mentions of a particular waste stream and TAP.</i></h6></td></tr>
-<tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="/ScreenShots/TopicModellingMainView.png" width="400"></a></td>
-<td><a href="./CoOccurrenceAnalysis/README.md"><img src="/ScreenShots/screen-COA-SM.png" width="420"></a></td></tr></table>
+<td><a href="./CoOccurrenceAnalysis/README.md"><img src="/ScreenShots/screen-COA-SM.png" width="420"></a></td>
+</tr>
+<tr>
+<td valign="top"><h6><i>Overview of literature of organic byproduct valorization</i></h6></td>
+<td valign="top"><h6><i>Shows potential valorization pathways for waste products along with relevant literature references showing mentions of a particular waste stream and TAP.</i></h6></td>
+</tr>
+</table>
 
 ## Abstract
 
