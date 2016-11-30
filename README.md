@@ -4,11 +4,11 @@
 This is additional online material relating to the research presented in the article:
 <i>Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Value Pathways in Academic Literature</i>
 
-This additional material includes:
-[Topic Modelling](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) results,
-[The Co-Occurrence](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html) GUI,
-and additional [Co-Occurence matrices] (https://github.com/isdata-org/mapping-the-bioeconomy/tree/master/CoOccurrenceAnalysis)
-...
+This additional material contains two main parts: the [Topic Modelling results](http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html) and the [Co-Occurence analysis results](https://github.com/isdata-org/mapping-the-bioeconomy/tree/master/CoOccurrenceAnalysis).
+
+The topic modelling results groups the analyzed literature into algorithmically-determined topics.  This helps to cluster together similar literature, and by clicking on the topics, you can see the literature in each topic, along with trends over time.
+
+With the co-occurrence analysis, we have also created an [online user interface](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html) (shown on the right side of the table below) which shows potential valorization pathways for waste products.  This is based on an analysis of literature where we located co-mentions of waste streams and TAPs (technologies, applications and products) in academic literature abstracts.  By selecting a combination of a waste stream and a TAP, you are then presented with literature references mentioning that combination.
 
 <table cellspacing="0" cellpadding="0">
 <tr>
@@ -18,10 +18,6 @@ and additional [Co-Occurence matrices] (https://github.com/isdata-org/mapping-th
 <tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="/ScreenShots/TopicModellingMainView.png" width="400"></a></td>
 <td><a href="./CoOccurrenceAnalysis/README.md"><img src="/ScreenShots/screen-COA-SM.png" width="420"></a></td>
-</tr>
-<tr>
-<td valign="top"><h6><i>Overview of literature of organic byproduct valorization</i></h6></td>
-<td valign="top"><h6><i>Shows potential valorization pathways for waste products along with relevant literature references showing mentions of a particular waste stream and TAP.</i></h6></td>
 </tr>
 </table>
 
