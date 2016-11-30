@@ -17,7 +17,7 @@ With the co-occurrence analysis, we have also created an [online user interface]
 </tr>
 <tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="/ScreenShots/TopicModellingMainView.png" width="400"></a></td>
-<td><a href="./CoOccurrenceAnalysis/README.md"><img src="/ScreenShots/screen-COA-SM.png" width="420"></a></td>
+<td><a href="./CoOccurrenceAnalysis/README.md"><img src="./CoOccurrenceAnalysis/images/ExampleofUseGIF.gif" width="420"></a></td>
 </tr>
 </table>
 
