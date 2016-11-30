@@ -1,5 +1,5 @@
 # mapping-the-bioeconomy
-##Topic modelling and co-occurrence analysis of the bio-economy
+##Topic modelling and co-occurrence analysis of waste valorization pathways in the bio-economy
 
 This is additional online material relating to the research presented in the article:
 <i>Secondary Resources in the Bio-Based Economy:  A Computer Assisted Survey of Value Pathways in Academic Literature</i>
