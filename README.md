@@ -12,9 +12,12 @@ and additional [Co-Occurence matrices] (https://github.com/isdata-org/mapping-th
 
 <table cellspacing="0" cellpadding="0">
 <tr>
-<td>Topic Modelling of Literature <br> <i>Overview of literature of organic byproduct valorization</i></td>
-<td>Co-occurrence Mapping of Wastes and TAPs (<b>T</b>echnologies, <b>A</b>pplications and <b>P</b>roducts) <br> <i>Shows potential valorization pathways for waste products along with relevant literature references showing mentions of a particular waste stream and TAP.</i></td>
+<td width=400 valign="top"><center>Topic Modelling of Literature Analyzed</center></td>
+<td width=420 valign="top"><center>Co-occurrence Mapping of Wastes and TAPs<br>(<b>T</b>echnologies, <b>A</b>pplications and <b>P</b>roducts)</center></td>
 </tr>
+<tr>
+<td><h6><i>Overview of literature of organic byproduct valorization</i></h6></td>
+<td><h6><i>Shows potential valorization pathways for waste products along with relevant literature references showing mentions of a particular waste stream and TAP.</i></h6></td></tr>
 <tr>
 <td><a href="http://isdata-org.github.io/mapping-the-bioeconomy/TopicModelling/index.html"><img src="/ScreenShots/TopicModellingMainView.png" width="400"></a></td>
 <td><a href="./CoOccurrenceAnalysis/README.md"><img src="/ScreenShots/screen-COA-SM.png" width="420"></a></td></tr></table>
