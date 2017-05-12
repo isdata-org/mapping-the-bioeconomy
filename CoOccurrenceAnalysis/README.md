@@ -8,7 +8,7 @@ Table of Contents
 =================
  * [Interactive co-occurence Visualization](#co-occurence-visualization)
  * Groups of Wastes
-   * [Alcohol Production - brewery, wine, distillery, malt, yeast](#alcohol-production-brewery-distillery-malt-wine-yeast)
+   * [Alcohol Production - brewery, wine, distillery, malt, yeast](#alcohol-production---brewery-distillery-malt-wine-yeast)
 
 
 ## Alcohol Production - brewery, distillery, malt, yeast, wine
