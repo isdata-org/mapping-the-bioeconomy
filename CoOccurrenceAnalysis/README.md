@@ -11,7 +11,7 @@ Table of Contents
    * [Alcohol Production - brewery, wine, distillery, malt, yeast](#alcohol-production---brewery-distillery-malt-wine-yeast)
 
 
-## Alcohol Production - brewery, distillery, malt, yeast, wine
+## Alcohol Production - brewery, distillery, malt, wine, yeast
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/alcohol.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/alcohol.png)
 
 ## Aquatic Wastes - aquaculture, fish, crustacean, mussel, oyster, shrimp, seafood, algae, seaweed
