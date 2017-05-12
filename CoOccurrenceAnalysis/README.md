@@ -4,7 +4,8 @@
 
 [![Co-occurrence Visualization](./images/ExampleofUseGIF.gif)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html)
 
-Table of Contents
+## Table of Contents
+
 =================
  * [Interactive co-occurence Visualization](#co-occurence-visualization)
  * Groups of Wastes
@@ -32,71 +33,96 @@ Table of Contents
    * [Root Crops - beet, cassava, onion, potato, sugar beet](#root-crops---beet-cassava-onion-potato-sugar-beet)
    * [Wood - eucalyptus, forest, pine, poplar, sawmill, spruce, oak, wood](#wood---eucalyptus-forest-pine-poplar-sawmill-spruce-oak-wood)
 
-## Alcohol Production - brewery, distillery, malt, wine, yeast
+## Groups of Wastes
+
+### Alcohol Production - brewery, distillery, malt, wine, yeast
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/alcohol.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/alcohol.png)
 
-## Aquatic Wastes - algae, aquaculture, crustacean, fish, mussel, oyster, seafood, seaweed, shrimp
+### Aquatic Wastes - algae, aquaculture, crustacean, fish, mussel, oyster, seafood, seaweed, shrimp
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/aquatic.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/aquatic.png)
 
-## Birds - duck, egg, poultry, turkey
+### Birds - duck, egg, poultry, turkey
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/birds.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/birds.png)
 
-## Dairy - cheese, dairy, milk
+### Dairy - cheese, dairy, milk
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/dairy.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/dairy.png)
 
-## Domestic Waste - garden, household waste, kitchen waste
+### Domestic Waste - garden, household waste, kitchen waste
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/domestic_waste.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/domestic_waste.png)
 
-## Fruit Trees - apple, apricot, banana, mango, olive, orange, peach, pomegranate
+### Fruit Trees - apple, apricot, banana, mango, olive, orange, peach, pomegranate
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/fruit_trees.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/fruit_trees.png)
 
-## General Agricultural Wastes - farm, greenhouse, horticulture
+### General Agricultural Wastes - farm, greenhouse, horticulture
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/General_agricultural_waste.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/General_agricultural_waste.png)
 
-## Grains - barley, maize, oat, rice, sorghum, wheat
+### Grains - barley, maize, oat, rice, sorghum, wheat
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/grains.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/grains.png)
 
-## Grasses - bamboo, flax, jute, kenaf, sisal, sugar cane
+### Grasses - bamboo, flax, jute, kenaf, sisal, sugar cane
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/grasses.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/grasses.png)
 
-## Industrial Waste from Animal Materials - leather, slaughterhouse, tannery
+### Industrial Waste from Animal Materials - leather, slaughterhouse, tannery
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/industrial_waste_animals.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/industrial_waste_animals.png)
 
-## General Industrial Waste - carpet, dye, textile
+### General Industrial Waste - carpet, dye, textile
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/industrial_waste.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/industrial_waste.png)
 
-## Mammals - cattle, goat, horse, rabbit, sheep, swine
+### Mammals - cattle, goat, horse, rabbit, sheep, swine
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/mammals.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/mammals.png)
 
-## Non-food crops - alfalfa, coffee, cotton, guayule, lucerne, tea, tobacco
+### Non-food crops - alfalfa, coffee, cotton, guayule, lucerne, tea, tobacco
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/Non-food_crops.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/Non-food_crops.png)
 
-## Non-food trees - castor, jatropha, neem
+### Non-food trees - castor, jatropha, neem
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/non-food_crop_trees.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/non-food_crop_trees.png)
 
-## Nut trees - almond, hazelnut, pistachio, walnut
+### Nut trees - almond, hazelnut, pistachio, walnut
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/nut_trees.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/nut_trees.png)
 
-## Oil crops - peanut, rapeseed, sesame, sunflower
+### Oil crops - peanut, rapeseed, sesame, sunflower
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/oil_crops.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/oil_crops.png)
 
-## Other Industrial Waste - rubber, sugar, tyre
+### Other Industrial Waste - rubber, sugar, tyre
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/other_industrial_waste.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/other_industrial_waste.png)
 
-## Palm - babassu, coconut, palm, sago
+### Palm - babassu, coconut, palm, sago
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/palm.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/palm.png)
 
-## Paper - kraft, newspaper, paper, paper mill
+### Paper - kraft, newspaper, paper, paper mill
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/paper.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/paper.png)
 
-## Plant Crops - bean, broccoli, cabbage, cranberry, grape, guar, lettuce, mushroom, mustard, okra, pineapple, tomato
+### Plant Crops - bean, broccoli, cabbage, cranberry, grape, guar, lettuce, mushroom, mustard, okra, pineapple, tomato
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/plant_crops.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/plant_crops.png)
 
-## Soy - soy, tofu
+### Soy - soy, tofu
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/soy.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/soy.png)
 
-## Root Crops - beet, cassava, onion, potato, sugar beet
+### Root Crops - beet, cassava, onion, potato, sugar beet
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/tuber_plant_crops.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/tuber_plant_crops.png)
 
-## Wood - eucalyptus, forest, pine, poplar, sawmill, spruce, oak, wood
+### Wood - eucalyptus, forest, pine, poplar, sawmill, spruce, oak, wood
+([back to top](#table-of-contents))
 [![Co-occurrence Matrices](./images/ClusteredWasteTapMatrices/wood.png)](https://raw.githubusercontent.com/isdata-org/mapping-the-bioeconomy/master/CoOccurrenceAnalysis/images/wood.png)
