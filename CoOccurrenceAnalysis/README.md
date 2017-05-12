@@ -5,8 +5,6 @@
 [![Co-occurrence Visualization](./images/ExampleofUseGIF.gif)](http://isdata-org.github.io/mapping-the-bioeconomy/CoOccurrenceAnalysis/CircleCoOccurLayout.html)
 
 ## Table of Contents
-
-=================
  * [Interactive co-occurence Visualization](#co-occurence-visualization)
  * Groups of Wastes
    * [Alcohol Production - brewery, wine, distillery, malt, yeast](#alcohol-production---brewery-distillery-malt-wine-yeast)
